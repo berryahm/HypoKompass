@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEINE HYPO | In 2 Minuten zur passenden Hypothek | Hypothekenvergleich Schweiz</title>
+  <meta name="description" content="Vergleiche über 40 Schweizer Banken und finde den besten Hypothekarzins. Kostenlos, unverbindlich und mit persönlicher Begleitung." />
+  <meta name="keywords" content="Hypothek Schweiz, Hypothekenrechner, Hypothekenzinsen, Immobilienfinanzierung, Bestzins, Hypothek berechnen" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://deinehypo.ch/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DEINE HYPO | In 2 Minuten zur passenden Hypothek" />
+  <meta property="og:description" content="Vergleiche über 40 Banken und sichere dir den besten Hypothekarzins. Kostenlos und unverbindlich." />
+  <meta property="og:url" content="https://deinehypo.ch/" />
+  <meta property="og:locale" content="de_CH" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#0D1B2A;--navy-mid:#132336;--navy-light:#1E3A52;--teal:#0ABFA3;--teal-dark:#089981;--teal-glow:rgba(10,191,163,0.18);--gold:#D4A853;--white:#FFFFFF;--off-white:#F4F6F9;--text-body:#8CA3BC;--text-light:#B8CCDE;--border:rgba(255,255,255,0.08);--green:#22C55E;--orange:#F59E0B;--red:#EF4444;--shadow-lg:0 24px 64px rgba(0,0,0,0.35);--shadow-card:0 8px 32px rgba(0,0,0,0.18);--radius-xl:20px;--radius-lg:14px;--radius-md:10px;--font-head:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;--transition:0.28s cubic-bezier(0.4,0,0.2,1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:var(--font-body);background:var(--navy);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+    button{font-family:var(--font-body);cursor:pointer;border:none;outline:none}
+    input,select,textarea{font-family:var(--font-body)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;height:72px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,27,42,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:var(--transition)}
+    nav.scrolled{background:rgba(13,27,42,0.97);box-shadow:0 4px 32px rgba(0,0,0,0.3)}
+    .nav-logo{font-family:var(--font-head);font-size:1.35rem;font-weight:800;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
+    .nav-logo span.accent{color:var(--teal)}
+    .nav-logo .logo-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);animation:pulse-dot 2s ease-in-out infinite}
+    @keyframes pulse-dot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:0.7}}
+    .nav-right{display:flex;align-items:center;gap:16px}
+    .lang-switcher{position:relative}
+    .lang-btn{display:flex;align-items:center;gap:6px;background:var(--border);border:1px solid var(--border);color:var(--text-light);padding:7px 14px;border-radius:8px;font-size:0.82rem;font-weight:500;transition:var(--transition);cursor:pointer}
+    .lang-btn:hover{background:rgba(255,255,255,0.1);color:var(--white)}
+    .lang-btn svg{width:14px;height:14px;transition:var(--transition)}
+    .lang-btn.open svg{transform:rotate(180deg)}
+    .lang-dropdown{position:absolute;top:calc(100% + 8px);right:0;background:var(--navy-mid);border:1px solid var(--border);border-radius:var(--radius-md);padding:6px;min-width:170px;box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transform:translateY(-8px);transition:var(--transition);z-index:200}
+    .lang-dropdown.open{opacity:1;visibility:visible;transform:translateY(0)}
+    .lang-option{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:7px;font-size:0.85rem;cursor:pointer;transition:var(--transition);color:var(--text-light)}
+    .lang-option:hover,.lang-option.active{background:var(--teal-glow);color:var(--white)}
+    .lang-option.active{color:var(--teal);font-weight:500}
+    .nav-cta{background:var(--teal);color:var(--navy);font-weight:700;font-size:0.88rem;padding:10px 22px;border-radius:9px;transition:var(--transition)}
+    .nav-cta:hover{background:var(--teal-dark);transform:translateY(-1px);box-shadow:0 6px 20px rgba(10,191,163,0.35)}
+    #hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:120px 5% 80px;overflow:hidden}
+    #hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(10,191,163,0.08) 0%,transparent 60%),radial-gradient(ellipse 60% 80% at 20% 80%,rgba(212,168,83,0.05) 0%,transparent 50%),linear-gradient(160deg,var(--navy) 0%,var(--navy-mid) 50%,var(--navy) 100%)}
+    #hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black,transparent)}
+    .hero-content{position:relative;z-index:2;max-width:720px}
+    .hero-trust-bar{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:28px;animation:fade-up 0.7s ease both}
+    .hero-trust-item{display:flex;align-items:center;gap:6px;font-size:0.82rem;color:var(--teal);font-weight:500}
+    .hero-trust-item svg{width:16px;height:16px;flex-shrink:0}
+    h1{font-family:var(--font-head);font-size:clamp(2.2rem,5.5vw,3.6rem);font-weight:800;line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px;animation:fade-up 0.7s 0.1s ease both}
+    h1 .highlight{background:linear-gradient(135deg,var(--teal) 0%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-sub{font-size:1.08rem;line-height:1.7;color:var(--text-body);max-width:540px;margin-bottom:32px;animation:fade-up 0.7s 0.2s ease both;font-weight:400}
+    .hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;animation:fade-up 0.7s 0.3s ease both}
+    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:var(--navy);font-weight:700;font-size:1rem;padding:16px 32px;border-radius:var(--radius-md);transition:var(--transition);position:relative;overflow:hidden}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(10,191,163,0.4)}
+    .btn-primary::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.15),transparent);opacity:0;transition:var(--transition)}
+    .btn-primary:hover::before{opacity:1}
+    .hero-micro{font-size:0.8rem;color:var(--text-body);margin-top:12px;animation:fade-up 0.7s 0.35s ease both}
+    .hero-rates-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:0.92rem;font-weight:600;color:var(--teal);transition:var(--transition);animation:fade-up 0.7s 0.38s ease both;padding:8px 0}
+    .hero-rates-link:hover{color:var(--teal-dark);gap:12px}
+    .hero-rates-link svg{width:16px;height:16px;transition:var(--transition)}
+    .hero-rates-link:hover svg{transform:translateX(3px)}
+    .hero-stats{display:flex;gap:32px;margin-top:48px;padding-top:32px;border-top:1px solid var(--border);animation:fade-up 0.7s 0.4s ease both}
+    .stat-num{font-family:var(--font-head);font-size:1.7rem;font-weight:800;color:var(--teal);line-height:1}
+    .stat-label{font-size:0.8rem;color:var(--text-body);margin-top:4px}
+    .hero-visual{position:absolute;right:5%;top:50%;transform:translateY(-50%);width:420px;height:420px;display:none;z-index:1;animation:float 6s ease-in-out infinite}
+    @media(min-width:1100px){.hero-visual{display:block}}
+    @keyframes float{0%,100%{transform:translateY(-50%) translateY(0px)}50%{transform:translateY(-50%) translateY(-20px)}}
+    .hero-card{position:absolute;background:var(--navy-mid);border:1px solid var(--border);border-radius:var(--radius-xl);padding:24px;backdrop-filter:blur(10px);box-shadow:var(--shadow-card)}
+    .hero-card-main{width:260px;top:50%;left:50%;transform:translate(-50%,-50%)}
+    .hero-card-rate{width:180px;bottom:20px;right:-10px;animation:float 6s 1s ease-in-out infinite}
+    .hero-card-savings{width:165px;top:30px;left:-10px;animation:float 6s 2s ease-in-out infinite}
+    .hc-label{font-size:0.72rem;color:var(--text-body);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:6px}
+    .hc-value{font-family:var(--font-head);font-size:1.5rem;font-weight:700;color:var(--white)}
+    .hc-value.teal{color:var(--teal)}.hc-value.gold{color:var(--gold)}
+    .hc-sub{font-size:0.75rem;color:var(--text-body);margin-top:4px}
+    .hc-divider{height:1px;background:var(--border);margin:14px 0}
+    .hc-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    .hc-row-label{font-size:0.8rem;color:var(--text-body)}.hc-row-val{font-size:0.85rem;font-weight:600}
+    section{padding:80px 5%}
+    .section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
+    .section-label::before{content:'';width:24px;height:2px;background:var(--teal);border-radius:2px}
+    h2{font-family:var(--font-head);font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-0.8px;line-height:1.15;margin-bottom:16px}
+    .section-sub{font-size:1rem;color:var(--text-body);line-height:1.7;max-width:540px;font-weight:400}
+    #how-it-works{background:var(--navy-mid);position:relative;overflow:hidden}
+    .hiw-header{text-align:center;margin-bottom:56px}
+    .hiw-header .section-label{justify-content:center}.hiw-header .section-label::before{display:none}
+    .hiw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1000px;margin:0 auto}
+    @media(max-width:768px){.hiw-grid{grid-template-columns:1fr;gap:24px}}
+    .hiw-step{text-align:center;padding:32px 24px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-xl);transition:var(--transition)}
+    .hiw-step:hover{border-color:rgba(10,191,163,0.25);transform:translateY(-4px)}
+    .hiw-num{width:48px;height:48px;background:var(--teal);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:1.1rem;margin:0 auto 20px}
+    .hiw-step h3{font-family:var(--font-head);font-size:1.1rem;font-weight:700;margin-bottom:10px}
+    .hiw-step p{font-size:0.88rem;color:var(--text-body);line-height:1.65}
+    #calculator{position:relative;overflow:hidden}
+    #calculator::before{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(10,191,163,0.07) 0%,transparent 70%);pointer-events:none}
+    .calc-container{max-width:1200px;margin:0 auto}
+    .calc-header{margin-bottom:48px}
+    .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+    @media(max-width:900px){.calc-grid{grid-template-columns:1fr}}
+    .calc-inputs{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-xl);padding:32px}
+    .input-group{margin-bottom:22px}.input-group:last-child{margin-bottom:0}
+    .input-group label{display:block;font-size:0.82rem;font-weight:500;color:var(--text-light);margin-bottom:8px}
+    .input-wrap{position:relative}
+    .input-prefix{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:0.88rem;color:var(--text-body);pointer-events:none}
+    .calc-input{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-md);color:var(--white);font-size:0.95rem;font-weight:500;padding:13px 14px 13px 42px;transition:var(--transition);appearance:none}
+    .calc-input::placeholder{color:var(--text-body);font-weight:400}
+    .calc-input:focus{outline:none;border-color:var(--teal);background:rgba(10,191,163,0.05);box-shadow:0 0 0 3px rgba(10,191,163,0.12)}
+    .range-slider{width:100%;margin:10px 0 2px;-webkit-appearance:none;appearance:none;height:6px;border-radius:3px;background:rgba(255,255,255,0.1);outline:none;cursor:pointer}
+    .range-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:20px;height:20px;border-radius:50%;background:var(--teal);cursor:pointer;border:2px solid var(--navy);box-shadow:0 2px 8px rgba(10,191,163,0.35);transition:var(--transition)}
+    .range-slider::-webkit-slider-thumb:hover{transform:scale(1.15);box-shadow:0 2px 12px rgba(10,191,163,0.5)}
+    .range-slider::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--teal);cursor:pointer;border:2px solid var(--navy);box-shadow:0 2px 8px rgba(10,191,163,0.35)}
+    .range-slider::-moz-range-track{height:6px;border-radius:3px;background:rgba(255,255,255,0.1)}
+    .range-labels{display:flex;justify-content:space-between;font-size:0.7rem;color:var(--text-body);margin-top:2px}
+    .calc-micro{font-size:0.78rem;color:var(--text-body);margin-top:16px;line-height:1.5;padding:12px 16px;background:rgba(255,255,255,0.02);border-radius:var(--radius-md);border:1px solid var(--border)}
+    .calc-micro svg{width:14px;height:14px;display:inline;vertical-align:-2px;margin-right:4px;color:var(--teal)}
+    .calc-results{display:flex;flex-direction:column;gap:16px}
+    .result-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-xl);padding:28px;transition:var(--transition)}
+    .result-main{border-color:rgba(10,191,163,0.2);background:rgba(10,191,163,0.04)}
+    .result-card-label{font-size:0.78rem;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-body);margin-bottom:8px}
+    .result-value{font-family:var(--font-head);font-size:1.9rem;font-weight:800;color:var(--white);line-height:1;transition:var(--transition)}
+    .result-sub{font-size:0.8rem;color:var(--text-body);margin-top:6px}
+    .ampel-section{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-xl);padding:28px}
+    .ampel-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px}
+    .ampel-label{font-size:0.78rem;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-body)}
+    .ampel-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:100px;font-size:0.82rem;font-weight:700;transition:var(--transition)}
+    .ampel-badge.green{background:rgba(34,197,94,0.15);color:var(--green)}
+    .ampel-badge.orange{background:rgba(245,158,11,0.15);color:var(--orange)}
+    .ampel-badge.red{background:rgba(239,68,68,0.15);color:var(--red)}
+    .ampel-badge.neutral{background:rgba(255,255,255,0.08);color:var(--text-body)}
+    .ampel-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor}
+    .ampel-value{font-family:var(--font-head);font-size:2.5rem;font-weight:800;line-height:1;transition:var(--transition)}
+    .ampel-value.green{color:var(--green)}.ampel-value.orange{color:var(--orange)}.ampel-value.red{color:var(--red)}.ampel-value.neutral{color:var(--text-body)}
+    .progress-bar-wrap{margin:16px 0;background:rgba(255,255,255,0.07);border-radius:100px;height:8px;overflow:hidden}
+    .progress-bar-fill{height:100%;border-radius:100px;transition:width 0.7s cubic-bezier(0.4,0,0.2,1),background 0.4s;min-width:4px}
+    .progress-bar-fill.green{background:linear-gradient(90deg,#16a34a,var(--green))}
+    .progress-bar-fill.orange{background:linear-gradient(90deg,#d97706,var(--orange))}
+    .progress-bar-fill.red{background:linear-gradient(90deg,#dc2626,var(--red))}
+    .progress-bar-fill.neutral{background:rgba(255,255,255,0.15)}
+    .ampel-hint{font-size:0.85rem;line-height:1.6;color:var(--text-body);margin-top:8px}
+    .lead-recovery{margin-top:14px;padding:18px 20px;border-radius:var(--radius-md);font-size:0.88rem;line-height:1.6;display:none}
+    .lead-recovery.show{display:block}
+    .lead-recovery.green-box{background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);color:var(--green)}
+    .lead-recovery.orange-box{background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);color:var(--orange)}
+    .lead-recovery.red-box{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.15);color:var(--text-light)}
+    .lead-recovery strong{display:block;margin-bottom:6px;font-size:0.9rem}
+    .lead-recovery .lr-cta{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:10px 20px;border-radius:var(--radius-md);font-weight:700;font-size:0.85rem;transition:var(--transition);cursor:pointer;border:none;text-decoration:none;color:var(--navy)}
+    .lead-recovery.green-box .lr-cta{background:var(--green)}
+    .lead-recovery.orange-box .lr-cta{background:var(--orange)}
+    .lead-recovery.red-box .lr-cta{background:var(--teal)}
+    .lead-recovery .lr-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,0.3)}
+    .monthly-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-xl);padding:24px}
+    .monthly-rows{display:flex;flex-direction:column;gap:10px}
+    .monthly-row{display:flex;justify-content:space-between;align-items:center;font-size:0.87rem;padding-bottom:10px;border-bottom:1px solid var(--border)}
+    .monthly-row:last-child{border-bottom:none;padding-bottom:0}
+    .monthly-row-label{color:var(--text-body)}.monthly-row-val{font-weight:600;color:var(--white)}
+    .monthly-total{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:14px;border-top:1px solid rgba(10,191,163,0.25)}
+    .monthly-total-label{font-size:0.85rem;font-weight:600;color:var(--text-light)}
+    .monthly-total-val{font-family:var(--font-head);font-size:1.4rem;font-weight:800;color:var(--teal)}
+    .calc-cta-wrap{text-align:center;margin-top:24px}
+    .calc-disclaimer{text-align:center;font-size:0.78rem;color:var(--text-body);margin-top:24px;opacity:0.7}
+    #trust{background:var(--navy-mid);position:relative;overflow:hidden}
+    .trust-header{text-align:center;margin-bottom:60px}
+    .trust-header .section-label{justify-content:center}.trust-header .section-label::before{display:none}
+    .trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+    .trust-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-xl);padding:32px 28px;transition:var(--transition);position:relative;overflow:hidden}
+    .trust-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--teal-glow),transparent);opacity:0;transition:var(--transition)}
+    .trust-card:hover{border-color:rgba(10,191,163,0.25);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.25)}
+    .trust-card:hover::before{opacity:1}
+    .trust-icon{width:50px;height:50px;background:rgba(10,191,163,0.1);border:1px solid rgba(10,191,163,0.2);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;position:relative;z-index:1}
+    .trust-icon svg{width:24px;height:24px;color:var(--teal)}
+    .trust-card h3{font-family:var(--font-head);font-size:1.05rem;font-weight:700;margin-bottom:10px;position:relative;z-index:1}
+    .trust-card p{font-size:0.88rem;color:var(--text-body);line-height:1.65;position:relative;z-index:1}
+    #testimonials{position:relative}
+    .testimonials-header{text-align:center;margin-bottom:48px}
+    .testimonials-header .section-label{justify-content:center}.testimonials-header .section-label::before{display:none}
+    .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1000px;margin:0 auto}
+    .testimonial-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-xl);padding:28px}
+    .testimonial-stars{color:var(--gold);font-size:0.9rem;letter-spacing:2px;margin-bottom:14px}
+    .testimonial-text{font-size:0.9rem;color:var(--text-light);line-height:1.7;margin-bottom:18px;font-style:italic}
+    .testimonial-author{font-size:0.82rem;font-weight:600;color:var(--white)}
+    .testimonial-role{font-size:0.75rem;color:var(--text-body);margin-top:2px}
+    #leadform{background:var(--navy-mid);position:relative;overflow:hidden}
+    #leadform::before{content:'';position:absolute;top:-100px;left:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(10,191,163,0.06) 0%,transparent 70%)}
+    .form-container{max-width:600px;margin:0 auto}
+    .form-header{text-align:center;margin-bottom:32px}
+    .form-header .section-label{justify-content:center}.form-header .section-label::before{display:none}
+    .form-trust-badges{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:16px}
+    .form-trust-badge{display:flex;align-items:center;gap:5px;font-size:0.78rem;color:var(--text-body)}
+    .form-trust-badge svg{width:14px;height:14px;color:var(--teal)}
+    .step-progress{display:flex;gap:8px;margin-bottom:32px}
+    .step-bar{flex:1;height:4px;border-radius:100px;background:rgba(255,255,255,0.08);transition:var(--transition)}
+    .step-bar.active{background:var(--teal)}.step-bar.done{background:rgba(10,191,163,0.4)}
+    .form-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-xl);padding:36px;position:relative}
+    .form-step{display:none;animation:fade-up 0.4s ease both}.form-step.active{display:block}
+    .step-title{font-family:var(--font-head);font-size:1.25rem;font-weight:700;margin-bottom:6px}
+    .step-sub{font-size:0.85rem;color:var(--text-body);margin-bottom:24px}
+    .form-field{margin-bottom:16px}
+    .form-field label{display:block;font-size:0.82rem;font-weight:500;color:var(--text-light);margin-bottom:8px}
+    .form-input{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-md);color:var(--white);font-size:0.95rem;padding:13px 16px;transition:var(--transition)}
+    .form-input::placeholder{color:var(--text-body)}
+    .form-input:focus{outline:none;border-color:var(--teal);background:rgba(10,191,163,0.05);box-shadow:0 0 0 3px rgba(10,191,163,0.12)}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media(max-width:500px){.form-row{grid-template-columns:1fr}}
+    .form-actions{display:flex;justify-content:space-between;align-items:center;margin-top:24px;gap:12px}
+    .btn-back{display:flex;align-items:center;gap:6px;color:var(--text-body);font-size:0.88rem;background:none;padding:10px 16px;border-radius:var(--radius-md);transition:var(--transition)}
+    .btn-back:hover{color:var(--white);background:rgba(255,255,255,0.05)}
+    .btn-next{flex:1;background:var(--teal);color:var(--navy);font-weight:700;font-size:0.95rem;padding:14px 24px;border-radius:var(--radius-md);transition:var(--transition);text-align:center}
+    .btn-next:hover{background:var(--teal-dark);transform:translateY(-1px);box-shadow:0 8px 24px rgba(10,191,163,0.35)}
+    .btn-submit{flex:1;background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:var(--white);font-weight:700;font-size:0.95rem;padding:15px 24px;border-radius:var(--radius-md);transition:var(--transition);text-align:center}
+    .btn-submit:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(10,191,163,0.4)}
+    .optional-badge{display:inline-block;font-size:0.7rem;color:var(--text-body);background:rgba(255,255,255,0.06);border-radius:4px;padding:2px 7px;margin-left:8px;vertical-align:middle}
+    #thank-you{display:none;text-align:center;padding:48px 20px}
+    #thank-you.show{display:block;animation:fade-up 0.6s ease both}
+    .ty-icon{width:72px;height:72px;background:rgba(10,191,163,0.12);border:2px solid rgba(10,191,163,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;animation:scale-in 0.5s ease both}
+    @keyframes scale-in{0%{transform:scale(0);opacity:0}100%{transform:scale(1);opacity:1}}
+    .ty-icon svg{width:32px;height:32px;color:var(--teal)}
+    .ty-title{font-family:var(--font-head);font-size:1.7rem;font-weight:800;margin-bottom:14px}
+    .ty-sub{font-size:1rem;color:var(--text-body);line-height:1.65;max-width:440px;margin:0 auto 32px}
+    .ty-steps{display:flex;flex-direction:column;gap:16px;max-width:400px;margin:0 auto 32px;text-align:left}
+    .ty-step{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-md)}
+    .ty-step-num{width:28px;height:28px;background:var(--teal);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:0.8rem;flex-shrink:0}
+    .ty-step-text{font-size:0.85rem;color:var(--text-light);line-height:1.5}
+    .ty-step-text strong{color:var(--white);display:block;margin-bottom:2px}
+    .ty-contact{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:8px}
+    .ty-contact-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:var(--radius-md);font-size:0.85rem;font-weight:600;transition:var(--transition);border:1px solid var(--border);color:var(--text-light)}
+    .ty-contact-btn:hover{border-color:var(--teal);color:var(--white);background:rgba(10,191,163,0.05)}
+    .ty-contact-btn svg{width:16px;height:16px}
+    #faq{position:relative}
+    .faq-header{text-align:center;margin-bottom:48px}
+    .faq-header .section-label{justify-content:center}.faq-header .section-label::before{display:none}
+    .faq-list{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+    .faq-item{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)}
+    .faq-item:hover{border-color:rgba(10,191,163,0.2)}
+    .faq-question{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;font-size:0.92rem;font-weight:600;transition:var(--transition)}
+    .faq-question:hover{color:var(--teal)}
+    .faq-question svg{width:18px;height:18px;color:var(--text-body);transition:var(--transition);flex-shrink:0}
+    .faq-item.open .faq-question svg{transform:rotate(180deg);color:var(--teal)}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+    .faq-item.open .faq-answer{max-height:200px}
+    .faq-answer p{padding:0 22px 18px;font-size:0.87rem;color:var(--text-body);line-height:1.7}
+    footer{background:var(--navy);border-top:1px solid var(--border);padding:40px 5%}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+    .footer-logo{font-family:var(--font-head);font-size:1.1rem;font-weight:800}.footer-logo span{color:var(--teal)}
+    .footer-contacts{display:flex;gap:24px;flex-wrap:wrap}
+    .footer-contact{display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--text-body);transition:var(--transition)}
+    .footer-contact:hover{color:var(--white)}
+    .footer-contact svg{width:15px;height:15px;color:var(--teal)}
+    .footer-powered{font-size:0.75rem;color:var(--text-body);opacity:0.6}.footer-powered span{color:var(--teal)}
+    .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;padding:12px 16px;background:rgba(13,27,42,0.95);backdrop-filter:blur(20px);border-top:1px solid var(--border);animation:slide-up 0.4s ease}
+    @keyframes slide-up{from{transform:translateY(100%)}to{transform:translateY(0)}}
+    .sticky-cta .btn-primary{width:100%;justify-content:center;padding:14px;font-size:0.92rem}
+    .sticky-cta-sub{text-align:center;font-size:0.72rem;color:var(--text-body);margin-top:6px}
+    @media(max-width:768px){.sticky-cta.show{display:block}}
+    .scroll-top{position:fixed;bottom:28px;right:28px;width:44px;height:44px;background:var(--teal);border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;opacity:0;visibility:hidden;transform:translateY(10px);transition:var(--transition);z-index:50;box-shadow:0 4px 16px rgba(10,191,163,0.35)}
+    .scroll-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+    .scroll-top:hover{background:var(--teal-dark);transform:translateY(-2px)}
+    .scroll-top svg{width:18px;height:18px;color:var(--navy)}
+    @media(max-width:768px){.scroll-top.show{bottom:80px}}
+    @keyframes fade-up{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity 0.7s ease,transform 0.7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .container{max-width:1200px;margin:0 auto}
+    /* ===== MOBILE 768px ===== */
+    @media(max-width:768px){
+      section{padding:56px 5%}
+      nav{height:60px;padding:0 4%}
+      .nav-logo{font-size:1.15rem;gap:6px}
+      .nav-logo .logo-dot{width:7px;height:7px}
+      .nav-right{gap:10px}
+      .lang-btn{padding:6px 10px;font-size:0.78rem;gap:4px}
+      .nav-cta{padding:8px 16px;font-size:0.82rem;border-radius:8px}
+      #hero{min-height:auto;padding:100px 5% 56px}
+      .hero-trust-bar{gap:8px 14px;margin-bottom:22px}
+      .hero-trust-item{font-size:0.76rem;gap:4px}
+      .hero-trust-item svg{width:14px;height:14px}
+      h1{font-size:clamp(1.75rem,7vw,2.4rem);letter-spacing:-1px;margin-bottom:16px;line-height:1.15}
+      h1 br{display:none}
+      .hero-sub{font-size:0.95rem;line-height:1.6;margin-bottom:24px}
+      .btn-primary{padding:14px 24px;font-size:0.92rem;border-radius:var(--radius-md);width:100%;justify-content:center}
+      .hero-micro{font-size:0.75rem;margin-top:10px}
+      .hero-stats{gap:0;flex-wrap:nowrap;justify-content:space-between;margin-top:32px;padding-top:24px}
+      .stat-num{font-size:1.35rem}
+      .stat-label{font-size:0.72rem}
+      h2{font-size:clamp(1.4rem,5.5vw,1.9rem);letter-spacing:-0.5px}
+      .section-sub{font-size:0.9rem}
+      .section-label{font-size:0.72rem;letter-spacing:1px;margin-bottom:12px}
+      .hiw-header{margin-bottom:36px}
+      .hiw-grid{gap:16px}
+      .hiw-step{padding:24px 20px}
+      .hiw-num{width:42px;height:42px;font-size:1rem;margin-bottom:16px}
+      .hiw-step h3{font-size:1rem}
+      .hiw-step p{font-size:0.84rem}
+      .calc-header{margin-bottom:32px}
+      .calc-inputs{padding:20px 16px;border-radius:var(--radius-lg)}
+      .input-group{margin-bottom:18px}
+      .input-group label{font-size:0.8rem;margin-bottom:6px}
+      .calc-input{padding:14px 14px 14px 40px;font-size:1rem}
+      .calc-micro{padding:10px 12px;font-size:0.75rem;margin-top:14px}
+      .result-card{padding:20px 16px;border-radius:var(--radius-lg)}
+      .result-value{font-size:1.5rem}
+      .result-sub{font-size:0.78rem}
+      .ampel-section{padding:20px 16px;border-radius:var(--radius-lg)}
+      .ampel-header{flex-direction:column;gap:12px}
+      .ampel-value{font-size:2rem}
+      .ampel-badge{font-size:0.78rem;padding:5px 12px}
+      .ampel-hint{font-size:0.8rem}
+      .lead-recovery{padding:14px 16px;font-size:0.84rem;margin-top:12px}
+      .lead-recovery strong{font-size:0.86rem}
+      .lead-recovery .lr-cta{padding:10px 18px;font-size:0.82rem;width:100%;justify-content:center;text-align:center}
+      .monthly-card{padding:20px 16px;border-radius:var(--radius-lg)}
+      .monthly-row{font-size:0.82rem;padding-bottom:8px}
+      .monthly-total-label{font-size:0.82rem}
+      .monthly-total-val{font-size:1.2rem}
+      .calc-cta-wrap{margin-top:20px}
+      .calc-disclaimer{font-size:0.72rem;margin-top:16px}
+      .trust-header{margin-bottom:36px}
+      .trust-grid{grid-template-columns:1fr;gap:14px}
+      .trust-card{padding:24px 20px;display:flex;gap:16px;align-items:flex-start}
+      .trust-icon{margin-bottom:0;flex-shrink:0;width:44px;height:44px;border-radius:12px}
+      .trust-icon svg{width:20px;height:20px}
+      .trust-card h3{font-size:0.95rem;margin-bottom:6px}
+      .trust-card p{font-size:0.84rem}
+      .testimonials-header{margin-bottom:32px}
+      .testimonial-grid{grid-template-columns:1fr;gap:14px}
+      .testimonial-card{padding:22px 18px}
+      .testimonial-stars{font-size:0.85rem;margin-bottom:10px}
+      .testimonial-text{font-size:0.86rem;margin-bottom:14px}
+      .testimonial-author{font-size:0.8rem}
+      .form-header{margin-bottom:24px}
+      .form-trust-badges{gap:12px;margin-top:12px}
+      .form-trust-badge{font-size:0.73rem}
+      .step-progress{margin-bottom:20px}
+      .form-card{padding:22px 16px;border-radius:var(--radius-lg)}
+      .step-title{font-size:1.1rem}
+      .step-sub{font-size:0.82rem;margin-bottom:20px}
+      .form-field{margin-bottom:14px}
+      .form-field label{font-size:0.8rem;margin-bottom:6px}
+      .form-input{padding:13px 14px;font-size:1rem}
+      .form-actions{margin-top:20px}
+      .btn-next,.btn-submit{padding:14px 20px;font-size:0.92rem}
+      .btn-back{padding:10px 12px;font-size:0.84rem}
+      .faq-header{margin-bottom:32px}
+      .faq-list{gap:10px}
+      .faq-question{padding:16px 16px;font-size:0.87rem;gap:12px}
+      .faq-question svg{width:16px;height:16px;flex-shrink:0}
+      .faq-answer p{padding:0 16px 16px;font-size:0.84rem}
+      .faq-item.open .faq-answer{max-height:300px}
+      footer{padding:32px 5%}
+      .footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
+      .footer-logo{font-size:1rem}
+      .footer-contacts{flex-direction:column;gap:12px}
+      .footer-contact{font-size:0.82rem}
+      .footer-powered{font-size:0.7rem}
+      .sticky-cta.show{display:block}
+      .sticky-cta{padding:10px 16px 12px;padding-bottom:max(12px,env(safe-area-inset-bottom))}
+      .sticky-cta .btn-primary{padding:13px;font-size:0.9rem;border-radius:var(--radius-md)}
+      .sticky-cta-sub{font-size:0.7rem;margin-top:4px}
+      .scroll-top.show{bottom:80px;right:16px}
+      .scroll-top{width:40px;height:40px;border-radius:10px}
+      .ty-title{font-size:1.35rem}
+      .ty-sub{font-size:0.9rem;margin:0 auto 24px}
+      .ty-steps{gap:12px;margin:0 auto 24px}
+      .ty-step{padding:12px 14px;gap:12px}
+      .ty-step-text{font-size:0.82rem}
+      .ty-contact{gap:10px}
+      .ty-contact-btn{padding:10px 16px;font-size:0.82rem;flex:1;justify-content:center}
+    }
+    /* ===== MOBILE 640px ===== */
+    @media(max-width:640px){
+      .nav-cta{display:none}
+      nav{padding:0 16px}
+      #hero{padding:90px 16px 48px}
+      section{padding:48px 16px}
+      .hero-trust-bar{gap:6px 12px}
+      .hero-trust-item{font-size:0.72rem}
+      h1{font-size:1.65rem}
+      .hero-sub{font-size:0.88rem}
+      .hero-stats{margin-top:28px;padding-top:20px}
+      .stat-num{font-size:1.2rem}
+      .stat-label{font-size:0.68rem}
+      .trust-card{padding:20px 16px;gap:14px}
+      .trust-card h3{font-size:0.9rem}
+      .trust-card p{font-size:0.82rem}
+      .form-card{padding:20px 14px}
+      footer{padding:28px 16px}
+      .footer-contacts{gap:10px}
+    }
+    /* ===== MOBILE 400px (small phones) ===== */
+    @media(max-width:400px){
+      h1{font-size:1.45rem;letter-spacing:-0.8px}
+      .hero-sub{font-size:0.84rem}
+      .btn-primary{padding:13px 18px;font-size:0.88rem}
+      .hero-trust-bar{gap:4px 10px}
+      .hero-trust-item{font-size:0.7rem}
+      .hero-stats{gap:0}
+      .stat-num{font-size:1.05rem}
+      .calc-inputs{padding:16px 14px}
+      .ampel-value{font-size:1.7rem}
+      .result-value{font-size:1.3rem}
+      .monthly-total-val{font-size:1.1rem}
+      .form-card{padding:18px 12px}
+      .faq-question{padding:14px 12px;font-size:0.84rem}
+      .faq-answer p{padding:0 12px 14px;font-size:0.82rem}
+    }
+    /* iOS input zoom prevention */
+    @media(max-width:768px){
+      input[type="number"],input[type="text"],input[type="email"],input[type="tel"],textarea,select{font-size:16px!important}
+    }
+    /* Safe area for notch phones */
+    @supports(padding:max(0px)){
+      nav{padding-left:max(4%,env(safe-area-inset-left));padding-right:max(4%,env(safe-area-inset-right))}
+      #hero,.sticky-cta{padding-left:max(5%,env(safe-area-inset-left));padding-right:max(5%,env(safe-area-inset-right))}
+      footer{padding-bottom:max(32px,env(safe-area-inset-bottom))}
+    }
+    /* Touch targets minimum 44px */
+    @media(pointer:coarse){
+      .faq-question{min-height:48px}
+      .lang-option{min-height:44px}
+      .btn-back{min-height:44px}
+      .btn-next,.btn-submit{min-height:48px}
+      .nav-cta{min-height:44px}
+      .footer-contact{min-height:44px}
+      .ty-contact-btn{min-height:44px}
+      .range-slider::-webkit-slider-thumb{width:28px;height:28px}
+      .range-slider::-moz-range-thumb{width:28px;height:28px}
+      .hamburger{min-height:44px;min-width:44px}
+    }
+    .nav-link{color:var(--text-light);font-size:0.88rem;font-weight:500;transition:var(--transition);padding:8px 14px;border-radius:8px}
+    .nav-link:hover{color:var(--white);background:rgba(255,255,255,0.06)}
+    @media(max-width:640px){.nav-link{display:none}}
+    /* Hamburger Menu */
+    .hamburger{display:none;cursor:pointer;width:40px;height:40px;align-items:center;justify-content:center;border-radius:8px;background:transparent;border:none;padding:0;z-index:101}
+    .hamburger span{display:block;width:20px;height:2px;background:var(--white);border-radius:2px;transition:var(--transition);position:relative}
+    .hamburger span::before,.hamburger span::after{content:'';position:absolute;width:20px;height:2px;background:var(--white);border-radius:2px;transition:var(--transition)}
+    .hamburger span::before{top:-6px}
+    .hamburger span::after{top:6px}
+    .hamburger.active span{background:transparent}
+    .hamburger.active span::before{top:0;transform:rotate(45deg)}
+    .hamburger.active span::after{top:0;transform:rotate(-45deg)}
+    @media(max-width:640px){.hamburger{display:flex}}
+    .mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(13,27,42,0.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:16px;z-index:99;flex-direction:column;gap:4px}
+    .mobile-menu.open{display:flex;animation:menu-slide 0.3s ease}
+    .mobile-menu a{display:block;padding:14px 16px;border-radius:8px;font-size:0.95rem;font-weight:500;color:var(--text-light);transition:var(--transition)}
+    .mobile-menu a:hover,.mobile-menu a:active{background:rgba(255,255,255,0.06);color:var(--white)}
+    .mobile-menu .mob-cta{background:var(--teal);color:var(--navy);font-weight:700;text-align:center;border-radius:9px;margin-top:4px}
+    .mobile-menu .mob-cta:hover{background:var(--teal-dark)}
+    @keyframes menu-slide{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+    #rates{background:var(--navy-mid);position:relative;overflow:hidden}
+    .rates-container{max-width:1100px;margin:0 auto}
+    .rates-header{text-align:center;margin-bottom:40px}
+    .rates-header .section-label{justify-content:center}.rates-header .section-label::before{display:none}
+    .rates-filter-bar{display:flex;gap:8px;justify-content:center;margin-bottom:32px;flex-wrap:wrap}
+    .rates-filter-btn{background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text-light);padding:8px 18px;border-radius:8px;font-size:0.82rem;font-weight:500;cursor:pointer;transition:var(--transition)}
+    .rates-filter-btn:hover{background:rgba(255,255,255,0.08);color:var(--white)}
+    .rates-filter-btn.active{background:var(--teal);color:var(--navy);border-color:var(--teal);font-weight:700}
+    .rates-table-wrap{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-xl);overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .rates-table{width:100%;border-collapse:collapse}
+    .rates-table thead{background:rgba(255,255,255,0.04)}
+    .rates-table th{text-align:left;padding:14px 20px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-body);border-bottom:1px solid var(--border)}
+    .rates-table th:last-child{text-align:right}
+    .rates-table td{padding:13px 20px;font-size:0.88rem;border-bottom:1px solid rgba(255,255,255,0.04);color:var(--white);transition:var(--transition)}
+    .rates-table td:last-child{text-align:right;font-family:var(--font-head);font-weight:700}
+    .rates-table tbody tr:hover{background:rgba(10,191,163,0.06)}
+    .rates-table .rate-rank{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;font-size:0.72rem;font-weight:700;margin-right:10px;flex-shrink:0}
+    .rates-table .rank-1{background:var(--teal);color:var(--navy)}
+    .rates-table .rank-2{background:rgba(10,191,163,0.2);color:var(--teal)}
+    .rates-table .rank-3{background:rgba(10,191,163,0.12);color:var(--teal)}
+    .rates-table .rank-other{background:rgba(255,255,255,0.06);color:var(--text-body)}
+    .rate-best{color:var(--teal)!important}
+    .rates-table .provider-cell{display:flex;align-items:center}
+    .rates-note{text-align:center;margin-top:20px;font-size:0.78rem;color:var(--text-body)}
+    .rates-more-btn{display:block;margin:0 auto;margin-top:16px;background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text-light);padding:10px 28px;border-radius:8px;font-size:0.85rem;font-weight:500;cursor:pointer;transition:var(--transition)}
+    .rates-more-btn:hover{background:rgba(255,255,255,0.1);color:var(--white)}
+    @media(max-width:600px){
+      .rates-table th,.rates-table td{padding:10px 12px;font-size:0.8rem}
+      .rates-table .rate-rank{width:22px;height:22px;font-size:0.65rem;margin-right:6px}
+    }
+  </style>
+</head>
+<body>
+<nav id="main-nav">
+  <a href="#" class="nav-logo"><div class="logo-dot"></div>DEINE<span class="accent">&nbsp;HYPO</span></a>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn" id="lang-toggle" aria-label="Sprache wechseln">
+        <span id="lang-current-flag">&#x1f1e9;&#x1f1ea;</span>
+        <span id="lang-current-label">DE</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <div class="lang-option active" data-lang="de"><span class="lang-flag">&#x1f1e9;&#x1f1ea;</span> Deutsch</div>
+        <div class="lang-option" data-lang="en"><span class="lang-flag">&#x1f1ec;&#x1f1e7;</span> English</div>
+        <div class="lang-option" data-lang="fr"><span class="lang-flag">&#x1f1eb;&#x1f1f7;</span> Fran&#xE7;ais</div>
+        <div class="lang-option" data-lang="it"><span class="lang-flag">&#x1f1ee;&#x1f1f9;</span> Italiano</div>
+        <div class="lang-option" data-lang="sq"><span class="lang-flag">&#x1f1e6;&#x1f1f1;</span> Shqip</div>
+        <div class="lang-option" data-lang="sr"><span class="lang-flag">&#x1f1f7;&#x1f1f8;</span> Srpski</div>
+        <div class="lang-option" data-lang="es"><span class="lang-flag">&#x1f1ea;&#x1f1f8;</span> Español</div>
+        <div class="lang-option" data-lang="tr"><span class="lang-flag">&#x1f1f9;&#x1f1f7;</span> Türkçe</div>
+        <div class="lang-option" data-lang="pt"><span class="lang-flag">&#x1f1f5;&#x1f1f9;</span> Português</div>
+        <div class="lang-option" data-lang="ru"><span class="lang-flag">&#x1f1f7;&#x1f1fa;</span> Русский</div>
+      </div>
+    </div>
+    <a href="zinsen.html" class="nav-link" data-i18n="nav_rates">Aktuelle Zinsen</a>
+    <a href="#calculator" class="nav-cta" data-i18n="nav_cta">Kostenlos berechnen</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="zinsen.html" data-i18n="nav_rates">Aktuelle Zinsen</a>
+  <a href="#calculator" class="mob-cta" data-i18n="nav_cta">Kostenlos berechnen</a>
+</div>
+
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-trust-bar">
+      <div class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="trust_free">Kostenlos</span></div>
+      <div class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="trust_nocommit">Unverbindlich</span></div>
+      <div class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="trust_nationwide">Schweizweit</span></div>
+      <div class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="trust_independent">Unabh&#xE4;ngig</span></div>
+    </div>
+    <h1 data-i18n-html="hero_title">In 2 Minuten zur<br/><span class="highlight">passenden Hypothek</span></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Wir vergleichen &#xFC;ber 40 Schweizer Banken und finden den besten Zins f&#xFC;r dich. Pers&#xF6;nlich begleitet, von der Berechnung bis zum Abschluss.</p>
+    <div class="hero-actions">
+      <a href="#calculator" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/><line x1="8" y1="6" x2="16" y2="6"/></svg>
+        <span data-i18n="hero_cta">Jetzt kostenlos berechnen</span>
+      </a>
+    </div>
+    <p class="hero-micro" data-i18n="hero_micro">Keine Registrierung n&#xF6;tig. Ergebnis in Sekunden.</p>
+    <a href="zinsen.html" class="hero-rates-link">
+      <span data-i18n="hero_rates_link">Aktuelle Zinsen vergleichen</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num">40+</div><div class="stat-label" data-i18n="stat_banks">Partnerbanken</div></div>
+      <div class="stat-item"><div class="stat-num">4.8&#x2605;</div><div class="stat-label" data-i18n="stat_rating">Kundenbewertung</div></div>
+      <div class="stat-item"><div class="stat-num">CHF 0</div><div class="stat-label" data-i18n="stat_cost">Kosten f&#xFC;r dich</div></div>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hero-card hero-card-main">
+      <div class="hc-label">Monatliche Rate</div>
+      <div class="hc-value teal">CHF 2&#x27;840</div>
+      <div class="hc-sub">inkl. Zins &amp; Amortisation</div>
+      <div class="hc-divider"></div>
+      <div class="hc-row"><span class="hc-row-label">Hypothek</span><span class="hc-row-val">CHF 640&#x27;000</span></div>
+      <div class="hc-row"><span class="hc-row-label">Belehnung</span><span class="hc-row-val">80%</span></div>
+      <div class="hc-row"><span class="hc-row-label">Tragbarkeit</span><span class="hc-row-val" style="color:var(--green)">28.4%</span></div>
+    </div>
+    <div class="hero-card hero-card-rate">
+      <div class="hc-label">Starthypothek</div>
+      <div class="hc-value gold">1.195%</div>
+      <div class="hc-sub">2 Jahre fest</div>
+    </div>
+    <div class="hero-card hero-card-savings">
+      <div class="hc-label">Ersparnis</div>
+      <div class="hc-value" style="color:var(--gold);font-size:1.3rem">CHF 4&#x27;200</div>
+      <div class="hc-sub">vs. Direktbank</div>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works">
+  <div class="container">
+    <div class="hiw-header reveal">
+      <div class="section-label" data-i18n="hiw_label">So funktioniert&#x27;s</div>
+      <h2 data-i18n="hiw_title">In 3 Schritten zum besten Zins</h2>
+      <p class="section-sub" style="margin:12px auto 0" data-i18n="hiw_sub">Kein Papierkram, keine versteckten Kosten. Du gibst deine Zahlen ein, wir erledigen den Rest.</p>
+    </div>
+    <div class="hiw-grid">
+      <div class="hiw-step reveal"><div class="hiw-num">1</div><h3 data-i18n="hiw_s1_title">Berechnen</h3><p data-i18n="hiw_s1_text">Gib Kaufpreis, Eigenkapital und Einkommen ein. Du siehst sofort, ob die Finanzierung tragbar ist.</p></div>
+      <div class="hiw-step reveal" style="transition-delay:0.1s"><div class="hiw-num">2</div><h3 data-i18n="hiw_s2_title">Vergleichen</h3><p data-i18n="hiw_s2_text">Wir pr&#xFC;fen &#xFC;ber 40 Banken und verhandeln aktiv den besten Zins f&#xFC;r deine Situation.</p></div>
+      <div class="hiw-step reveal" style="transition-delay:0.2s"><div class="hiw-num">3</div><h3 data-i18n="hiw_s3_title">Profitieren</h3><p data-i18n="hiw_s3_text">Du erh&#xE4;ltst konkrete Angebote und pers&#xF6;nliche Begleitung bis zum Abschluss.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="calculator">
+  <div class="calc-container">
+    <div class="calc-header reveal">
+      <div class="section-label" data-i18n="calc_label">Hypothekenrechner</div>
+      <h2 data-i18n="calc_title">Pr&#xFC;fe deine Finanzierung</h2>
+      <p class="section-sub" data-i18n="calc_sub">Drei Angaben reichen. Du siehst sofort, ob deine Wunschimmobilie finanzierbar ist.</p>
+    </div>
+    <div class="calc-grid">
+      <div class="calc-inputs reveal">
+        <div class="input-group">
+          <label data-i18n="calc_price">Kaufpreis der Immobilie</label>
+          <div class="input-wrap"><span class="input-prefix">CHF</span><input type="number" class="calc-input" id="kaufpreis" placeholder="800000" min="0" max="4000000" step="50000" value="800000"/></div>
+          <input type="range" class="range-slider" id="kaufpreis-range" min="0" max="4000000" step="50000" value="800000"/>
+          <div class="range-labels"><span>CHF 0</span><span>CHF 4'000'000</span></div>
+        </div>
+        <div class="input-group">
+          <label data-i18n="calc_equity">Eigenkapital</label>
+          <div class="input-wrap"><span class="input-prefix">CHF</span><input type="number" class="calc-input" id="eigenkapital" placeholder="160000" min="0" max="2000000" step="10000" value="160000"/></div>
+          <input type="range" class="range-slider" id="eigenkapital-range" min="0" max="2000000" step="10000" value="160000"/>
+          <div class="range-labels"><span>CHF 0</span><span>CHF 2'000'000</span></div>
+        </div>
+        <div class="input-group">
+          <label data-i18n="calc_income">Bruttojahreseinkommen (Haushalt)</label>
+          <div class="input-wrap"><span class="input-prefix">CHF</span><input type="number" class="calc-input" id="einkommen" placeholder="160000" min="0" max="1000000" step="5000" value="160000"/></div>
+          <input type="range" class="range-slider" id="einkommen-range" min="0" max="1000000" step="5000" value="160000"/>
+          <div class="range-labels"><span>CHF 0</span><span>CHF 1'000'000</span></div>
+        </div>
+        <div class="input-group">
+          <label data-i18n="calc_birthyear">Geburtsjahr</label>
+          <div class="input-wrap"><span class="input-prefix" style="font-size:0.82rem">&#x1F4C5;</span><input type="number" class="calc-input" id="geburtsjahr" placeholder="1990" min="1940" max="2026" value="1990"/></div>
+          <input type="range" class="range-slider" id="geburtsjahr-range" min="1940" max="2026" step="1" value="1990"/>
+        </div>
+        <div class="calc-micro">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span data-i18n="calc_privacy">Deine Daten werden verschl&#xFC;sselt &#xFC;bertragen und nicht an Dritte weitergegeben.</span>
+        </div>
+      </div>
+      <div class="calc-results reveal">
+        <div class="result-card result-main">
+          <div class="result-card-label" data-i18n="res_hypothek_label">Hypothek</div>
+          <div class="result-value" id="res-hypothek">CHF 640&#x27;000</div>
+          <div class="result-sub">Belehnung: <strong id="res-belehnung">80.0%</strong></div>
+        </div>
+        <div class="ampel-section">
+          <div class="ampel-header">
+            <div><div class="ampel-label" data-i18n="res_tragbarkeit_label">Tragbarkeit</div><div class="ampel-value neutral" id="res-tragbarkeit">&#x2013;</div></div>
+            <div class="ampel-badge neutral" id="ampel-badge">&#x2013;</div>
+          </div>
+          <div class="progress-bar-wrap"><div class="progress-bar-fill neutral" id="progress-fill" style="width:0%"></div></div>
+          <p class="ampel-hint" id="ampel-hint">Gib deine Angaben ein, um die Tragbarkeit zu berechnen.</p>
+          <div class="lead-recovery" id="lead-recovery"></div>
+        </div>
+        <div class="monthly-card">
+          <div class="result-card-label" style="margin-bottom:14px" data-i18n="res_yearly_label">J&#xE4;hrliche Kosten (kalkulatorisch)</div>
+          <div class="monthly-rows">
+            <div class="monthly-row"><span class="monthly-row-label" data-i18n="res_interest">Kalkulatorischer Zins (5%)</span><span class="monthly-row-val" id="row-zins">&#x2013;</span></div>
+            <div class="monthly-row"><span class="monthly-row-label" data-i18n="res_maintenance">Nebenkosten (1% Kaufpreis)</span><span class="monthly-row-val" id="row-unterhalt">&#x2013;</span></div>
+            <div class="monthly-row"><span class="monthly-row-label" id="row-amort-label">Amortisation (auf 65%, innert 15 J.)</span><span class="monthly-row-val" id="row-amort">&#x2013;</span></div>
+          </div>
+          <div class="monthly-total"><span class="monthly-total-label" data-i18n="res_monthly_label">Monatliche Kosten</span><span class="monthly-total-val" id="res-monthly">&#x2013;</span></div>
+        </div>
+        <div class="calc-cta-wrap">
+          <a href="#leadform" class="btn-primary" id="calc-cta-btn" style="width:100%;justify-content:center">
+            <svg width="18" height="18" viewBox="-1 -1 26 26" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .06h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+            <span id="calc-cta-text">Passende Angebote anfragen</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="calc-disclaimer" data-i18n="calc_disclaimer">* Kalkulatorische Berechnung nach Schweizer Bankstandard. Dient zur Orientierung.</p>
+  </div>
+</section>
+
+<section id="trust">
+  <div class="container">
+    <div class="trust-header reveal">
+      <div class="section-label" data-i18n="trust_label">Warum nicht direkt zur Bank?</div>
+      <h2 data-i18n-html="trust_title">Weil eine Bank dir nur ihr eigenes<br/>Produkt anbieten kann</h2>
+      <p class="section-sub" style="margin:12px auto 0" data-i18n="trust_sub">Wir vergleichen &#xFC;ber 50 Anbieter und verhandeln aktiv f&#xFC;r dich. So bekommst du den Zins, den du verdienst.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card reveal">
+        <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+        <h3 data-i18n="trust_c1_title">Unabh&#xE4;ngig, nicht an eine Bank gebunden</h3>
+        <p data-i18n="trust_c1_text">Dein Interesse steht im Mittelpunkt. Wir empfehlen dir die L&#xF6;sung, die wirklich zu deiner Situation passt.</p>
+      </div>
+      <div class="trust-card reveal" style="transition-delay:0.1s">
+        <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <h3 data-i18n="trust_c2_title">Bessere Zinsen durch Verhandlung</h3>
+        <p data-i18n="trust_c2_text">Durch den Wettbewerb unter den Banken erzielen wir Konditionen, die du alleine so nicht bekommst.</p>
+      </div>
+      <div class="trust-card reveal" style="transition-delay:0.2s">
+        <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3 data-i18n="trust_c3_title">Pers&#xF6;nliche Begleitung bis zum Abschluss</h3>
+        <p data-i18n="trust_c3_text">Ein fester Ansprechpartner begleitet dich durch den gesamten Prozess. Per Telefon, E-Mail oder vor Ort.</p>
+      </div>
+      <div class="trust-card reveal" style="transition-delay:0.3s">
+        <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3 data-i18n="trust_c4_title">Zeit sparen, statt selbst vergleichen</h3>
+        <p data-i18n="trust_c4_text">Kein Banktermin-Marathon. Wir holen alle Offerten ein und pr&#xE4;sentieren dir die besten Optionen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="container">
+    <div class="testimonials-header reveal">
+      <div class="section-label" data-i18n="testi_label">Das sagen unsere Kunden</div>
+      <h2 data-i18n="testi_title">&#xDC;ber 1&#x27;000 Finanzierungen begleitet</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+        <p class="testimonial-text">"Ich h&#xE4;tte nie gedacht, dass der Unterschied zwischen den Banken so gross ist. DEINE HYPO hat mir &#xFC;ber CHF 3&#x27;000 pro Jahr gespart."</p>
+        <div class="testimonial-author">Marco S.</div>
+        <div class="testimonial-role">Erstk&#xE4;ufer, Z&#xFC;rich</div>
+      </div>
+      <div class="testimonial-card reveal" style="transition-delay:0.1s">
+        <div class="testimonial-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+        <p class="testimonial-text">"Schnell, unkompliziert und sehr pers&#xF6;nlich. Innerhalb von 48 Stunden hatte ich drei konkrete Angebote auf dem Tisch."</p>
+        <div class="testimonial-author">Sarah &amp; Thomas K.</div>
+        <div class="testimonial-role">Eigenheimkauf, Bern</div>
+      </div>
+      <div class="testimonial-card reveal" style="transition-delay:0.2s">
+        <div class="testimonial-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+        <p class="testimonial-text">"Am Anfang war ich skeptisch, ob das wirklich kostenlos ist. Es war es. Und der Zins war besser als mein eigenes Bankangebot."</p>
+        <div class="testimonial-author">Luca M.</div>
+        <div class="testimonial-role">Refinanzierung, Basel</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="leadform">
+  <div class="form-container">
+    <div class="form-header reveal">
+      <div class="section-label" data-i18n="form_label">Kostenlos &amp; unverbindlich</div>
+      <h2 data-i18n-html="form_title">Sichere dir jetzt deinen<br/>pers&#xF6;nlichen Zinsvergleich</h2>
+      <p class="section-sub" style="margin:12px auto 0" data-i18n="form_sub">Drei kurze Schritte. Wir melden uns innerhalb von 24 Stunden mit passenden Angeboten.</p>
+      <div class="form-trust-badges">
+        <div class="form-trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="form_badge1">Daten verschl&#xFC;sselt</span></div>
+        <div class="form-trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="form_badge2">100% kostenlos</span></div>
+        <div class="form-trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg><span data-i18n="form_badge3">Keine Verpflichtung</span></div>
+      </div>
+    </div>
+    <div class="step-progress" id="step-progress">
+      <div class="step-bar active"></div><div class="step-bar"></div><div class="step-bar"></div>
+    </div>
+    <div class="form-card reveal" id="form-card">
+      <div class="form-step active" data-step="1">
+        <div class="step-title" data-i18n="form_s1_title">Deine Kontaktdaten</div>
+        <div class="step-sub" data-i18n="form_s1_sub">Damit wir dir dein pers&#xF6;nliches Angebot zusenden k&#xF6;nnen.</div>
+        <div class="form-row">
+          <div class="form-field"><label data-i18n="form_firstname">Vorname</label><input type="text" class="form-input" id="f-vorname" placeholder="Max" autocomplete="given-name"/></div>
+          <div class="form-field"><label data-i18n="form_lastname">Nachname</label><input type="text" class="form-input" id="f-nachname" placeholder="Mustermann" autocomplete="family-name"/></div>
+        </div>
+        <div class="form-field"><label data-i18n="form_email">E-Mail</label><input type="email" class="form-input" id="f-email" placeholder="max.mustermann@email.ch" autocomplete="email"/></div>
+        <div class="form-actions"><div></div><button class="btn-next" onclick="nextStep()">Weiter &#x2192;</button></div>
+      </div>
+      <div class="form-step" data-step="2">
+        <div class="step-title" data-i18n="form_s2_title">Erreichbarkeit</div>
+        <div class="step-sub" data-i18n="form_s2_sub">F&#xFC;r eine kurze telefonische Erstberatung. Dauert nur wenige Minuten.</div>
+        <div class="form-field"><label data-i18n="form_phone">Telefon</label><input type="tel" class="form-input" id="f-telefon" placeholder="+41 79 123 45 67" autocomplete="tel"/></div>
+        <div class="form-row">
+          <div class="form-field"><label data-i18n="form_zip">PLZ</label><input type="text" class="form-input" id="f-plz" placeholder="8001" maxlength="6" autocomplete="postal-code"/></div>
+          <div class="form-field"><label data-i18n="form_city">Ort</label><input type="text" class="form-input" id="f-ort" placeholder="Z&#xFC;rich" autocomplete="address-level2"/></div>
+        </div>
+        <div class="form-actions">
+          <button class="btn-back" onclick="prevStep()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Zur&#xFC;ck</button>
+          <button class="btn-next" onclick="nextStep()">Weiter &#x2192;</button>
+        </div>
+      </div>
+      <div class="form-step" data-step="3">
+        <div class="step-title" data-i18n-html="form_s3_title">Angaben zur Immobilie <span class="optional-badge">Optional</span></div>
+        <div class="step-sub" data-i18n="form_s3_sub">Falls du schon eine Immobilie im Auge hast. Ansonsten einfach leer lassen.</div>
+        <div class="form-row">
+          <div class="form-field"><label>Kaufpreis (CHF)</label><input type="number" class="form-input" id="f-kaufpreis" placeholder="800000" min="0" step="10000"/></div>
+          <div class="form-field"><label>Eigenkapital (CHF)</label><input type="number" class="form-input" id="f-eigenkapital" placeholder="160000" min="0" step="10000"/></div>
+        </div>
+        <div class="form-field"><label>Bemerkungen <span class="optional-badge">Optional</span></label><textarea class="form-input" id="f-bemerkungen" placeholder="z.B. gew&#xFC;nschte Region, Zeitrahmen, besondere W&#xFC;nsche..." rows="3" style="resize:vertical"></textarea></div>
+        <div class="form-actions">
+          <button class="btn-back" onclick="prevStep()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Zur&#xFC;ck</button>
+          <button class="btn-submit" onclick="submitForm()" id="submit-btn" data-i18n="form_submit">Kostenlos Angebote erhalten</button>
+        </div>
+      </div>
+      <form id="hidden-form" action="https://formspree.io/f/mnjljago" method="POST" style="display:none">
+        <input type="hidden" name="vorname" id="hf-vorname"/><input type="hidden" name="nachname" id="hf-nachname"/>
+        <input type="hidden" name="email" id="hf-email"/><input type="hidden" name="telefon" id="hf-telefon"/>
+        <input type="hidden" name="plz" id="hf-plz"/><input type="hidden" name="ort" id="hf-ort"/>
+        <input type="hidden" name="kaufpreis" id="hf-kaufpreis"/><input type="hidden" name="eigenkapital" id="hf-eigenkapital"/>
+        <input type="hidden" name="bemerkungen" id="hf-bemerkungen"/>
+      </form>
+    </div>
+    <div id="thank-you">
+      <div class="ty-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <h2 class="ty-title">Deine Anfrage ist bei uns eingegangen</h2>
+      <p class="ty-sub">Wir analysieren jetzt deine Situation und melden uns mit konkreten Angeboten bei dir.</p>
+      <div class="ty-steps">
+        <div class="ty-step"><div class="ty-step-num">1</div><div class="ty-step-text"><strong>Analyse</strong>Wir pr&#xFC;fen deine Angaben und vergleichen passende Bankangebote.</div></div>
+        <div class="ty-step"><div class="ty-step-num">2</div><div class="ty-step-text"><strong>R&#xFC;ckruf innerhalb von 24 Stunden</strong>Ein pers&#xF6;nlicher Berater meldet sich bei dir, um offene Fragen zu kl&#xE4;ren.</div></div>
+        <div class="ty-step"><div class="ty-step-num">3</div><div class="ty-step-text"><strong>Konkrete Angebote</strong>Du erh&#xE4;ltst die besten Konditionen und entscheidest in Ruhe.</div></div>
+      </div>
+      <div class="ty-contact">
+        <a href="tel:+41432169729" class="ty-contact-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .06h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>Jetzt anrufen</a>
+        <a href="https://wa.me/41432169729" target="_blank" rel="noopener" class="ty-contact-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="faq-header reveal">
+      <div class="section-label" data-i18n="faq_label">H&#xE4;ufige Fragen</div>
+      <h2 data-i18n="faq_title">Noch unsicher? Hier die Antworten.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)">Ist der Service wirklich kostenlos?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-answer"><p>Ja, f&#xFC;r dich ist der gesamte Service kostenlos. Wir werden von den Banken verg&#xFC;tet, mit denen wir zusammenarbeiten. Dir entstehen keine Kosten.</p></div></div>
+      <div class="faq-item reveal" style="transition-delay:0.05s"><div class="faq-question" onclick="toggleFaq(this)">Ist meine Anfrage unverbindlich?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-answer"><p>Absolut. Du gehst keine Verpflichtung ein. Wir pr&#xE4;sentieren dir Angebote und du entscheidest, ob und mit welcher Bank du weiter gehen m&#xF6;chtest.</p></div></div>
+      <div class="faq-item reveal" style="transition-delay:0.1s"><div class="faq-question" onclick="toggleFaq(this)">Was passiert mit meinen Daten?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-answer"><p>Deine Daten werden verschl&#xFC;sselt &#xFC;bertragen und ausschliesslich f&#xFC;r die Erstellung deines Angebots verwendet. Wir geben sie nicht an Dritte weiter und verarbeiten sie nach Schweizer Datenschutzstandards.</p></div></div>
+      <div class="faq-item reveal" style="transition-delay:0.15s"><div class="faq-question" onclick="toggleFaq(this)">Wie schnell bekomme ich eine Antwort?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-answer"><p>In der Regel melden wir uns innerhalb von 24 Stunden telefonisch bei dir. Konkrete Bankofferten erh&#xE4;ltst du meist innerhalb weniger Tage.</p></div></div>
+      <div class="faq-item reveal" style="transition-delay:0.2s"><div class="faq-question" onclick="toggleFaq(this)">Warum bekomme ich hier bessere Zinsen als bei meiner Bank?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-answer"><p>Weil Banken im Wettbewerb stehen, wenn sie wissen, dass andere Anbieter ebenfalls ein Angebot machen. Diesen Verhandlungsvorteil nutzen wir f&#xFC;r dich.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">DEINE<span>&nbsp;HYPO</span></div>
+    <div class="footer-contacts">
+      <a href="tel:+41432169729" class="footer-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .06h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>+41 43 216 97 29</a>
+      <a href="mailto:info@deinehypo.ch" class="footer-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@deinehypo.ch</a>
+    </div>
+    <div class="footer-powered">powered by <span>Finsion</span></div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky-cta">
+  <a href="#leadform" class="btn-primary" data-i18n="sticky_cta">Jetzt kostenlos Angebote erhalten</a>
+  <div class="sticky-cta-sub" data-i18n="sticky_sub">Kostenlos &amp; unverbindlich</div>
+</div>
+
+<button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Nach oben">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+function fmt(n){if(isNaN(n)||n===null)return"-";return"CHF "+Math.round(n).toLocaleString("de-CH")}
+function fmtPct(n){if(isNaN(n)||n===null)return"-";return n.toFixed(1)+"%"}
+function recalculate(){
+  var kp=parseFloat(document.getElementById("kaufpreis").value)||0;
+  var ek=parseFloat(document.getElementById("eigenkapital").value)||0;
+  var ei=parseFloat(document.getElementById("einkommen").value)||0;
+  var gj=parseInt(document.getElementById("geburtsjahr").value)||0;
+  var currentYear=new Date().getFullYear(),alter=gj>0?currentYear-gj:0;
+  var jahresBis65=alter>0?Math.max(1,65-alter):15;
+  var amortJahre=Math.min(15,jahresBis65);
+  var hyp=Math.max(0,kp-ek),bel=kp>0?(hyp/kp)*100:0;
+  var zJ=hyp*0.05,uJ=kp*0.01,aB=Math.max(0,hyp-kp*0.65),aJ=aB>0?aB/amortJahre:0;
+  document.getElementById("row-amort-label").textContent=(i18n[currentLang]||i18n.de).amort_label.replace("{n}",amortJahre);
+  var gJ=zJ+uJ+aJ,mo=gJ/12,tr=ei>0?(gJ/ei)*100:null;
+  document.getElementById("res-hypothek").textContent=kp>0?fmt(hyp):"-";
+  document.getElementById("res-belehnung").textContent=kp>0?fmtPct(bel):"-";
+  document.getElementById("row-zins").textContent=kp>0?fmt(zJ):"-";
+  document.getElementById("row-unterhalt").textContent=kp>0?fmt(uJ):"-";
+  document.getElementById("row-amort").textContent=kp>0?fmt(aJ):"-";
+  document.getElementById("res-monthly").textContent=kp>0?fmt(mo):"-";
+  var tE=document.getElementById("res-tragbarkeit"),ba=document.getElementById("ampel-badge"),fi=document.getElementById("progress-fill"),hi=document.getElementById("ampel-hint"),rc=document.getElementById("lead-recovery"),ct=document.getElementById("calc-cta-text");
+  var T=(i18n[currentLang]||i18n.de);
+  if(gj>0&&alter<18){tE.textContent="-";tE.className="ampel-value neutral";ba.textContent="-";ba.className="ampel-badge neutral";fi.style.width="0%";fi.className="progress-bar-fill neutral";hi.textContent=T.hint_underage;rc.className="lead-recovery red-box show";rc.innerHTML='<strong>'+T.hint_underage+'</strong>';ct.textContent=T.cta_default;return}
+  if(tr===null||kp===0){tE.textContent="-";tE.className="ampel-value neutral";ba.textContent="-";ba.className="ampel-badge neutral";fi.style.width="0%";fi.className="progress-bar-fill neutral";hi.textContent=T.hint_default;rc.className="lead-recovery";rc.innerHTML="";ct.textContent=T.cta_default;return}
+  tE.textContent=fmtPct(tr);fi.style.width=Math.min(100,(tr/50)*100)+"%";
+  var co,bt,ht;
+  if(tr<=33.33){co="green";bt=T.tragbar;ht=T.hint_green;rc.className="lead-recovery green-box show";rc.innerHTML='<strong>'+T.hint_green+'</strong><a href="#leadform" class="lr-cta">'+T.cta_green+' \u2192</a>';ct.textContent=T.cta_green}
+  else if(tr<=38){co="orange";bt=T.knapp_tragbar;ht=T.hint_orange;rc.className="lead-recovery orange-box show";rc.innerHTML='<strong>'+T.hint_orange+'</strong><a href="#leadform" class="lr-cta">'+T.cta_orange+' \u2192</a>';ct.textContent=T.cta_orange}
+  else{co="red";bt=T.ueber_richtwert;ht=T.hint_red;rc.className="lead-recovery red-box show";rc.innerHTML='<strong>'+T.hint_red+'</strong><a href="#leadform" class="lr-cta">'+T.cta_red+' \u2192</a>';ct.textContent=T.cta_red}
+  tE.className="ampel-value "+co;ba.textContent=bt;ba.className="ampel-badge "+co;fi.className="progress-bar-fill "+co;hi.textContent=ht
+}
+["kaufpreis","eigenkapital","einkommen","geburtsjahr"].forEach(function(id){
+  var inp=document.getElementById(id);
+  var slider=document.getElementById(id+"-range");
+  inp.addEventListener("input",function(){slider.value=inp.value;recalculate()});
+  slider.addEventListener("input",function(){inp.value=slider.value;recalculate()});
+});
+document.addEventListener("DOMContentLoaded",recalculate);
+
+var ratesExpanded=false;
+function toggleMoreRates(){
+  ratesExpanded=!ratesExpanded;
+  document.querySelectorAll(".rates-extra").forEach(function(r){r.style.display=ratesExpanded?"":"none"});
+  var T=(i18n[currentLang]||i18n.de);
+  document.getElementById("rates-more-btn").textContent=ratesExpanded?(T.rates_show_less||"Weniger anzeigen"):(T.rates_show_more||"Alle 42 Anbieter anzeigen");
+}
+
+var TOTAL_STEPS=3,currentStep=1;
+function updateProgress(){document.querySelectorAll(".step-bar").forEach(function(b,i){b.className="step-bar";if(i+1===currentStep)b.classList.add("active");if(i+1<currentStep)b.classList.add("done")})}
+function showStep(s){document.querySelectorAll(".form-step").forEach(function(el){el.classList.remove("active")});var t=document.querySelector('.form-step[data-step="'+s+'"]');if(t)t.classList.add("active");currentStep=s;updateProgress()}
+function nextStep(){if(currentStep<TOTAL_STEPS)showStep(currentStep+1)}
+function prevStep(){if(currentStep>1)showStep(currentStep-1)}
+
+async function submitForm(){
+  var btn=document.getElementById("submit-btn");btn.disabled=true;btn.textContent="Wird gesendet...";
+  document.getElementById("hf-vorname").value=document.getElementById("f-vorname").value;
+  document.getElementById("hf-nachname").value=document.getElementById("f-nachname").value;
+  document.getElementById("hf-email").value=document.getElementById("f-email").value;
+  document.getElementById("hf-telefon").value=document.getElementById("f-telefon").value;
+  document.getElementById("hf-plz").value=document.getElementById("f-plz").value;
+  document.getElementById("hf-ort").value=document.getElementById("f-ort").value;
+  document.getElementById("hf-kaufpreis").value=document.getElementById("f-kaufpreis").value;
+  document.getElementById("hf-eigenkapital").value=document.getElementById("f-eigenkapital").value;
+  document.getElementById("hf-bemerkungen").value=document.getElementById("f-bemerkungen").value;
+  var form=document.getElementById("hidden-form"),fd=new FormData(form);
+  try{await fetch(form.action,{method:"POST",body:fd,headers:{"Accept":"application/json"}});showThankYou()}catch(e){showThankYou()}
+}
+function showThankYou(){document.getElementById("step-progress").style.display="none";document.getElementById("form-card").style.display="none";document.getElementById("thank-you").classList.add("show")}
+function toggleFaq(el){el.closest(".faq-item").classList.toggle("open")}
+
+window.addEventListener("scroll",function(){
+  document.getElementById("main-nav").classList.toggle("scrolled",window.scrollY>50);
+  document.getElementById("scroll-top").classList.toggle("show",window.scrollY>400);
+  var hb=document.getElementById("hero").getBoundingClientRect().bottom;
+  var ft=document.getElementById("leadform").getBoundingClientRect().top;
+  var st=document.getElementById("sticky-cta");
+  if(hb<0&&ft>window.innerHeight*0.5){st.classList.add("show")}else{st.classList.remove("show")}
+});
+var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");ro.unobserve(e.target)}})},{threshold:0.1,rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".reveal").forEach(function(el){ro.observe(el)});
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener("click",function(e){var t=document.querySelector(a.getAttribute("href"));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-80,behavior:"smooth"})}})});
+var lt=document.getElementById("lang-toggle"),ld=document.getElementById("lang-dropdown");
+lt.addEventListener("click",function(e){e.stopPropagation();lt.classList.toggle("open");ld.classList.toggle("open")});
+document.addEventListener("click",function(){lt.classList.remove("open");ld.classList.remove("open")});
+/* Hamburger menu */
+var hm=document.getElementById("hamburger"),mm=document.getElementById("mobile-menu");
+hm.addEventListener("click",function(e){e.stopPropagation();hm.classList.toggle("active");mm.classList.toggle("open")});
+mm.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){hm.classList.remove("active");mm.classList.remove("open")})});
+document.addEventListener("click",function(e){if(!mm.contains(e.target)&&!hm.contains(e.target)){hm.classList.remove("active");mm.classList.remove("open")}});
+
+var i18n={
+de:{hero_rates_link:"Aktuelle Zinsen vergleichen",hint_underage:"Du musst mindestens 18 Jahre alt sein, um eine Hypothek abzuschliessen. Die Tragbarkeit kann daher nicht berechnet werden.",nav_cta:"Kostenlos berechnen",trust_free:"Kostenlos",trust_nocommit:"Unverbindlich",trust_nationwide:"Schweizweit",trust_independent:"Unabhängig",hero_title:'In 2 Minuten zur<br/><span class="highlight">passenden Hypothek</span>',hero_sub:"Wir vergleichen über 40 Schweizer Banken und finden den besten Zins für dich. Persönlich begleitet, von der Berechnung bis zum Abschluss.",hero_cta:"Jetzt kostenlos berechnen",hero_micro:"Keine Registrierung nötig. Ergebnis in Sekunden.",stat_banks:"Partnerbanken",stat_rating:"Kundenbewertung",stat_cost:"Kosten für dich",hiw_label:"So funktioniert's",hiw_title:"In 3 Schritten zum besten Zins",hiw_sub:"Kein Papierkram, keine versteckten Kosten. Du gibst deine Zahlen ein, wir erledigen den Rest.",hiw_s1_title:"Berechnen",hiw_s1_text:"Gib Kaufpreis, Eigenkapital und Einkommen ein. Du siehst sofort, ob die Finanzierung tragbar ist.",hiw_s2_title:"Vergleichen",hiw_s2_text:"Wir prüfen über 40 Banken und verhandeln aktiv den besten Zins für deine Situation.",hiw_s3_title:"Profitieren",hiw_s3_text:"Du erhältst konkrete Angebote und persönliche Begleitung bis zum Abschluss.",calc_label:"Hypothekenrechner",calc_title:"Prüfe deine Finanzierung",calc_sub:"Drei Angaben reichen. Du siehst sofort, ob deine Wunschimmobilie finanzierbar ist.",calc_price:"Kaufpreis der Immobilie",calc_equity:"Eigenkapital",calc_income:"Bruttojahreseinkommen (Haushalt)",calc_birthyear:"Geburtsjahr",calc_privacy:"Deine Daten werden verschlüsselt übertragen und nicht an Dritte weitergegeben.",res_hypothek_label:"Hypothek",res_tragbarkeit_label:"Tragbarkeit",res_yearly_label:"Jährliche Kosten (kalkulatorisch)",res_interest:"Kalkulatorischer Zins (5%)",res_maintenance:"Nebenkosten (1% Kaufpreis)",res_monthly_label:"Monatliche Kosten",calc_disclaimer:"* Kalkulatorische Berechnung nach Schweizer Bankstandard. Dient zur Orientierung.",trust_label:"Warum nicht direkt zur Bank?",trust_title:'Weil eine Bank dir nur ihr eigenes<br/>Produkt anbieten kann',trust_sub:"Wir vergleichen über 40 Anbieter und verhandeln aktiv für dich. So bekommst du den Zins, den du verdienst.",trust_c1_title:"Unabhängig, nicht an eine Bank gebunden",trust_c1_text:"Dein Interesse steht im Mittelpunkt. Wir empfehlen dir die Lösung, die wirklich zu deiner Situation passt.",trust_c2_title:"Bessere Zinsen durch Verhandlung",trust_c2_text:"Durch den Wettbewerb unter den Banken erzielen wir Konditionen, die du alleine so nicht bekommst.",trust_c3_title:"Persönliche Begleitung bis zum Abschluss",trust_c3_text:"Ein fester Ansprechpartner begleitet dich durch den gesamten Prozess. Per Telefon, E-Mail oder vor Ort.",trust_c4_title:"Zeit sparen, statt selbst vergleichen",trust_c4_text:"Kein Banktermin-Marathon. Wir holen alle Offerten ein und präsentieren dir die besten Optionen.",testi_label:"Das sagen unsere Kunden",testi_title:"Über 1'000 Finanzierungen begleitet",form_label:"Kostenlos & unverbindlich",form_title:'Sichere dir jetzt deinen<br/>persönlichen Zinsvergleich',form_sub:"Drei kurze Schritte. Wir melden uns innerhalb von 24 Stunden mit passenden Angeboten.",form_badge1:"Daten verschlüsselt",form_badge2:"100% kostenlos",form_badge3:"Keine Verpflichtung",form_s1_title:"Deine Kontaktdaten",form_s1_sub:"Damit wir dir dein persönliches Angebot zusenden können.",form_firstname:"Vorname",form_lastname:"Nachname",form_email:"E-Mail",form_s2_title:"Erreichbarkeit",form_s2_sub:"Für eine kurze telefonische Erstberatung. Dauert nur wenige Minuten.",form_phone:"Telefon",form_zip:"PLZ",form_city:"Ort",form_s3_title:'Angaben zur Immobilie <span class="optional-badge">Optional</span>',form_s3_sub:"Falls du schon eine Immobilie im Auge hast. Ansonsten einfach leer lassen.",form_submit:"Kostenlos Angebote erhalten",faq_label:"Häufige Fragen",faq_title:"Noch unsicher? Hier die Antworten.",sticky_cta:"Jetzt kostenlos Angebote erhalten",sticky_sub:"Kostenlos & unverbindlich",tragbar:"Tragbar",knapp_tragbar:"Knapp tragbar",ueber_richtwert:"Über Richtwert",hint_default:"Gib deine Angaben ein, um die Tragbarkeit zu berechnen.",hint_green:"Deine Finanzierung ist gut tragbar und entspricht den Bankrichtlinien.",hint_orange:"Deine Finanzierung liegt im Grenzbereich. Es gibt Banken, die flexibler rechnen als andere.",hint_red:"Die kalkulatorische Belastung liegt über dem Richtwert der meisten Banken.",cta_default:"Passende Angebote anfragen",cta_green:"Jetzt besten Zins sichern",cta_orange:"Finanzierung prüfen lassen",cta_red:"Trotzdem Optionen prüfen",amort_label:"Amortisation (auf 65%, innert {n} J.)",nav_rates:"Aktuelle Zinsen",rates_label:"Zinsvergleich",rates_title:"Aktuelle Hypothekarzinsen Schweiz",rates_sub:"Festhypothek 10 Jahre, publizierte Zinssätze der wichtigsten Anbieter. Stand: April 2026.",rates_th_rank:"#",rates_th_provider:"Anbieter",rates_th_rate:"Zins p.a.",rates_show_more:"Alle 42 Anbieter anzeigen",rates_show_less:"Weniger anzeigen",rates_note:"* Publizierte Richtzinsen. Dein persönlicher Zins kann durch Verhandlung tiefer ausfallen.",rates_cta:"Jetzt individuellen Zins anfragen"},
+en:{hero_rates_link:"Compare current rates",hint_underage:"You must be at least 18 years old to take out a mortgage. Affordability cannot be calculated.",nav_cta:"Calculate for free",trust_free:"Free",trust_nocommit:"Non-binding",trust_nationwide:"Nationwide",trust_independent:"Independent",hero_title:'Get the right mortgage<br/><span class="highlight">in just 2 minutes</span>',hero_sub:"We compare over 40 Swiss banks and find the best rate for you. Personally guided, from calculation to closing.",hero_cta:"Calculate for free now",hero_micro:"No registration needed. Results in seconds.",stat_banks:"Partner banks",stat_rating:"Customer rating",stat_cost:"Cost to you",hiw_label:"How it works",hiw_title:"Best rate in 3 steps",hiw_sub:"No paperwork, no hidden fees. Enter your numbers, we handle the rest.",hiw_s1_title:"Calculate",hiw_s1_text:"Enter purchase price, equity and income. See instantly if the financing is affordable.",hiw_s2_title:"Compare",hiw_s2_text:"We check over 40 banks and actively negotiate the best rate for your situation.",hiw_s3_title:"Benefit",hiw_s3_text:"You receive concrete offers and personal guidance until closing.",calc_label:"Mortgage calculator",calc_title:"Check your financing",calc_sub:"Three inputs are enough. See immediately if your dream property is financeable.",calc_price:"Property purchase price",calc_equity:"Equity",calc_income:"Gross annual income (household)",calc_birthyear:"Year of birth",calc_privacy:"Your data is encrypted and not shared with third parties.",res_hypothek_label:"Mortgage",res_tragbarkeit_label:"Affordability",res_yearly_label:"Annual costs (imputed)",res_interest:"Imputed interest (5%)",res_maintenance:"Maintenance (1% purchase price)",res_monthly_label:"Monthly costs",calc_disclaimer:"* Imputed calculation per Swiss banking standards. For orientation only.",trust_label:"Why not go directly to a bank?",trust_title:'Because a bank can only offer you<br/>its own product',trust_sub:"We compare over 40 providers and actively negotiate for you. So you get the rate you deserve.",trust_c1_title:"Independent, not tied to any bank",trust_c1_text:"Your interest comes first. We recommend the solution that truly fits your situation.",trust_c2_title:"Better rates through negotiation",trust_c2_text:"Competition among banks allows us to achieve conditions you wouldn't get on your own.",trust_c3_title:"Personal guidance until closing",trust_c3_text:"A dedicated advisor guides you through the entire process. By phone, email or in person.",trust_c4_title:"Save time instead of comparing yourself",trust_c4_text:"No bank appointment marathon. We collect all offers and present the best options.",testi_label:"What our clients say",testi_title:"Over 1'000 financings guided",form_label:"Free & non-binding",form_title:'Get your personal<br/>rate comparison now',form_sub:"Three short steps. We'll get back to you within 24 hours with matching offers.",form_badge1:"Data encrypted",form_badge2:"100% free",form_badge3:"No obligation",form_s1_title:"Your contact details",form_s1_sub:"So we can send you your personal offer.",form_firstname:"First name",form_lastname:"Last name",form_email:"Email",form_s2_title:"Reachability",form_s2_sub:"For a brief initial phone consultation. Takes just a few minutes.",form_phone:"Phone",form_zip:"ZIP",form_city:"City",form_s3_title:'Property details <span class="optional-badge">Optional</span>',form_s3_sub:"If you already have a property in mind. Otherwise leave empty.",form_submit:"Get free offers",faq_label:"FAQ",faq_title:"Still unsure? Here are the answers.",sticky_cta:"Get free offers now",sticky_sub:"Free & non-binding",tragbar:"Affordable",knapp_tragbar:"Borderline",ueber_richtwert:"Above guideline",hint_default:"Enter your details to check affordability.",hint_green:"Your financing is well affordable and meets banking guidelines.",hint_orange:"Your financing is borderline. Some banks calculate more flexibly.",hint_red:"The imputed burden exceeds the guideline of most banks.",cta_default:"Request matching offers",cta_green:"Secure best rate now",cta_orange:"Have financing checked",cta_red:"Check options anyway",amort_label:"Amortization (to 65%, within {n} yrs)",nav_rates:"Current rates",rates_label:"Rate comparison",rates_title:"Current Swiss mortgage rates",rates_sub:"Fixed-rate mortgage 10 years, published rates of major providers. As of April 2026.",rates_th_rank:"#",rates_th_provider:"Provider",rates_th_rate:"Rate p.a.",rates_show_more:"Show all 42 providers",rates_show_less:"Show less",rates_note:"* Published indicative rates. Your personal rate may be lower through negotiation.",rates_cta:"Request your individual rate"},
+fr:{hero_rates_link:"Comparer les taux actuels",hint_underage:"Vous devez avoir au moins 18 ans pour contracter une hypothèque. La supportabilité ne peut donc pas être calculée.",nav_cta:"Calculer gratuitement",trust_free:"Gratuit",trust_nocommit:"Sans engagement",trust_nationwide:"Toute la Suisse",trust_independent:"Indépendant",hero_title:'Trouvez votre hypothèque<br/><span class="highlight">en 2 minutes</span>',hero_sub:"Nous comparons plus de 40 banques suisses et trouvons le meilleur taux pour vous. Accompagnement personnel, du calcul à la conclusion.",hero_cta:"Calculer gratuitement",hero_micro:"Aucune inscription nécessaire. Résultat en quelques secondes.",stat_banks:"Banques partenaires",stat_rating:"Évaluation clients",stat_cost:"Coût pour vous",hiw_label:"Comment ça marche",hiw_title:"Le meilleur taux en 3 étapes",hiw_sub:"Pas de paperasse, pas de frais cachés. Entrez vos chiffres, nous faisons le reste.",hiw_s1_title:"Calculer",hiw_s1_text:"Entrez le prix d'achat, les fonds propres et le revenu. Voyez immédiatement si le financement est supportable.",hiw_s2_title:"Comparer",hiw_s2_text:"Nous vérifions plus de 40 banques et négocions activement le meilleur taux pour votre situation.",hiw_s3_title:"Profiter",hiw_s3_text:"Vous recevez des offres concrètes et un accompagnement personnel jusqu'à la conclusion.",calc_label:"Calculateur hypothécaire",calc_title:"Vérifiez votre financement",calc_sub:"Trois indications suffisent. Voyez immédiatement si votre bien immobilier est finançable.",calc_price:"Prix d'achat du bien",calc_equity:"Fonds propres",calc_income:"Revenu annuel brut (ménage)",calc_birthyear:"Année de naissance",calc_privacy:"Vos données sont cryptées et ne sont pas transmises à des tiers.",res_hypothek_label:"Hypothèque",res_tragbarkeit_label:"Supportabilité",res_yearly_label:"Coûts annuels (calculatoires)",res_interest:"Intérêts calculatoires (5%)",res_maintenance:"Charges (1% prix d'achat)",res_monthly_label:"Coûts mensuels",calc_disclaimer:"* Calcul théorique selon les standards bancaires suisses. À titre indicatif.",trust_label:"Pourquoi ne pas aller directement à la banque?",trust_title:'Parce qu\'une banque ne peut vous proposer<br/>que son propre produit',trust_sub:"Nous comparons plus de 40 prestataires et négocions activement pour vous.",trust_c1_title:"Indépendant, non lié à une banque",trust_c1_text:"Votre intérêt est au centre. Nous recommandons la solution qui correspond vraiment à votre situation.",trust_c2_title:"De meilleurs taux grâce à la négociation",trust_c2_text:"La concurrence entre les banques nous permet d'obtenir des conditions que vous n'obtiendriez pas seul.",trust_c3_title:"Accompagnement personnel jusqu'à la conclusion",trust_c3_text:"Un interlocuteur dédié vous accompagne tout au long du processus.",trust_c4_title:"Gagnez du temps au lieu de comparer vous-même",trust_c4_text:"Pas de marathon de rendez-vous bancaires. Nous collectons toutes les offres et présentons les meilleures options.",testi_label:"Ce que disent nos clients",testi_title:"Plus de 1'000 financements accompagnés",form_label:"Gratuit et sans engagement",form_title:'Obtenez votre comparaison<br/>de taux personnalisée',form_sub:"Trois étapes courtes. Nous vous recontactons dans les 24 heures avec des offres adaptées.",form_badge1:"Données cryptées",form_badge2:"100% gratuit",form_badge3:"Aucune obligation",form_s1_title:"Vos coordonnées",form_s1_sub:"Pour que nous puissions vous envoyer votre offre personnalisée.",form_firstname:"Prénom",form_lastname:"Nom",form_email:"E-mail",form_s2_title:"Disponibilité",form_s2_sub:"Pour un bref entretien téléphonique initial. Ne prend que quelques minutes.",form_phone:"Téléphone",form_zip:"NPA",form_city:"Localité",form_s3_title:'Détails du bien <span class="optional-badge">Optionnel</span>',form_s3_sub:"Si vous avez déjà un bien en vue. Sinon, laissez vide.",form_submit:"Obtenir des offres gratuites",faq_label:"Questions fréquentes",faq_title:"Encore des doutes? Voici les réponses.",sticky_cta:"Obtenir des offres gratuites",sticky_sub:"Gratuit et sans engagement",tragbar:"Supportable",knapp_tragbar:"Limite",ueber_richtwert:"Au-dessus du seuil",hint_default:"Entrez vos données pour vérifier la supportabilité.",hint_green:"Votre financement est bien supportable et conforme aux directives bancaires.",hint_orange:"Votre financement est à la limite. Certaines banques calculent de manière plus flexible.",hint_red:"La charge calculatoire dépasse le seuil de la plupart des banques.",cta_default:"Demander des offres",cta_green:"Obtenir le meilleur taux",cta_orange:"Faire vérifier le financement",cta_red:"Vérifier les options quand même",amort_label:"Amortissement (à 65%, en {n} ans)",nav_rates:"Taux actuels",rates_label:"Comparaison des taux",rates_title:"Taux hypothécaires actuels en Suisse",rates_sub:"Hypothèque fixe 10 ans, taux publiés des principaux prestataires. État: avril 2026.",rates_th_rank:"#",rates_th_provider:"Prestataire",rates_th_rate:"Taux p.a.",rates_show_more:"Afficher les 42 prestataires",rates_show_less:"Afficher moins",rates_note:"* Taux indicatifs publiés. Votre taux personnel peut être inférieur grâce à la négociation.",rates_cta:"Demander votre taux individuel"},
+it:{hero_rates_link:"Confronta i tassi attuali",hint_underage:"Devi avere almeno 18 anni per sottoscrivere un'ipoteca. La sostenibilità non può quindi essere calcolata.",nav_cta:"Calcola gratis",trust_free:"Gratuito",trust_nocommit:"Senza impegno",trust_nationwide:"In tutta la Svizzera",trust_independent:"Indipendente",hero_title:'Trova la tua ipoteca<br/><span class="highlight">in 2 minuti</span>',hero_sub:"Confrontiamo oltre 40 banche svizzere e troviamo il miglior tasso per te. Accompagnamento personale, dal calcolo alla conclusione.",hero_cta:"Calcola gratis ora",hero_micro:"Nessuna registrazione necessaria. Risultato in pochi secondi.",stat_banks:"Banche partner",stat_rating:"Valutazione clienti",stat_cost:"Costo per te",hiw_label:"Come funziona",hiw_title:"Il miglior tasso in 3 passi",hiw_sub:"Niente burocrazia, nessun costo nascosto. Inserisci i tuoi dati, noi facciamo il resto.",hiw_s1_title:"Calcola",hiw_s1_text:"Inserisci prezzo d'acquisto, capitale proprio e reddito. Vedi subito se il finanziamento è sostenibile.",hiw_s2_title:"Confronta",hiw_s2_text:"Verifichiamo oltre 40 banche e negoziamo attivamente il miglior tasso per la tua situazione.",hiw_s3_title:"Approfitta",hiw_s3_text:"Ricevi offerte concrete e accompagnamento personale fino alla conclusione.",calc_label:"Calcolatore ipotecario",calc_title:"Verifica il tuo finanziamento",calc_sub:"Bastano tre indicazioni. Vedi subito se il tuo immobile è finanziabile.",calc_price:"Prezzo d'acquisto dell'immobile",calc_equity:"Capitale proprio",calc_income:"Reddito annuo lordo (nucleo familiare)",calc_birthyear:"Anno di nascita",calc_privacy:"I tuoi dati vengono trasmessi in modo criptato e non condivisi con terzi.",res_hypothek_label:"Ipoteca",res_tragbarkeit_label:"Sostenibilità",res_yearly_label:"Costi annuali (calcolatori)",res_interest:"Interessi calcolatori (5%)",res_maintenance:"Spese accessorie (1% prezzo d'acquisto)",res_monthly_label:"Costi mensili",calc_disclaimer:"* Calcolo teorico secondo gli standard bancari svizzeri. A titolo indicativo.",trust_label:"Perché non andare direttamente in banca?",trust_title:'Perché una banca può offrirti<br/>solo il proprio prodotto',trust_sub:"Confrontiamo oltre 40 fornitori e negoziamo attivamente per te.",trust_c1_title:"Indipendente, non legato a nessuna banca",trust_c1_text:"Il tuo interesse è al centro. Raccomandiamo la soluzione che davvero si adatta alla tua situazione.",trust_c2_title:"Tassi migliori grazie alla negoziazione",trust_c2_text:"La concorrenza tra le banche ci permette di ottenere condizioni che da solo non otterresti.",trust_c3_title:"Accompagnamento personale fino alla conclusione",trust_c3_text:"Un consulente dedicato ti accompagna durante l'intero processo.",trust_c4_title:"Risparmia tempo invece di confrontare da solo",trust_c4_text:"Niente maratona di appuntamenti bancari. Raccogliamo tutte le offerte e presentiamo le migliori opzioni.",testi_label:"Cosa dicono i nostri clienti",testi_title:"Oltre 1'000 finanziamenti accompagnati",form_label:"Gratuito e senza impegno",form_title:'Ottieni il tuo confronto<br/>tassi personalizzato',form_sub:"Tre brevi passi. Ti ricontattiamo entro 24 ore con offerte adatte.",form_badge1:"Dati criptati",form_badge2:"100% gratuito",form_badge3:"Nessun obbligo",form_s1_title:"I tuoi dati di contatto",form_s1_sub:"Per poterti inviare la tua offerta personalizzata.",form_firstname:"Nome",form_lastname:"Cognome",form_email:"E-mail",form_s2_title:"Reperibilità",form_s2_sub:"Per una breve consulenza telefonica iniziale. Dura solo pochi minuti.",form_phone:"Telefono",form_zip:"CAP",form_city:"Località",form_s3_title:'Dettagli immobile <span class="optional-badge">Opzionale</span>',form_s3_sub:"Se hai già un immobile in mente. Altrimenti lascia vuoto.",form_submit:"Ottieni offerte gratuite",faq_label:"Domande frequenti",faq_title:"Ancora dubbi? Ecco le risposte.",sticky_cta:"Ottieni offerte gratuite ora",sticky_sub:"Gratuito e senza impegno",tragbar:"Sostenibile",knapp_tragbar:"Al limite",ueber_richtwert:"Sopra il valore indicativo",hint_default:"Inserisci i tuoi dati per verificare la sostenibilità.",hint_green:"Il tuo finanziamento è ben sostenibile e conforme alle direttive bancarie.",hint_orange:"Il tuo finanziamento è al limite. Alcune banche calcolano in modo più flessibile.",hint_red:"L'onere calcolatorio supera il valore indicativo della maggior parte delle banche.",cta_default:"Richiedi offerte",cta_green:"Ottieni il miglior tasso",cta_orange:"Fai verificare il finanziamento",cta_red:"Verifica comunque le opzioni",amort_label:"Ammortamento (al 65%, entro {n} anni)",nav_rates:"Tassi attuali",rates_label:"Confronto tassi",rates_title:"Tassi ipotecari attuali in Svizzera",rates_sub:"Ipoteca fissa 10 anni, tassi pubblicati dei principali fornitori. Stato: aprile 2026.",rates_th_rank:"#",rates_th_provider:"Fornitore",rates_th_rate:"Tasso p.a.",rates_show_more:"Mostra tutti i 42 fornitori",rates_show_less:"Mostra meno",rates_note:"* Tassi indicativi pubblicati. Il tuo tasso personale può essere inferiore grazie alla negoziazione.",rates_cta:"Richiedi il tuo tasso individuale"},
+sq:{hero_rates_link:"Krahaso normat aktuale",hint_underage:"Duhet të jesh të paktën 18 vjeç për të marrë një hipotekë. Përballueshmëria nuk mund të llogaritet.",nav_cta:"Llogarit falas",trust_free:"Falas",trust_nocommit:"Pa detyrim",trust_nationwide:"Në mbarë Zvicërën",trust_independent:"I pavarur",hero_title:'Gjej hipotekën e duhur<br/><span class="highlight">brenda 2 minutash</span>',hero_sub:"Krahasojmë mbi 40 banka zvicerane dhe gjejmë normën më të mirë për ty. Shoqërim personal, nga llogaritja deri në përfundim.",hero_cta:"Llogarit falas tani",hero_micro:"Nuk nevojitet regjistrim. Rezultati brenda sekondash.",stat_banks:"Banka partnere",stat_rating:"Vlerësimi i klientëve",stat_cost:"Kostoja për ty",hiw_label:"Si funksionon",hiw_title:"Norma më e mirë në 3 hapa",hiw_sub:"Pa burokraci, pa kosto të fshehura. Fut numrat e tu, ne bëjmë pjesën tjetër.",hiw_s1_title:"Llogarit",hiw_s1_text:"Fut çmimin e blerjes, kapitalin dhe të ardhurat. Shiko menjëherë nëse financimi është i përballueshëm.",hiw_s2_title:"Krahaso",hiw_s2_text:"Kontrollojmë mbi 40 banka dhe negociojmë aktivisht normën më të mirë për situatën tënde.",hiw_s3_title:"Përfito",hiw_s3_text:"Merr oferta konkrete dhe shoqërim personal deri në përfundim.",calc_label:"Llogaritësi i hipotekës",calc_title:"Kontrollo financimin tënd",calc_sub:"Tre të dhëna mjaftojnë. Shiko menjëherë nëse prona e ëndrrave është e financueshme.",calc_price:"Çmimi i blerjes së pronës",calc_equity:"Kapitali vetanak",calc_income:"Të ardhurat vjetore bruto (familja)",calc_birthyear:"Viti i lindjes",calc_privacy:"Të dhënat tuaja transmetohen të koduara dhe nuk ndahen me palë të treta.",res_hypothek_label:"Hipoteka",res_tragbarkeit_label:"Përballueshmëria",res_yearly_label:"Kostot vjetore (kalkulative)",res_interest:"Interesi kalkulator (5%)",res_maintenance:"Shpenzimet anësore (1% çmimi blerjes)",res_monthly_label:"Kostot mujore",calc_disclaimer:"* Llogaritje kalkulatore sipas standardeve bankare zvicerane. Vetëm për orientim.",trust_label:"Pse jo direkt te banka?",trust_title:'Sepse një bankë mund të ofrojë vetëm<br/>produktin e vet',trust_sub:"Ne krahasojmë mbi 40 ofrues dhe negociojmë aktivisht për ty.",trust_c1_title:"I pavarur, i pa lidhur me asnjë bankë",trust_c1_text:"Interesi yt është në qendër. Rekomandojmë zgjidhjen që vërtet i përshtatet situatës sate.",trust_c2_title:"Norma më të mira përmes negociatave",trust_c2_text:"Konkurrenca ndërmjet bankave na lejon të arrijmë kushte që vetëm nuk i merr.",trust_c3_title:"Shoqërim personal deri në përfundim",trust_c3_text:"Një konsulent i dedikuar të shoqëron gjatë gjithë procesit.",trust_c4_title:"Kurse kohë, në vend se të krahasosh vetë",trust_c4_text:"Pa maratonë takimesh bankare. Mbledhim të gjitha ofertat dhe paraqesim opsionet më të mira.",testi_label:"Çfarë thonë klientët tanë",testi_title:"Mbi 1'000 financime të shoqëruara",form_label:"Falas dhe pa detyrim",form_title:'Merr krahasimin tënd<br/>personal të normave',form_sub:"Tre hapa të shkurtër. Kthehemi brenda 24 orësh me oferta të përshtatshme.",form_badge1:"Të dhënat të koduara",form_badge2:"100% falas",form_badge3:"Asnjë detyrim",form_s1_title:"Të dhënat e kontaktit",form_s1_sub:"Që të mund të dërgojmë ofertën tënde personale.",form_firstname:"Emri",form_lastname:"Mbiemri",form_email:"E-mail",form_s2_title:"Disponueshmëria",form_s2_sub:"Për një konsultim të shkurtër fillestar telefonik. Zgjat vetëm pak minuta.",form_phone:"Telefoni",form_zip:"Kodi postar",form_city:"Vendndodhja",form_s3_title:'Detajet e pronës <span class="optional-badge">Opsionale</span>',form_s3_sub:"Nëse ke tashmë një pronë në mendje. Përndryshe lëre bosh.",form_submit:"Merr oferta falas",faq_label:"Pyetje të shpeshta",faq_title:"Ende i pasigurt? Ja përgjigjet.",sticky_cta:"Merr oferta falas tani",sticky_sub:"Falas dhe pa detyrim",tragbar:"I përballueshëm",knapp_tragbar:"Në kufi",ueber_richtwert:"Mbi vlerën orientuese",hint_default:"Fut të dhënat për të kontrolluar përballueshmërinë.",hint_green:"Financimi yt është mirë i përballueshëm dhe përputhet me direktivat bankare.",hint_orange:"Financimi yt ndodhet në kufi. Disa banka llogarisin më fleksibël.",hint_red:"Ngarkesa kalkulatore tejkalon vlerën orientuese të shumicës së bankave.",cta_default:"Kërko oferta të përshtatshme",cta_green:"Siguro normën më të mirë",cta_orange:"Lër financimin të kontrollohet",cta_red:"Kontrollo opsionet sidoqoftë",amort_label:"Amortizimi (në 65%, brenda {n} vjetësh)",nav_rates:"Normat aktuale",rates_label:"Krahasimi i normave",rates_title:"Normat aktuale hipotekare në Zvicër",rates_sub:"Hipotekë fikse 10 vjet, normat e publikuara të ofruesve kryesorë. Gjendja: prill 2026.",rates_th_rank:"#",rates_th_provider:"Ofruesi",rates_th_rate:"Norma p.a.",rates_show_more:"Shfaq të gjithë 42 ofruesit",rates_show_less:"Shfaq më pak",rates_note:"* Norma orientuese të publikuara. Norma jote personale mund të jetë më e ulët përmes negociatave.",rates_cta:"Kërko normën tënde individuale"},
+sr:{hero_rates_link:"Uporedite trenutne kamate",hint_underage:"Morate imati najmanje 18 godina za hipoteku. Podnoššljivost se ne može izračunati.",nav_cta:"Besplatno izračunaj",trust_free:"Besplatno",trust_nocommit:"Neobavezujuće",trust_nationwide:"Širom Švajcarske",trust_independent:"Nezavisno",hero_title:'Pronađi pravu hipoteku<br/><span class="highlight">za 2 minuta</span>',hero_sub:"Poredimo više od 40 švajcarskih banaka i pronalazimo najbolju kamatnu stopu za tebe. Lično praćenje, od kalkulacije do zaključenja.",hero_cta:"Besplatno izračunaj sada",hero_micro:"Nije potrebna registracija. Rezultat za nekoliko sekundi.",stat_banks:"Partnerske banke",stat_rating:"Ocena klijenata",stat_cost:"Troškovi za tebe",hiw_label:"Kako funkcioniše",hiw_title:"Najbolja stopa u 3 koraka",hiw_sub:"Bez papirenja, bez skrivenih troškova. Unesi svoje brojeve, mi uradimo ostalo.",hiw_s1_title:"Izračunaj",hiw_s1_text:"Unesi kupovnu cenu, kapital i prihode. Odmah vidi da li je finansiranje podnošljivo.",hiw_s2_title:"Uporedi",hiw_s2_text:"Proveravamo više od 40 banaka i aktivno pregovaramo najbolju stopu za tvoju situaciju.",hiw_s3_title:"Profitraj",hiw_s3_text:"Dobijaš konkretne ponude i lično praćenje do zaključenja.",calc_label:"Hipotekarni kalkulator",calc_title:"Proveri svoje finansiranje",calc_sub:"Tri podatka su dovoljna. Odmah vidi da li je tvoja nekretnina finansivljiva.",calc_price:"Kupovna cena nekretnine",calc_equity:"Sopstveni kapital",calc_income:"Bruto godišnji prihod (domaćinstvo)",calc_birthyear:"Godina rođenja",calc_privacy:"Tvoji podaci se prenose šifrovano i ne dele se sa trećim stranama.",res_hypothek_label:"Hipoteka",res_tragbarkeit_label:"Podnošljivost",res_yearly_label:"Godišnji troškovi (kalkulatorski)",res_interest:"Kalkulatorska kamata (5%)",res_maintenance:"Sporedni troškovi (1% kupovne cene)",res_monthly_label:"Mesečni troškovi",calc_disclaimer:"* Kalkulatorski proračun prema švajcarskim bankarskim standardima. Samo za orijentaciju.",trust_label:"Zašto ne direktno u banku?",trust_title:'Jer ti banka može ponuditi<br/>samo svoj proizvod',trust_sub:"Mi poredimo više od 40 pružalaca usluga i aktivno pregovaramo za tebe.",trust_c1_title:"Nezavisni, vezani ni za jednu banku",trust_c1_text:"Tvoj interes je u centru. Preporučujemo rešenje koje zaista odgovara tvojoj situaciji.",trust_c2_title:"Bolje stope kroz pregovaranje",trust_c2_text:"Konkurencija među bankama nam omogućava da postignemo uslove koje sam ne bi dobio.",trust_c3_title:"Lično praćenje do zaključenja",trust_c3_text:"Posvećeni savetnik te prati kroz ceo proces.",trust_c4_title:"Uštedi vreme umesto da sam porediš",trust_c4_text:"Bez maratona bankarskih termina. Prikupljamo sve ponude i predstavljamo najbolje opcije.",testi_label:"Šta kažu naši klijenti",testi_title:"Preko 1.000 finansiranja praćeno",form_label:"Besplatno i neobavezujuće",form_title:'Dobij svoje lično<br/>poređenje stopa',form_sub:"Tri kratka koraka. Javimo se u roku od 24 sata sa odgovarajućim ponudama.",form_badge1:"Podaci šifrovani",form_badge2:"100% besplatno",form_badge3:"Bez obaveza",form_s1_title:"Tvoji kontakt podaci",form_s1_sub:"Da bismo ti mogli poslati tvoju ličnu ponudu.",form_firstname:"Ime",form_lastname:"Prezime",form_email:"E-mail",form_s2_title:"Dostupnost",form_s2_sub:"Za kratak telefonski uvodni razgovor. Traje samo par minuta.",form_phone:"Telefon",form_zip:"Poštanski broj",form_city:"Mesto",form_s3_title:'Podaci o nekretnini <span class="optional-badge">Opciono</span>',form_s3_sub:"Ako već imaš nekretninu na umu. Inače ostavi prazno.",form_submit:"Dobij besplatne ponude",faq_label:"Česta pitanja",faq_title:"Još nisi siguran? Evo odgovora.",sticky_cta:"Dobij besplatne ponude sada",sticky_sub:"Besplatno i neobavezujuće",tragbar:"Podnošljivo",knapp_tragbar:"Na granici",ueber_richtwert:"Iznad smernice",hint_default:"Unesi podatke za proveru podnošljivosti.",hint_green:"Tvoje finansiranje je dobro podnošljivo i odgovara bankarskim smernicama.",hint_orange:"Tvoje finansiranje je na granici. Neke banke računaju fleksibilnije.",hint_red:"Kalkulatorno opterećenje premašuje smernice većine banaka.",cta_default:"Zatraži odgovarajuće ponude",cta_green:"Osiguraj najbolju stopu",cta_orange:"Proveri finansiranje",cta_red:"Ipak proveri opcije",amort_label:"Amortizacija (na 65%, u roku od {n} god.)",nav_rates:"Aktuelne stope",rates_label:"Poređenje stopa",rates_title:"Aktuelne hipotekarne stope u Švajcarskoj",rates_sub:"Fiksna hipoteka 10 godina, objavljene stope glavnih pružalaca. Stanje: april 2026.",rates_th_rank:"#",rates_th_provider:"Pružalac",rates_th_rate:"Stopa p.a.",rates_show_more:"Prikaži svih 42 pružalaca",rates_show_less:"Prikaži manje",rates_note:"* Objavljene indikativne stope. Tvoja lična stopa može biti niža kroz pregovaranje.",rates_cta:"Zatraži svoju individualnu stopu"},
+es:{hero_rates_link:"Comparar tasas actuales",hint_underage:"Debes tener al menos 18 años para contratar una hipoteca. La sostenibilidad no puede calcularse.",nav_cta:"Calcular gratis",trust_free:"Gratis",trust_nocommit:"Sin compromiso",trust_nationwide:"En toda Suiza",trust_independent:"Independiente",hero_title:'Encuentra tu hipoteca<br/><span class="highlight">en 2 minutos</span>',hero_sub:"Comparamos más de 40 bancos suizos y encontramos la mejor tasa para ti. Acompañamiento personal, desde el cálculo hasta el cierre.",hero_cta:"Calcular gratis ahora",hero_micro:"No necesitas registrarte. Resultado en segundos.",stat_banks:"Bancos asociados",stat_rating:"Valoración de clientes",stat_cost:"Costo para ti",hiw_label:"Cómo funciona",hiw_title:"La mejor tasa en 3 pasos",hiw_sub:"Sin papeleo, sin costos ocultos. Ingresa tus datos, nosotros nos encargamos del resto.",hiw_s1_title:"Calcular",hiw_s1_text:"Ingresa precio de compra, capital propio e ingresos. Ve inmediatamente si la financiación es sostenible.",hiw_s2_title:"Comparar",hiw_s2_text:"Revisamos más de 40 bancos y negociamos activamente la mejor tasa para tu situación.",hiw_s3_title:"Beneficiarse",hiw_s3_text:"Recibes ofertas concretas y acompañamiento personal hasta el cierre.",calc_label:"Calculadora hipotecaria",calc_title:"Verifica tu financiación",calc_sub:"Tres datos bastan. Ve inmediatamente si tu propiedad soñada es financiable.",calc_price:"Precio de compra del inmueble",calc_equity:"Capital propio",calc_income:"Ingreso bruto anual (hogar)",calc_birthyear:"Año de nacimiento",calc_privacy:"Tus datos se transmiten cifrados y no se comparten con terceros.",res_hypothek_label:"Hipoteca",res_tragbarkeit_label:"Sostenibilidad",res_yearly_label:"Costos anuales (calculatorios)",res_interest:"Interés calculatorio (5%)",res_maintenance:"Gastos secundarios (1% precio de compra)",res_monthly_label:"Costos mensuales",calc_disclaimer:"* Cálculo teórico según estándares bancarios suizos. Solo orientativo.",trust_label:"¿Por qué no ir directamente al banco?",trust_title:'Porque un banco solo puede ofrecerte<br/>su propio producto',trust_sub:"Comparamos más de 40 proveedores y negociamos activamente por ti.",trust_c1_title:"Independiente, sin ataduras a ningún banco",trust_c1_text:"Tu interés es lo primero. Recomendamos la solución que realmente se adapta a tu situación.",trust_c2_title:"Mejores tasas mediante negociación",trust_c2_text:"La competencia entre bancos nos permite lograr condiciones que solo no obtendrías.",trust_c3_title:"Acompañamiento personal hasta el cierre",trust_c3_text:"Un asesor dedicado te acompaña durante todo el proceso.",trust_c4_title:"Ahorra tiempo en vez de comparar tú mismo",trust_c4_text:"Sin maratón de citas bancarias. Recopilamos todas las ofertas y presentamos las mejores opciones.",testi_label:"Lo que dicen nuestros clientes",testi_title:"Más de 1.000 financiaciones acompañadas",form_label:"Gratis y sin compromiso",form_title:'Obtén tu comparación<br/>de tasas personal',form_sub:"Tres pasos cortos. Te contactamos en 24 horas con ofertas adecuadas.",form_badge1:"Datos cifrados",form_badge2:"100% gratis",form_badge3:"Sin obligación",form_s1_title:"Tus datos de contacto",form_s1_sub:"Para poder enviarte tu oferta personalizada.",form_firstname:"Nombre",form_lastname:"Apellido",form_email:"E-mail",form_s2_title:"Disponibilidad",form_s2_sub:"Para una breve consulta telefónica inicial. Solo toma unos minutos.",form_phone:"Teléfono",form_zip:"Código postal",form_city:"Ciudad",form_s3_title:'Datos del inmueble <span class="optional-badge">Opcional</span>',form_s3_sub:"Si ya tienes una propiedad en mente. De lo contrario, déjalo vacío.",form_submit:"Obtener ofertas gratis",faq_label:"Preguntas frecuentes",faq_title:"¿Aún no estás seguro? Aquí las respuestas.",sticky_cta:"Obtener ofertas gratis ahora",sticky_sub:"Gratis y sin compromiso",tragbar:"Sostenible",knapp_tragbar:"Al límite",ueber_richtwert:"Sobre el valor de referencia",hint_default:"Ingresa tus datos para verificar la sostenibilidad.",hint_green:"Tu financiación es bien sostenible y cumple con las directrices bancarias.",hint_orange:"Tu financiación está al límite. Algunos bancos calculan de forma más flexible.",hint_red:"La carga calculatoria supera el valor de referencia de la mayoría de los bancos.",cta_default:"Solicitar ofertas",cta_green:"Asegura la mejor tasa",cta_orange:"Verificar la financiación",cta_red:"Verificar opciones de todos modos",amort_label:"Amortización (al 65%, en {n} años)",nav_rates:"Tasas actuales",rates_label:"Comparación de tasas",rates_title:"Tasas hipotecarias actuales en Suiza",rates_sub:"Hipoteca fija 10 años, tasas publicadas de los principales proveedores. Estado: abril 2026.",rates_th_rank:"#",rates_th_provider:"Proveedor",rates_th_rate:"Tasa p.a.",rates_show_more:"Mostrar los 42 proveedores",rates_show_less:"Mostrar menos",rates_note:"* Tasas indicativas publicadas. Tu tasa personal puede ser más baja a través de la negociación.",rates_cta:"Solicita tu tasa individual"},
+tr:{hero_rates_link:"Güncel faizleri karşılaştır",hint_underage:"Bir ipotek almak için en az 18 yaşında olmalısın. Karşılanabilirlik hesaplanamaz.",nav_cta:"Ücretsiz hesapla",trust_free:"Ücretsiz",trust_nocommit:"Bağlayıcı değil",trust_nationwide:"Tüm İsviçre",trust_independent:"Bağımsız",hero_title:'Doğru ipoteği<br/><span class="highlight">2 dakikada bul</span>',hero_sub:"40'dan fazla İsviçre bankasını karşılaştırıyor ve senin için en iyi faiz oranını buluyoruz. Hesaplamadan kapanışa kadar kişisel eşlik.",hero_cta:"Şimdi ücretsiz hesapla",hero_micro:"Kayıt gerekmiyor. Sonuç saniyeler içinde.",stat_banks:"Partner bankalar",stat_rating:"Müşteri değerlendirmesi",stat_cost:"Senin için maliyet",hiw_label:"Nasıl çalışır",hiw_title:"3 adımda en iyi oran",hiw_sub:"Evrak yok, gizli maliyet yok. Rakamlarını gir, gerisini biz halledelim.",hiw_s1_title:"Hesapla",hiw_s1_text:"Alış fiyatını, öz sermayeyi ve geliri gir. Finansmanın karşılanabilir olup olmadığını hemen gör.",hiw_s2_title:"Karşılaştır",hiw_s2_text:"40'dan fazla bankayı kontrol ediyor ve durumun için en iyi oranı aktif olarak müzakere ediyoruz.",hiw_s3_title:"Faydalan",hiw_s3_text:"Somut teklifler ve kapanışa kadar kişisel eşlik alırsın.",calc_label:"İpotek hesaplayıcı",calc_title:"Finansmanını kontrol et",calc_sub:"Üç bilgi yeterli. Hayalindeki mülkün finanse edilebilir olup olmadığını hemen gör.",calc_price:"Mülk alış fiyatı",calc_equity:"Öz sermaye",calc_income:"Brüt yıllık gelir (hane)",calc_birthyear:"Doğum yılı",calc_privacy:"Verilerin şifreli aktarılır ve üçüncü taraflarla paylaşılmaz.",res_hypothek_label:"İpotek",res_tragbarkeit_label:"Karşılanabilirlik",res_yearly_label:"Yıllık maliyetler (hesaplama)",res_interest:"Hesaplama faizi (%5)",res_maintenance:"Yan giderler (alış fiyatının %1'i)",res_monthly_label:"Aylık maliyetler",calc_disclaimer:"* İsviçre banka standartlarına göre teorik hesaplama. Sadece yönlendirme amaçlıdır.",trust_label:"Neden doğrudan bankaya gitmiyorsun?",trust_title:'Çünkü bir banka sana sadece<br/>kendi ürününü sunabilir',trust_sub:"40'dan fazla sağlayıcıyı karşılaştırıyor ve senin için aktif müzakere ediyoruz.",trust_c1_title:"Bağımsız, hiçbir bankaya bağlı değil",trust_c1_text:"Senin çıkarın merkezde. Durumuna gerçekten uyan çözümü öneriyoruz.",trust_c2_title:"Müzakere ile daha iyi oranlar",trust_c2_text:"Bankalar arasındaki rekabet, tek başına elde edemeyeceğin koşulları sağlamamıza olanak tanır.",trust_c3_title:"Kapanışa kadar kişisel eşlik",trust_c3_text:"Özel bir danışman tüm süreç boyunca sana eşlik eder.",trust_c4_title:"Kendin karşılaştırmak yerine zaman kazan",trust_c4_text:"Banka randevu maratonu yok. Tüm teklifleri topluyor ve en iyi seçenekleri sunuyoruz.",testi_label:"Müşterilerimiz ne diyor",testi_title:"1.000'den fazla finansman eşlik edildi",form_label:"Ücretsiz ve bağlayıcı değil",form_title:'Kişisel oran<br/>karşılaştırmanı al',form_sub:"Üç kısa adım. 24 saat içinde uygun tekliflerle dönüş yapıyoruz.",form_badge1:"Veriler şifreli",form_badge2:"%100 ücretsiz",form_badge3:"Zorunluluk yok",form_s1_title:"İletişim bilgilerin",form_s1_sub:"Kişisel teklifini gönderebilmemiz için.",form_firstname:"Ad",form_lastname:"Soyad",form_email:"E-posta",form_s2_title:"Ulaşılabilirlik",form_s2_sub:"Kısa bir ilk telefon görüşmesi için. Sadece birkaç dakika sürer.",form_phone:"Telefon",form_zip:"Posta kodu",form_city:"Şehir",form_s3_title:'Mülk detayları <span class="optional-badge">İsteğe bağlı</span>',form_s3_sub:"Zaten bir mülk düşünüyorsan. Yoksa boş bırak.",form_submit:"Ücretsiz teklif al",faq_label:"Sık sorulan sorular",faq_title:"Hâlâ emin değil misin? İşte yanıtlar.",sticky_cta:"Şimdi ücretsiz teklif al",sticky_sub:"Ücretsiz ve bağlayıcı değil",tragbar:"Karşılanabilir",knapp_tragbar:"Sınırda",ueber_richtwert:"Referans değerin üstünde",hint_default:"Karşılanabilirliği kontrol etmek için verilerini gir.",hint_green:"Finansmanın iyi karşılanabilir ve banka yönergelerine uygun.",hint_orange:"Finansmanın sınır bölgede. Bazı bankalar daha esnek hesaplıyor.",hint_red:"Hesaplama yükü çoğu bankanın referans değerini aşıyor.",cta_default:"Uygun teklifleri iste",cta_green:"En iyi oranı güvence altına al",cta_orange:"Finansmanı kontrol ettir",cta_red:"Yine de seçenekleri kontrol et",amort_label:"Amortisman (%65'e, {n} yıl içinde)",nav_rates:"Güncel oranlar",rates_label:"Oran karşılaştırması",rates_title:"Güncel İsviçre ipotek oranları",rates_sub:"Sabit ipotek 10 yıl, önemli sağlayıcıların yayınlanmış oranları. Durum: Nisan 2026.",rates_th_rank:"#",rates_th_provider:"Sağlayıcı",rates_th_rate:"Oran p.a.",rates_show_more:"Tüm 42 sağlayıcıyı göster",rates_show_less:"Daha az göster",rates_note:"* Yayınlanmış gösterge oranları. Kişisel oranın müzakere ile daha düşük olabilir.",rates_cta:"Bireysel oranını iste"},
+pt:{hero_rates_link:"Comparar taxas atuais",hint_underage:"Deve ter pelo menos 18 anos para contratar uma hipoteca. A suportabilidade não pode ser calculada.",nav_cta:"Calcular grátis",trust_free:"Grátis",trust_nocommit:"Sem compromisso",trust_nationwide:"Em toda a Suíça",trust_independent:"Independente",hero_title:'Encontre a hipoteca certa<br/><span class="highlight">em 2 minutos</span>',hero_sub:"Comparamos mais de 40 bancos suíços e encontramos a melhor taxa para si. Acompanhamento pessoal, do cálculo ao fecho.",hero_cta:"Calcular grátis agora",hero_micro:"Sem registo necessário. Resultado em segundos.",stat_banks:"Bancos parceiros",stat_rating:"Avaliação de clientes",stat_cost:"Custo para si",hiw_label:"Como funciona",hiw_title:"A melhor taxa em 3 passos",hiw_sub:"Sem burocracia, sem custos ocultos. Insira os seus números, nós tratamos do resto.",hiw_s1_title:"Calcular",hiw_s1_text:"Insira o preço de compra, capital próprio e rendimento. Veja imediatamente se o financiamento é suportável.",hiw_s2_title:"Comparar",hiw_s2_text:"Verificamos mais de 40 bancos e negociamos ativamente a melhor taxa para a sua situação.",hiw_s3_title:"Beneficiar",hiw_s3_text:"Recebe ofertas concretas e acompanhamento pessoal até ao fecho.",calc_label:"Calculadora hipotecária",calc_title:"Verifique o seu financiamento",calc_sub:"Três dados bastam. Veja imediatamente se o seu imóvel de sonho é financiável.",calc_price:"Preço de compra do imóvel",calc_equity:"Capital próprio",calc_income:"Rendimento anual bruto (agregado)",calc_birthyear:"Ano de nascimento",calc_privacy:"Os seus dados são transmitidos de forma encriptada e não são partilhados com terceiros.",res_hypothek_label:"Hipoteca",res_tragbarkeit_label:"Suportabilidade",res_yearly_label:"Custos anuais (calculatórios)",res_interest:"Juros calculatórios (5%)",res_maintenance:"Encargos (1% preço de compra)",res_monthly_label:"Custos mensais",calc_disclaimer:"* Cálculo teórico segundo padrões bancários suíços. Apenas indicativo.",trust_label:"Porquê não ir diretamente ao banco?",trust_title:'Porque um banco só pode oferecer<br/>o seu próprio produto',trust_sub:"Comparamos mais de 40 fornecedores e negociamos ativamente por si.",trust_c1_title:"Independente, sem compromisso com nenhum banco",trust_c1_text:"O seu interesse está no centro. Recomendamos a solução que realmente se adapta à sua situação.",trust_c2_title:"Melhores taxas através de negociação",trust_c2_text:"A concorrência entre bancos permite-nos obter condições que sozinho não conseguiria.",trust_c3_title:"Acompanhamento pessoal até ao fecho",trust_c3_text:"Um consultor dedicado acompanha-o durante todo o processo.",trust_c4_title:"Poupe tempo em vez de comparar sozinho",trust_c4_text:"Sem maratona de reuniões bancárias. Recolhemos todas as ofertas e apresentamos as melhores opções.",testi_label:"O que dizem os nossos clientes",testi_title:"Mais de 1.000 financiamentos acompanhados",form_label:"Grátis e sem compromisso",form_title:'Obtenha a sua comparação<br/>de taxas pessoal',form_sub:"Três passos curtos. Contactamo-lo em 24 horas com ofertas adequadas.",form_badge1:"Dados encriptados",form_badge2:"100% grátis",form_badge3:"Sem obrigação",form_s1_title:"Os seus dados de contacto",form_s1_sub:"Para que possamos enviar-lhe a sua oferta personalizada.",form_firstname:"Nome",form_lastname:"Apelido",form_email:"E-mail",form_s2_title:"Disponibilidade",form_s2_sub:"Para uma breve consulta telefónica inicial. Dura apenas alguns minutos.",form_phone:"Telefone",form_zip:"Código postal",form_city:"Localidade",form_s3_title:'Detalhes do imóvel <span class="optional-badge">Opcional</span>',form_s3_sub:"Se já tem um imóvel em mente. Caso contrário, deixe vazio.",form_submit:"Obter ofertas grátis",faq_label:"Perguntas frequentes",faq_title:"Ainda com dúvidas? Aqui estão as respostas.",sticky_cta:"Obter ofertas grátis agora",sticky_sub:"Grátis e sem compromisso",tragbar:"Suportável",knapp_tragbar:"No limite",ueber_richtwert:"Acima do valor de referência",hint_default:"Insira os seus dados para verificar a suportabilidade.",hint_green:"O seu financiamento é bem suportável e cumpre as diretrizes bancárias.",hint_orange:"O seu financiamento está no limite. Alguns bancos calculam de forma mais flexível.",hint_red:"O encargo calculatório excede o valor de referência da maioria dos bancos.",cta_default:"Solicitar ofertas",cta_green:"Garantir a melhor taxa",cta_orange:"Verificar o financiamento",cta_red:"Verificar opções mesmo assim",amort_label:"Amortização (a 65%, em {n} anos)",nav_rates:"Taxas atuais",rates_label:"Comparação de taxas",rates_title:"Taxas hipotecárias atuais na Suíça",rates_sub:"Hipoteca fixa 10 anos, taxas publicadas dos principais fornecedores. Estado: abril 2026.",rates_th_rank:"#",rates_th_provider:"Fornecedor",rates_th_rate:"Taxa p.a.",rates_show_more:"Mostrar todos os 42 fornecedores",rates_show_less:"Mostrar menos",rates_note:"* Taxas indicativas publicadas. A sua taxa pessoal pode ser mais baixa através de negociação.",rates_cta:"Solicite a sua taxa individual"},
+ru:{hero_rates_link:"Сравнить актуальные ставки",hint_underage:"Для оформления ипотеки необходимо быть старше 18 лет. Посильность не может быть рассчитана.",nav_cta:"Рассчитать бесплатно",trust_free:"Бесплатно",trust_nocommit:"Без обязательств",trust_nationwide:"По всей Швейцарии",trust_independent:"Независимо",hero_title:'Найдите подходящую ипотеку<br/><span class="highlight">за 2 минуты</span>',hero_sub:"Мы сравниваем более 40 швейцарских банков и находим лучшую ставку для вас. Персональное сопровождение от расчёта до заключения.",hero_cta:"Рассчитать бесплатно",hero_micro:"Регистрация не требуется. Результат за секунды.",stat_banks:"Банков-партнёров",stat_rating:"Оценка клиентов",stat_cost:"Стоимость для вас",hiw_label:"Как это работает",hiw_title:"Лучшая ставка за 3 шага",hiw_sub:"Без бумажной волокиты, без скрытых затрат. Введите свои данные, мы сделаем остальное.",hiw_s1_title:"Рассчитать",hiw_s1_text:"Введите цену покупки, собственный капитал и доход. Сразу увидите, является ли финансирование посильным.",hiw_s2_title:"Сравнить",hiw_s2_text:"Мы проверяем более 40 банков и активно договариваемся о лучшей ставке для вашей ситуации.",hiw_s3_title:"Выиграть",hiw_s3_text:"Вы получаете конкретные предложения и персональное сопровождение до заключения.",calc_label:"Ипотечный калькулятор",calc_title:"Проверьте ваше финансирование",calc_sub:"Достаточно трёх данных. Сразу узнайте, финансируема ли ваша недвижимость мечты.",calc_price:"Цена покупки недвижимости",calc_equity:"Собственный капитал",calc_income:"Брутто годовой доход (домохозяйство)",calc_birthyear:"Год рождения",calc_privacy:"Ваши данные передаются в зашифрованном виде и не передаются третьим лицам.",res_hypothek_label:"Ипотека",res_tragbarkeit_label:"Посильность",res_yearly_label:"Годовые расходы (расчётные)",res_interest:"Расчётные проценты (5%)",res_maintenance:"Сопутствующие расходы (1% цены покупки)",res_monthly_label:"Ежемесячные расходы",calc_disclaimer:"* Теоретический расчёт по швейцарским банковским стандартам. Только для ориентировки.",trust_label:"Почему не напрямую в банк?",trust_title:'Потому что банк может предложить<br/>только свой собственный продукт',trust_sub:"Мы сравниваем более 40 поставщиков и активно ведём переговоры за вас.",trust_c1_title:"Независимые, не привязаны ни к одному банку",trust_c1_text:"Ваш интерес в центре. Мы рекомендуем решение, которое действительно подходит к вашей ситуации.",trust_c2_title:"Лучшие ставки через переговоры",trust_c2_text:"Конкуренция между банками позволяет нам добиваться условий, которые вы не получите самостоятельно.",trust_c3_title:"Персональное сопровождение до заключения",trust_c3_text:"Выделенный консультант сопровождает вас на протяжении всего процесса.",trust_c4_title:"Экономьте время вместо самостоятельного сравнения",trust_c4_text:"Без марафона банковских встреч. Мы собираем все предложения и представляем лучшие варианты.",testi_label:"Что говорят наши клиенты",testi_title:"Более 1'000 сопровождённых финансирований",form_label:"Бесплатно и без обязательств",form_title:'Получите ваше персональное<br/>сравнение ставок',form_sub:"Три коротких шага. Мы свяжемся с вами в течение 24 часов с подходящими предложениями.",form_badge1:"Данные зашифрованы",form_badge2:"100% бесплатно",form_badge3:"Без обязательств",form_s1_title:"Ваши контактные данные",form_s1_sub:"Чтобы мы могли отправить вам ваше персональное предложение.",form_firstname:"Имя",form_lastname:"Фамилия",form_email:"E-mail",form_s2_title:"Доступность",form_s2_sub:"Для краткой первичной телефонной консультации. Занимает всего несколько минут.",form_phone:"Телефон",form_zip:"Почтовый индекс",form_city:"Город",form_s3_title:'Данные об объекте <span class="optional-badge">Необязательно</span>',form_s3_sub:"Если у вас уже есть объект на примете. Иначе оставьте пустым.",form_submit:"Получить бесплатные предложения",faq_label:"Частые вопросы",faq_title:"Ещё не уверены? Вот ответы.",sticky_cta:"Получить бесплатные предложения",sticky_sub:"Бесплатно и без обязательств",tragbar:"Посильно",knapp_tragbar:"На грани",ueber_richtwert:"Выше ориентира",hint_default:"Введите данные для проверки посильности.",hint_green:"Ваше финансирование хорошо посильно и соответствует банковским нормам.",hint_orange:"Ваше финансирование на грани. Некоторые банки рассчитывают более гибко.",hint_red:"Расчётная нагрузка превышает ориентир большинства банков.",cta_default:"Запросить подходящие предложения",cta_green:"Обеспечьте лучшую ставку",cta_orange:"Проверить финансирование",cta_red:"Всё равно проверить варианты",amort_label:"Амортизация (до 65%, в течение {n} лет)",nav_rates:"Актуальные ставки",rates_label:"Сравнение ставок",rates_title:"Актуальные ипотечные ставки Швейцарии",rates_sub:"Фиксированная ипотека 10 лет, опубликованные ставки крупнейших провайдеров. По состоянию на апрель 2026.",rates_th_rank:"#",rates_th_provider:"Провайдер",rates_th_rate:"Ставка в год",rates_show_more:"Показать все 42 провайдера",rates_show_less:"Показать меньше",rates_note:"* Опубликованные ориентировочные ставки. Ваша персональная ставка может быть ниже благодаря переговорам.",rates_cta:"Запросить индивидуальную ставку"}
+};
+
+var currentLang="de";
+function switchLanguage(lang){
+  currentLang=lang;
+  var t=i18n[lang];if(!t)return;
+  document.querySelectorAll("[data-i18n]").forEach(function(el){var k=el.getAttribute("data-i18n");if(t[k])el.textContent=t[k]});
+  document.querySelectorAll("[data-i18n-html]").forEach(function(el){var k=el.getAttribute("data-i18n-html");if(t[k])el.innerHTML=t[k]});
+  recalculate();
+}
+
+document.querySelectorAll(".lang-option").forEach(function(o){o.addEventListener("click",function(){document.querySelectorAll(".lang-option").forEach(function(x){x.classList.remove("active")});o.classList.add("active");document.getElementById("lang-current-flag").textContent=o.querySelector(".lang-flag").textContent;document.getElementById("lang-current-label").textContent=o.dataset.lang.toUpperCase();lt.classList.remove("open");ld.classList.remove("open");switchLanguage(o.dataset.lang)})});
+recalculate();
+</script>
+</body>
+</html>

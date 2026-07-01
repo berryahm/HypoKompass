@@ -1,0 +1,2776 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>DEINE HYPO – Hypothekenrechner Schweiz | Bessere Zinsen durch Vergleich</title>
+  <meta name="description" content="Berechne deine Hypothek in Sekunden. DEINE HYPO vergleicht Zinsen von führenden Schweizer Banken und begleitet dich persönlich von A bis Z zur besten Finanzierung." />
+  <meta name="keywords" content="Hypothek Schweiz, Hypothekenrechner, Hypothekenzinsen, Immobilienfinanzierung, Bestzins, Hypothek berechnen" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://deinehypo.ch/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DEINE HYPO – Hypothekenrechner Schweiz" />
+  <meta property="og:description" content="Berechne deine Hypothek in Sekunden und erhalte bessere Zinsen durch unseren Vergleich." />
+  <meta property="og:url" content="https://deinehypo.ch/" />
+  <meta property="og:image" content="https://deinehypo.ch/og-image.jpg" />
+  <meta property="og:locale" content="de_CH" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DEINE HYPO – Hypothekenrechner Schweiz" />
+  <meta name="twitter:description" content="Berechne deine Hypothek in Sekunden und erhalte bessere Zinsen." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===========================
+       CSS VARIABLES & RESET
+    =========================== */
+    :root {
+      --navy:       #0D1B2A;
+      --navy-mid:   #132336;
+      --navy-light: #1E3A52;
+      --teal:       #0ABFA3;
+      --teal-dark:  #089981;
+      --teal-glow:  rgba(10, 191, 163, 0.18);
+      --gold:       #D4A853;
+      --white:      #FFFFFF;
+      --off-white:  #F4F6F9;
+      --text-body:  #8CA3BC;
+      --text-light: #B8CCDE;
+      --border:     rgba(255,255,255,0.08);
+      --green:      #22C55E;
+      --orange:     #F59E0B;
+      --red:        #EF4444;
+      --shadow-lg:  0 24px 64px rgba(0,0,0,0.35);
+      --shadow-card:0 8px 32px rgba(0,0,0,0.18);
+      --radius-xl:  20px;
+      --radius-lg:  14px;
+      --radius-md:  10px;
+      --font-head:  'Plus Jakarta Sans', sans-serif;
+      --font-body:  'Inter', sans-serif;
+      --transition: 0.28s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--navy);
+      color: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button { font-family: var(--font-body); cursor: pointer; border: none; outline: none; }
+    input, select { font-family: var(--font-body); }
+
+    /* ===========================
+       NOISE TEXTURE OVERLAY
+    =========================== */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    /* ===========================
+       NAVIGATION
+    =========================== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 5%;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(13,27,42,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    nav.scrolled {
+      background: rgba(13,27,42,0.97);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+    }
+
+    .nav-logo {
+      font-family: var(--font-head);
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-logo span.accent { color: var(--teal); }
+
+    .nav-logo .logo-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%,100% { transform: scale(1); opacity: 1; }
+      50%      { transform: scale(1.4); opacity: 0.7; }
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      position: relative;
+    }
+
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      color: var(--text-light);
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .lang-btn:hover {
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+    }
+
+    .lang-btn svg { width: 14px; height: 14px; transition: var(--transition); }
+    .lang-btn.open svg { transform: rotate(180deg); }
+
+    .lang-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--navy-mid);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 6px;
+      min-width: 170px;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      transition: var(--transition);
+      z-index: 200;
+    }
+
+    .lang-dropdown.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .lang-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-radius: 7px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: var(--transition);
+      color: var(--text-light);
+    }
+
+    .lang-option:hover, .lang-option.active {
+      background: var(--teal-glow);
+      color: var(--white);
+    }
+
+    .lang-option.active { color: var(--teal); font-weight: 500; }
+
+    .lang-flag { font-size: 1.1rem; }
+
+    .nav-cta {
+      background: var(--teal);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 10px 20px;
+      border-radius: 9px;
+      transition: var(--transition);
+      letter-spacing: 0.1px;
+    }
+
+    .nav-cta:hover {
+      background: var(--teal-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(10,191,163,0.35);
+    }
+
+    /* ===========================
+       HERO SECTION
+    =========================== */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 120px 5% 80px;
+      overflow: hidden;
+    }
+
+    /* Animated background gradient */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(10,191,163,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 20% 80%, rgba(212,168,83,0.05) 0%, transparent 50%),
+        linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy) 100%);
+      animation: hero-bg 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes hero-bg {
+      0%   { opacity: 1; }
+      100% { opacity: 0.7; }
+    }
+
+    /* Grid lines background */
+    #hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(10,191,163,0.1);
+      border: 1px solid rgba(10,191,163,0.25);
+      color: var(--teal);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      animation: fade-up 0.7s ease both;
+    }
+
+    .hero-badge .badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+      animation: fade-up 0.7s 0.1s ease both;
+    }
+
+    h1 .highlight {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-body);
+      max-width: 520px;
+      margin-bottom: 40px;
+      animation: fade-up 0.7s 0.2s ease both;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fade-up 0.7s 0.3s ease both;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--teal);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 15px 30px;
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+      letter-spacing: 0.1px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(10,191,163,0.4);
+    }
+
+    .btn-primary:hover::before { opacity: 1; }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .btn-secondary:hover { color: var(--white); }
+
+    .btn-secondary svg {
+      width: 18px; height: 18px;
+      transition: var(--transition);
+    }
+
+    .btn-secondary:hover svg { transform: translateX(4px); }
+
+    /* Hero floating visual */
+    .hero-visual {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 420px;
+      height: 420px;
+      display: none;
+      z-index: 1;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @media (min-width: 1100px) { .hero-visual { display: block; } }
+
+    @keyframes float {
+      0%,100% { transform: translateY(-50%) translateY(0px); }
+      50%      { transform: translateY(-50%) translateY(-20px); }
+    }
+
+    .hero-card {
+      position: absolute;
+      background: var(--navy-mid);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .hero-card-main {
+      width: 260px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    .hero-card-rate {
+      width: 180px;
+      bottom: 20px;
+      right: -10px;
+      animation: float 6s 1s ease-in-out infinite;
+    }
+
+    .hero-card-savings {
+      width: 165px;
+      top: 30px;
+      left: -10px;
+      animation: float 6s 2s ease-in-out infinite;
+    }
+
+    .hc-label {
+      font-size: 0.72rem;
+      color: var(--text-body);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+
+    .hc-value {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .hc-value.teal { color: var(--teal); }
+    .hc-value.gold { color: var(--gold); }
+    .hc-sub { font-size: 0.75rem; color: var(--text-body); margin-top: 4px; }
+
+    .hc-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 14px 0;
+    }
+
+    .hc-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .hc-row-label { font-size: 0.8rem; color: var(--text-body); }
+    .hc-row-val { font-size: 0.85rem; font-weight: 600; }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      animation: fade-up 0.7s 0.4s ease both;
+    }
+
+    .stat-item {}
+
+    .stat-num {
+      font-family: var(--font-head);
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--teal);
+      line-height: 1;
+    }
+
+    .stat-label { font-size: 0.8rem; color: var(--text-body); margin-top: 4px; }
+
+    /* ===========================
+       SECTION STYLES
+    =========================== */
+    section { padding: 80px 5%; }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 16px;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 24px; height: 2px;
+      background: var(--teal);
+      border-radius: 2px;
+    }
+
+    h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      max-width: 540px;
+      font-weight: 300;
+    }
+
+    /* ===========================
+       CALCULATOR SECTION
+    =========================== */
+    #calculator {
+      background: var(--navy-mid);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #calculator::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(10,191,163,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .calc-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .calc-header { margin-bottom: 48px; }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) { .calc-grid { grid-template-columns: 1fr; } }
+
+    /* Calculator Inputs */
+    .calc-inputs {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+    }
+
+    .input-group {
+      margin-bottom: 22px;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-light);
+      margin-bottom: 8px;
+      letter-spacing: 0.2px;
+    }
+
+    .input-wrap {
+      position: relative;
+    }
+
+    .input-prefix {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.88rem;
+      color: var(--text-body);
+      pointer-events: none;
+    }
+
+    .calc-input {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-md);
+      color: var(--white);
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 13px 14px 13px 42px;
+      transition: var(--transition);
+      appearance: none;
+    }
+
+    .calc-input.no-prefix { padding-left: 14px; }
+
+    .calc-input::placeholder { color: var(--text-body); font-weight: 400; }
+
+    .calc-input:focus {
+      outline: none;
+      border-color: var(--teal);
+      background: rgba(10,191,163,0.05);
+      box-shadow: 0 0 0 3px rgba(10,191,163,0.12);
+    }
+
+    .input-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* Calculator Results */
+    .calc-results {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .result-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      transition: var(--transition);
+    }
+
+    .result-main {
+      border-color: rgba(10,191,163,0.2);
+      background: rgba(10,191,163,0.04);
+    }
+
+    .result-card-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--text-body);
+      margin-bottom: 8px;
+    }
+
+    .result-value {
+      font-family: var(--font-head);
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      transition: var(--transition);
+    }
+
+    .result-sub { font-size: 0.8rem; color: var(--text-body); margin-top: 6px; }
+
+    /* Ampel / Traffic Light */
+    .ampel-section {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+    }
+
+    .ampel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .ampel-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--text-body);
+    }
+
+    .ampel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      transition: var(--transition);
+    }
+
+    .ampel-badge.green { background: rgba(34,197,94,0.15); color: var(--green); }
+    .ampel-badge.orange { background: rgba(245,158,11,0.15); color: var(--orange); }
+    .ampel-badge.red { background: rgba(239,68,68,0.15); color: var(--red); }
+    .ampel-badge.neutral { background: rgba(255,255,255,0.08); color: var(--text-body); }
+
+    .ampel-badge::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .ampel-value {
+      font-family: var(--font-head);
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1;
+      transition: var(--transition);
+    }
+
+    .ampel-value.green { color: var(--green); }
+    .ampel-value.orange { color: var(--orange); }
+    .ampel-value.red { color: var(--red); }
+    .ampel-value.neutral { color: var(--text-body); }
+
+    /* Progress bar */
+    .progress-bar-wrap {
+      margin: 16px 0;
+      background: rgba(255,255,255,0.07);
+      border-radius: 100px;
+      height: 8px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      border-radius: 100px;
+      transition: width 0.7s cubic-bezier(0.4,0,0.2,1), background 0.4s;
+      min-width: 4px;
+    }
+
+    .progress-bar-fill.green { background: linear-gradient(90deg, #16a34a, var(--green)); }
+    .progress-bar-fill.orange { background: linear-gradient(90deg, #d97706, var(--orange)); }
+    .progress-bar-fill.red { background: linear-gradient(90deg, #dc2626, var(--red)); }
+    .progress-bar-fill.neutral { background: rgba(255,255,255,0.15); }
+
+    .ampel-hint {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--text-body);
+      margin-top: 8px;
+    }
+
+    .ampel-warning {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: rgba(245,158,11,0.08);
+      border: 1px solid rgba(245,158,11,0.2);
+      border-radius: var(--radius-md);
+      font-size: 0.84rem;
+      color: var(--orange);
+      line-height: 1.55;
+      display: none;
+    }
+
+    .ampel-warning.show { display: block; }
+
+    /* Rate card */
+    .rate-card {
+      background: linear-gradient(135deg, rgba(212,168,83,0.08), rgba(10,191,163,0.05));
+      border: 1px solid rgba(212,168,83,0.2);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .rate-card-left .rate-label {
+      font-size: 0.75rem;
+      color: var(--text-body);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 4px;
+    }
+
+    .rate-card-left .rate-name {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .rate-card-left .rate-desc { font-size: 0.78rem; color: var(--text-body); margin-top: 2px; }
+
+    .rate-num {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold);
+    }
+
+    .rate-num span { font-size: 1rem; font-weight: 500; color: var(--text-body); }
+
+    /* Monthly breakdown */
+    .monthly-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+    }
+
+    .monthly-rows { display: flex; flex-direction: column; gap: 10px; }
+
+    .monthly-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.87rem;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .monthly-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .monthly-row-label { color: var(--text-body); }
+    .monthly-row-val { font-weight: 600; color: var(--white); }
+
+    .monthly-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(10,191,163,0.25);
+    }
+
+    .monthly-total-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    .monthly-total-val {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--teal);
+    }
+
+    .calc-disclaimer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-body);
+      margin-top: 24px;
+      opacity: 0.7;
+    }
+
+    .calc-cta-wrap {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* ===========================
+       TRUST / USP SECTION
+    =========================== */
+    #trust {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #trust::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 300px;
+      background: radial-gradient(ellipse, rgba(10,191,163,0.05) 0%, transparent 70%);
+    }
+
+    .trust-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .trust-header .section-label { justify-content: center; }
+    .trust-header .section-label::before { display: none; }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .trust-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 32px 28px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trust-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--teal-glow), transparent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .trust-card:hover {
+      border-color: rgba(10,191,163,0.25);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+    }
+
+    .trust-card:hover::before { opacity: 1; }
+
+    .trust-icon {
+      width: 50px; height: 50px;
+      background: rgba(10,191,163,0.1);
+      border: 1px solid rgba(10,191,163,0.2);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .trust-icon svg { width: 24px; height: 24px; color: var(--teal); }
+
+    .trust-card h3 {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .trust-card p {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      line-height: 1.65;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===========================
+       LEAD FORM SECTION
+    =========================== */
+    #leadform {
+      background: var(--navy-mid);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #leadform::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: -100px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(10,191,163,0.06) 0%, transparent 70%);
+    }
+
+    .form-container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .form-header { text-align: center; margin-bottom: 48px; }
+    .form-header .section-label { justify-content: center; }
+    .form-header .section-label::before { display: none; }
+
+    /* Step indicator */
+    .step-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 40px;
+    }
+
+    .step-dot {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      transition: var(--transition);
+      background: rgba(255,255,255,0.05);
+      border: 2px solid rgba(255,255,255,0.1);
+      color: var(--text-body);
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-dot.active {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: var(--navy);
+      box-shadow: 0 0 0 4px rgba(10,191,163,0.2);
+    }
+
+    .step-dot.done {
+      background: rgba(10,191,163,0.15);
+      border-color: rgba(10,191,163,0.4);
+      color: var(--teal);
+    }
+
+    .step-line {
+      flex: 1;
+      height: 2px;
+      background: rgba(255,255,255,0.08);
+      max-width: 40px;
+      transition: var(--transition);
+    }
+
+    .step-line.done { background: rgba(10,191,163,0.4); }
+
+    /* Form card */
+    .form-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      position: relative;
+    }
+
+    .form-step { display: none; animation: fade-up 0.4s ease both; }
+    .form-step.active { display: block; }
+
+    .step-title {
+      font-family: var(--font-head);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .step-sub {
+      font-size: 0.87rem;
+      color: var(--text-body);
+      margin-bottom: 28px;
+    }
+
+    .form-field {
+      margin-bottom: 18px;
+    }
+
+    .form-field label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+
+    .form-input {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-md);
+      color: var(--white);
+      font-size: 0.95rem;
+      padding: 13px 16px;
+      transition: var(--transition);
+    }
+
+    .form-input::placeholder { color: var(--text-body); }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--teal);
+      background: rgba(10,191,163,0.05);
+      box-shadow: 0 0 0 3px rgba(10,191,163,0.12);
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+
+    .optional-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      color: var(--text-body);
+      background: rgba(255,255,255,0.06);
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 28px;
+      gap: 12px;
+    }
+
+    .btn-back {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-body);
+      font-size: 0.88rem;
+      background: none;
+      padding: 10px 16px;
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+    }
+
+    .btn-back:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+
+    .btn-next {
+      flex: 1;
+      background: var(--teal);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 24px;
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+    }
+
+    .btn-next:hover {
+      background: var(--teal-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(10,191,163,0.35);
+    }
+
+    .btn-submit {
+      flex: 1;
+      background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 15px 24px;
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(10,191,163,0.4);
+    }
+
+    .btn-submit::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .btn-submit:hover::before { opacity: 1; }
+
+    /* Thank you screen */
+    #thank-you {
+      display: none;
+      text-align: center;
+      padding: 48px 20px;
+    }
+
+    #thank-you.show { display: block; animation: fade-up 0.6s ease both; }
+
+    .ty-icon {
+      width: 72px; height: 72px;
+      background: rgba(10,191,163,0.12);
+      border: 2px solid rgba(10,191,163,0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      animation: scale-in 0.5s ease both;
+    }
+
+    @keyframes scale-in {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .ty-icon svg { width: 32px; height: 32px; color: var(--teal); }
+
+    .ty-title {
+      font-family: var(--font-head);
+      font-size: 1.7rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .ty-sub { font-size: 1rem; color: var(--text-body); line-height: 1.65; max-width: 400px; margin: 0 auto; }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid var(--border);
+      padding: 40px 5%;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    .footer-logo span { color: var(--teal); }
+
+    .footer-contacts {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-contact {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-body);
+      transition: var(--transition);
+    }
+
+    .footer-contact:hover { color: var(--white); }
+    .footer-contact svg { width: 15px; height: 15px; color: var(--teal); }
+
+    .footer-powered {
+      font-size: 0.75rem;
+      color: var(--text-body);
+      opacity: 0.6;
+    }
+
+    .footer-powered span { color: var(--teal); }
+
+    /* ===========================
+       ANIMATIONS
+    =========================== */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===========================
+       SCROLL TO TOP
+    =========================== */
+    .scroll-top {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 44px; height: 44px;
+      background: var(--teal);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: var(--transition);
+      z-index: 50;
+      box-shadow: 0 4px 16px rgba(10,191,163,0.35);
+    }
+
+    .scroll-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+    .scroll-top:hover { background: var(--teal-dark); transform: translateY(-2px); }
+    .scroll-top svg { width: 18px; height: 18px; color: var(--navy); }
+
+    /* ===========================
+       UTILITIES
+    =========================== */
+    .text-center { text-align: center; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    /* Mobile nav overlay */
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    @media (max-width: 640px) {
+      .mobile-menu-toggle { display: flex; align-items: center; }
+      .nav-cta { display: none; }
+    }
+
+    /* ===========================
+       RESPONSIVE
+    =========================== */
+    @media (max-width: 768px) {
+      section { padding: 60px 5%; }
+      .calc-inputs { padding: 22px; }
+      .form-card { padding: 26px 20px; }
+      .input-row { grid-template-columns: 1fr; }
+      .hero-stats { gap: 20px; flex-wrap: wrap; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      .step-indicator { gap: 0; }
+      .step-dot { width: 26px; height: 26px; font-size: 0.65rem; }
+      .step-line { max-width: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===========================
+     NAVIGATION
+=========================== -->
+<nav id="main-nav">
+  <a href="#" class="nav-logo">
+    <div class="logo-dot"></div>
+    DEINE<span class="accent">&nbsp;HYPO</span>
+  </a>
+  <div class="nav-right">
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+      <button class="lang-btn" id="lang-toggle" aria-label="Sprache wechseln">
+        <span id="lang-current-flag">🇩🇪</span>
+        <span id="lang-current-label">DE</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <div class="lang-option active" data-lang="de"><span class="lang-flag">🇩🇪</span> Deutsch</div>
+        <div class="lang-option" data-lang="en"><span class="lang-flag">🇬🇧</span> English</div>
+        <div class="lang-option" data-lang="fr"><span class="lang-flag">🇫🇷</span> Français</div>
+        <div class="lang-option" data-lang="it"><span class="lang-flag">🇮🇹</span> Italiano</div>
+        <div class="lang-option" data-lang="sq"><span class="lang-flag">🇦🇱</span> Shqip</div>
+        <div class="lang-option" data-lang="sr"><span class="lang-flag">🇷🇸</span> Srpski</div>
+        <div class="lang-option" data-lang="es"><span class="lang-flag">🇪🇸</span> Español</div>
+        <div class="lang-option" data-lang="pt"><span class="lang-flag">🇵🇹</span> Português</div>
+      </div>
+    </div>
+    <a href="#leadform" class="nav-cta" data-i18n="nav_cta">Beratung starten</a>
+  </div>
+</nav>
+
+<!-- ===========================
+     HERO SECTION
+=========================== -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span data-i18n="hero_badge">Hypothekenvergleich Schweiz</span>
+    </div>
+    <h1>
+      <span data-i18n="hero_h1_1">Finde heraus, wie viel</span><br/>
+      <span class="highlight" data-i18n="hero_h1_2">Immobilie du dir</span><br/>
+      <span data-i18n="hero_h1_3">leisten kannst</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero_sub">
+      Berechne deine Hypothek in wenigen Sekunden und erhalte bessere Zinsen durch unseren Vergleich mit führenden Schweizer Partnerbanken.
+    </p>
+    <div class="hero-actions">
+      <a href="#calculator" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+        <span data-i18n="hero_cta">Jetzt berechnen</span>
+      </a>
+      <a href="#leadform" class="btn-secondary">
+        <span data-i18n="hero_cta2">Beratung anfragen</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">50+</div>
+        <div class="stat-label" data-i18n="stat1">Partnerbanken</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">Top</div>
+        <div class="stat-label" data-i18n="stat2">Zinsen</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">A–Z</div>
+        <div class="stat-label" data-i18n="stat3">Begleitung</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating visual cards -->
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hero-card hero-card-main">
+      <div class="hc-label" data-i18n="hc_label1">Monatliche Rate</div>
+      <div class="hc-value teal">CHF 2'840</div>
+      <div class="hc-sub" data-i18n="hc_sub1">inkl. Zins & Amortisation</div>
+      <div class="hc-divider"></div>
+      <div class="hc-row"><span class="hc-row-label" data-i18n="hc_row1">Hypothek</span><span class="hc-row-val">CHF 640'000</span></div>
+      <div class="hc-row"><span class="hc-row-label" data-i18n="hc_row2">Belehnung</span><span class="hc-row-val">80%</span></div>
+      <div class="hc-row"><span class="hc-row-label" data-i18n="hc_row3">Tragbarkeit</span><span class="hc-row-val" style="color:var(--green)">28.4%</span></div>
+    </div>
+    <div class="hero-card hero-card-rate">
+      <div class="hc-label" data-i18n="hc_label2">Starthypothek</div>
+      <div class="hc-value gold">1.195%</div>
+      <div class="hc-sub">2 Jahre fest</div>
+    </div>
+    <div class="hero-card hero-card-savings">
+      <div class="hc-label" data-i18n="hc_label3">Ersparnis</div>
+      <div class="hc-value" style="color:var(--gold);font-size:1.3rem">CHF 4'200</div>
+      <div class="hc-sub" data-i18n="hc_sub3">vs. Direktbank</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     CALCULATOR SECTION
+=========================== -->
+<section id="calculator">
+  <div class="calc-container">
+    <div class="calc-header reveal">
+      <div class="section-label" data-i18n="calc_label">Hypothekenrechner</div>
+      <h2 data-i18n="calc_title">Deine persönliche Berechnung</h2>
+      <p class="section-sub" data-i18n="calc_sub">Alle Werte basieren auf dem Schweizer Kalkulationsstandard. Passe die Felder an und sieh das Resultat sofort.</p>
+    </div>
+
+    <div class="calc-grid">
+      <!-- LEFT: Inputs -->
+      <div class="calc-inputs reveal">
+        <div class="input-group">
+          <label data-i18n="label_kaufpreis">Kaufpreis</label>
+          <div class="input-wrap">
+            <span class="input-prefix">CHF</span>
+            <input type="number" class="calc-input" id="kaufpreis" placeholder="800'000" min="0" step="1000" value="800000" />
+          </div>
+        </div>
+        <div class="input-group">
+          <label data-i18n="label_eigenkapital">Eigenkapital</label>
+          <div class="input-wrap">
+            <span class="input-prefix">CHF</span>
+            <input type="number" class="calc-input" id="eigenkapital" placeholder="160'000" min="0" step="1000" value="160000" />
+          </div>
+        </div>
+        <div class="input-group">
+          <label data-i18n="label_einkommen">Bruttojahreseinkommen</label>
+          <div class="input-wrap">
+            <span class="input-prefix">CHF</span>
+            <input type="number" class="calc-input" id="einkommen" placeholder="120'000" min="0" step="1000" value="120000" />
+          </div>
+        </div>
+        <div class="input-group">
+          <label data-i18n="label_geburt">Geburtsdatum</label>
+          <input type="date" class="calc-input no-prefix" id="geburtsdatum" />
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label data-i18n="label_leasing">Leasing / Kredit (mtl.)</label>
+            <div class="input-wrap">
+              <span class="input-prefix">CHF</span>
+              <input type="number" class="calc-input" id="leasing" placeholder="0" min="0" step="10" value="0" />
+            </div>
+          </div>
+          <div class="input-group">
+            <label data-i18n="label_alimente">Alimente (mtl.)</label>
+            <div class="input-wrap">
+              <span class="input-prefix">CHF</span>
+              <input type="number" class="calc-input" id="alimente" placeholder="0" min="0" step="10" value="0" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Results -->
+      <div class="calc-results reveal">
+        <!-- Hypothek & Belehnung -->
+        <div class="result-card result-main">
+          <div class="result-card-label" data-i18n="res_hypo_label">Hypothek</div>
+          <div class="result-value" id="res-hypothek">CHF 640'000</div>
+          <div class="result-sub"><span data-i18n="res_bel_label">Belehnung:</span> <strong id="res-belehnung">80.0%</strong></div>
+        </div>
+
+        <!-- Traffic Light / Ampel -->
+        <div class="ampel-section">
+          <div class="ampel-header">
+            <div>
+              <div class="ampel-label" data-i18n="res_trag_label">Einkommensbelastung</div>
+              <div class="ampel-value neutral" id="res-tragbarkeit">–</div>
+            </div>
+            <div class="ampel-badge neutral" id="ampel-badge">–</div>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill neutral" id="progress-fill" style="width:0%"></div>
+          </div>
+          <p class="ampel-hint" id="ampel-hint" data-i18n="ampel_hint_default">Gib deine Angaben ein, um die Tragbarkeit zu berechnen.</p>
+          <div class="ampel-warning" id="ampel-warning"></div>
+        </div>
+
+        <!-- Monthly breakdown -->
+        <div class="monthly-card">
+          <div class="result-card-label" style="margin-bottom:14px" data-i18n="res_monthly_label">Jährliche Kosten (Aufschlüsselung)</div>
+          <div class="monthly-rows">
+            <div class="monthly-row">
+              <span class="monthly-row-label" data-i18n="row_zins">Kalkulatorischer Zins (5%)</span>
+              <span class="monthly-row-val" id="row-zins">–</span>
+            </div>
+            <div class="monthly-row">
+              <span class="monthly-row-label" data-i18n="row_unterhalt">Unterhalt (1% Kaufpreis)</span>
+              <span class="monthly-row-val" id="row-unterhalt">–</span>
+            </div>
+            <div class="monthly-row">
+              <span class="monthly-row-label" data-i18n="row_amort">Amortisation (80% → 65%)</span>
+              <span class="monthly-row-val" id="row-amort">–</span>
+            </div>
+          </div>
+          <div class="monthly-total">
+            <span class="monthly-total-label" data-i18n="row_monthly">Monatliche Gesamtkosten</span>
+            <span class="monthly-total-val" id="res-monthly">–</span>
+          </div>
+        </div>
+
+        <!-- Rate card -->
+        <div class="rate-card">
+          <div class="rate-card-left">
+            <div class="rate-label" data-i18n="rate_label">Beispiel Starthypothek</div>
+            <div class="rate-name">2 Jahre Festhypothek</div>
+            <div class="rate-desc" data-i18n="rate_desc">Aktuelle Marktindikation</div>
+          </div>
+          <div>
+            <div class="rate-num">1.195<span>%</span></div>
+          </div>
+        </div>
+
+        <div class="calc-cta-wrap">
+          <a href="#leadform" class="btn-primary" style="width:100%;justify-content:center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .06h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+            <span data-i18n="calc_form_cta">Persönliche Beratung & Bestzins anfragen</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p class="calc-disclaimer" data-i18n="calc_disclaimer">
+      * Die Berechnung basiert auf Ihren Angaben und dient nur zur Orientierung. Keine Gewähr für Vollständigkeit oder Richtigkeit.
+    </p>
+  </div>
+</section>
+
+<!-- ===========================
+     TRUST / USP SECTION
+=========================== -->
+<section id="trust">
+  <div class="container">
+    <div class="trust-header reveal">
+      <div class="section-label" data-i18n="trust_label">Warum DEINE HYPO</div>
+      <h2 data-i18n="trust_title">Mehr Banken. Bessere Zinsen.<br/>Persönliche Begleitung.</h2>
+      <p class="section-sub" style="margin: 12px auto 0" data-i18n="trust_sub">
+        Wir arbeiten mit führenden Schweizer Partnerbanken zusammen – für maximale Auswahl und Top-Zinsen.
+      </p>
+    </div>
+
+    <div class="trust-grid">
+      <div class="trust-card reveal">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+        </div>
+        <h3 data-i18n="usp1_title">Zugang zu vielen Partnerbanken</h3>
+        <p data-i18n="usp1_text">Dank unseres breiten Netzwerks erhalten Sie Angebote von führenden Schweizer Banken – gebündelt an einem Ort.</p>
+      </div>
+
+      <div class="trust-card reveal" style="transition-delay:0.1s">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+          </svg>
+        </div>
+        <h3 data-i18n="usp2_title">Bessere Zinsen durch Vergleich</h3>
+        <p data-i18n="usp2_text">Wir vergleichen Angebote und verhandeln aktiv für Sie – damit Sie den Bestzins erhalten, der zu Ihrer Situation passt.</p>
+      </div>
+
+      <div class="trust-card reveal" style="transition-delay:0.2s">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <h3 data-i18n="usp3_title">Persönliche Begleitung von A bis Z</h3>
+        <p data-i18n="usp3_text">Von der ersten Berechnung bis zur Unterzeichnung – ein persönlicher Ansprechpartner begleitet Sie durch den gesamten Prozess.</p>
+      </div>
+
+      <div class="trust-card reveal" style="transition-delay:0.3s">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+        </div>
+        <h3 data-i18n="usp4_title">Neutral und unabhängig</h3>
+        <p data-i18n="usp4_text">Wir sind nicht auf eine Bank beschränkt. Ihr Interesse steht im Mittelpunkt – nicht das Produkt einer einzelnen Institution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     LEAD FORM SECTION
+=========================== -->
+<section id="leadform">
+  <div class="form-container">
+    <div class="form-header reveal">
+      <div class="section-label" data-i18n="form_label">Zinsvergleich starten</div>
+      <h2 data-i18n="form_title">In wenigen Schritten zu<br/>deinem persönlichen Angebot</h2>
+      <p class="section-sub" style="margin: 12px auto 0" data-i18n="form_sub">
+        Einfach ausfüllen – wir melden uns mit passenden Top-Zinsen bei dir.
+      </p>
+    </div>
+
+    <!-- Step indicator -->
+    <div class="step-indicator" id="step-indicator" aria-label="Formular-Fortschritt">
+      <!-- Generated by JS -->
+    </div>
+
+    <!-- Form card -->
+    <div class="form-card reveal" id="form-card">
+      <!-- STEP 1: Name -->
+      <div class="form-step active" data-step="1">
+        <div class="step-title" data-i18n="step1_title">Wie heisst du?</div>
+        <div class="step-sub" data-i18n="step1_sub">Wir möchten dich persönlich ansprechen.</div>
+        <div class="form-row">
+          <div class="form-field">
+            <label data-i18n="label_vorname">Vorname</label>
+            <input type="text" class="form-input" id="f-vorname" placeholder="Max" autocomplete="given-name" />
+          </div>
+          <div class="form-field">
+            <label data-i18n="label_nachname">Nachname</label>
+            <input type="text" class="form-input" id="f-nachname" placeholder="Mustermann" autocomplete="family-name" />
+          </div>
+        </div>
+        <div class="form-actions">
+          <div></div>
+          <button class="btn-next" onclick="nextStep()"><span data-i18n="btn_next">Weiter</span> →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: Geburtsdatum -->
+      <div class="form-step" data-step="2">
+        <div class="step-title" data-i18n="step2_title">Dein Geburtsdatum</div>
+        <div class="step-sub" data-i18n="step2_sub">Für die Tragbarkeitsberechnung benötigt.</div>
+        <div class="form-field">
+          <label data-i18n="label_geburtsdatum">Geburtsdatum</label>
+          <input type="date" class="form-input" id="f-geburtsdatum" autocomplete="bday" />
+        </div>
+        <div class="form-actions">
+          <button class="btn-back" onclick="prevStep()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            <span data-i18n="btn_back">Zurück</span>
+          </button>
+          <button class="btn-next" onclick="nextStep()"><span data-i18n="btn_next">Weiter</span> →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Adresse -->
+      <div class="form-step" data-step="3">
+        <div class="step-title" data-i18n="step3_title">Deine Adresse</div>
+        <div class="step-sub" data-i18n="step3_sub">Strasse und Hausnummer.</div>
+        <div class="form-field">
+          <label data-i18n="label_adresse">Strasse & Hausnummer</label>
+          <input type="text" class="form-input" id="f-adresse" placeholder="Musterstrasse 12" autocomplete="street-address" />
+        </div>
+        <div class="form-actions">
+          <button class="btn-back" onclick="prevStep()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            <span data-i18n="btn_back">Zurück</span>
+          </button>
+          <button class="btn-next" onclick="nextStep()"><span data-i18n="btn_next">Weiter</span> →</button>
+        </div>
+      </div>
+
+      <!-- STEP 4: PLZ / Ort -->
+      <div class="form-step" data-step="4">
+        <div class="step-title" data-i18n="step4_title">PLZ & Wohnort</div>
+        <div class="step-sub" data-i18n="step4_sub">Für die regionale Zuordnung.</div>
+        <div class="form-row">
+          <div class="form-field">
+            <label data-i18n="label_plz">PLZ</label>
+            <input type="text" class="form-input" id="f-plz" placeholder="8001" maxlength="6" autocomplete="postal-code" />
+          </div>
+          <div class="form-field">
+            <label data-i18n="label_ort">Ort</label>
+            <input type="text" class="form-input" id="f-ort" placeholder="Zürich" autocomplete="address-level2" />
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn-back" onclick="prevStep()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            <span data-i18n="btn_back">Zurück</span>
+          </button>
+          <button class="btn-next" onclick="nextStep()"><span data-i18n="btn_next">Weiter</span> →</button>
+        </div>
+      </div>
+
+      <!-- STEP 5: Email -->
+      <div class="form-step" data-step="5">
+        <div class="step-title" data-i18n="step5_title">Deine E-Mail-Adresse</div>
+        <div class="step-sub" data-i18n="step5_sub">Deine Angebote werden dir per E-Mail zugestellt.</div>
+        <div class="form-field">
+          <label>E-Mail</label>
+          <input type="email" class="form-input" id="f-email" placeholder="max.mustermann@email.ch" autocomplete="email" />
+        </div>
+        <div class="form-actions">
+          <button class="btn-back" onclick="prevStep()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            <span data-i18n="btn_back">Zurück</span>
+          </button>
+          <button class="btn-next" onclick="nextStep()"><span data-i18n="btn_next">Weiter</span> →</button>
+        </div>
+      </div>
+
+      <!-- STEP 6: Telefon -->
+      <div class="form-step" data-step="6">
+        <div class="step-title" data-i18n="step6_title">Deine Telefonnummer</div>
+        <div class="step-sub" data-i18n="step6_sub">Damit wir dich für eine kurze Erstberatung erreichen können.</div>
+        <div class="form-field">
+          <label data-i18n="label_telefon">Telefon</label>
+          <input type="tel" class="form-input" id="f-telefon" placeholder="+41 79 123 45 67" autocomplete="tel" />
+        </div>
+        <div class="form-actions">
+          <button class="btn-back" onclick="prevStep()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            <span data-i18n="btn_back">Zurück</span>
+          </button>
+          <button class="btn-next" onclick="nextStep()"><span data-i18n="btn_next">Weiter</span> →</button>
+        </div>
+      </div>
+
+      <!-- STEP 7: Kaufpreis (optional) -->
+      <div class="form-step" data-step="7">
+        <div class="step-title" data-i18n="step7_title">Kaufpreis <span class="optional-badge" data-i18n="optional">Optional</span></div>
+        <div class="step-sub" data-i18n="step7_sub">Was ist der ungefähre Kaufpreis der Immobilie?</div>
+        <div class="form-field">
+          <label data-i18n="label_kaufpreis">Kaufpreis (CHF)</label>
+          <input type="number" class="form-input" id="f-kaufpreis" placeholder="800000" min="0" step="10000" autocomplete="off" />
+        </div>
+        <div class="form-actions">
+          <button class="btn-back" onclick="prevStep()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            <span data-i18n="btn_back">Zurück</span>
+          </button>
+          <button class="btn-next" onclick="nextStep()"><span data-i18n="btn_next">Weiter</span> →</button>
+        </div>
+      </div>
+
+      <!-- STEP 8: Eigenkapital (optional) -->
+      <div class="form-step" data-step="8">
+        <div class="step-title" data-i18n="step8_title">Eigenkapital <span class="optional-badge" data-i18n="optional">Optional</span></div>
+        <div class="step-sub" data-i18n="step8_sub">Wie viel Eigenkapital steht dir zur Verfügung?</div>
+        <div class="form-field">
+          <label data-i18n="label_eigenkapital">Eigenkapital (CHF)</label>
+          <input type="number" class="form-input" id="f-eigenkapital" placeholder="160000" min="0" step="10000" autocomplete="off" />
+        </div>
+        <div class="form-actions">
+          <button class="btn-back" onclick="prevStep()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            <span data-i18n="btn_back">Zurück</span>
+          </button>
+          <button class="btn-next" onclick="nextStep()"><span data-i18n="btn_next">Weiter</span> →</button>
+        </div>
+      </div>
+
+      <!-- STEP 9: Wunschregion (optional) -->
+      <div class="form-step" data-step="9">
+        <div class="step-title" data-i18n="step9_title">Wunschregion <span class="optional-badge" data-i18n="optional">Optional</span></div>
+        <div class="step-sub" data-i18n="step9_sub">In welcher Region in der Schweiz suchst du?</div>
+        <div class="form-field">
+          <label data-i18n="label_region">Wunschregion</label>
+          <input type="text" class="form-input" id="f-region" placeholder="z.B. Zürich, Bern, Basel, Luzern..." autocomplete="off" />
+        </div>
+        <div class="form-actions">
+          <button class="btn-back" onclick="prevStep()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            <span data-i18n="btn_back">Zurück</span>
+          </button>
+          <button class="btn-submit" onclick="submitForm()" id="submit-btn">
+            <span data-i18n="btn_submit">Jetzt deinen Zinsvergleich starten</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Hidden Formspree form -->
+      <form id="hidden-form" action="https://formspree.io/f/mnjljago" method="POST" style="display:none">
+        <input type="hidden" name="vorname" id="hf-vorname" />
+        <input type="hidden" name="nachname" id="hf-nachname" />
+        <input type="hidden" name="geburtsdatum" id="hf-geburtsdatum" />
+        <input type="hidden" name="adresse" id="hf-adresse" />
+        <input type="hidden" name="plz" id="hf-plz" />
+        <input type="hidden" name="ort" id="hf-ort" />
+        <input type="hidden" name="email" id="hf-email" />
+        <input type="hidden" name="telefon" id="hf-telefon" />
+        <input type="hidden" name="kaufpreis" id="hf-kaufpreis" />
+        <input type="hidden" name="eigenkapital" id="hf-eigenkapital" />
+        <input type="hidden" name="region" id="hf-region" />
+      </form>
+    </div>
+
+    <!-- Thank you screen -->
+    <div id="thank-you">
+      <div class="ty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h2 class="ty-title" data-i18n="ty_title">Danke für deine Anfrage!</h2>
+      <p class="ty-sub" data-i18n="ty_sub">Wir melden uns in Kürze mit passenden Angeboten per E-Mail. Unser Team freut sich darauf, dir den besten Zins zu sichern.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     FOOTER
+=========================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">DEINE<span>&nbsp;HYPO</span></div>
+    <div class="footer-contacts">
+      <a href="tel:+41441234567" class="footer-contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .06h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+        +41 44 123 45 67
+      </a>
+      <a href="mailto:info@deinehypo.ch" class="footer-contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@deinehypo.ch
+      </a>
+    </div>
+    <div class="footer-powered">powered by <span>Finsion</span></div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Nach oben">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ===========================
+     JAVASCRIPT
+=========================== -->
+<script>
+/* ===========================
+   TRANSLATIONS
+=========================== */
+const i18n = {
+  de: {
+    nav_cta: "Beratung starten",
+    hero_badge: "Hypothekenvergleich Schweiz",
+    hero_h1_1: "Finde heraus, wie viel",
+    hero_h1_2: "Immobilie du dir",
+    hero_h1_3: "leisten kannst",
+    hero_sub: "Berechne deine Hypothek in wenigen Sekunden und erhalte bessere Zinsen durch unseren Vergleich mit führenden Schweizer Partnerbanken.",
+    hero_cta: "Jetzt berechnen",
+    hero_cta2: "Beratung anfragen",
+    stat1: "Partnerbanken",
+    stat2: "Zinsen",
+    stat3: "Begleitung",
+    hc_label1: "Monatliche Rate",
+    hc_sub1: "inkl. Zins & Amortisation",
+    hc_row1: "Hypothek",
+    hc_row2: "Belehnung",
+    hc_row3: "Tragbarkeit",
+    hc_label2: "Starthypothek",
+    hc_label3: "Ersparnis",
+    hc_sub3: "vs. Direktbank",
+    calc_label: "Hypothekenrechner",
+    calc_title: "Deine persönliche Berechnung",
+    calc_sub: "Alle Werte basieren auf dem Schweizer Kalkulationsstandard. Passe die Felder an und sieh das Resultat sofort.",
+    label_kaufpreis: "Kaufpreis",
+    label_eigenkapital: "Eigenkapital",
+    label_einkommen: "Bruttojahreseinkommen",
+    label_geburt: "Geburtsdatum",
+    label_leasing: "Leasing / Kredit (mtl.)",
+    label_alimente: "Alimente (mtl.)",
+    res_hypo_label: "Hypothek",
+    res_bel_label: "Belehnung:",
+    res_trag_label: "Einkommensbelastung",
+    res_monthly_label: "Jährliche Kosten (Aufschlüsselung)",
+    row_zins: "Kalkulatorischer Zins (5%)",
+    row_unterhalt: "Unterhalt (1% Kaufpreis)",
+    row_amort: "Amortisation (80% → 65%)",
+    row_monthly: "Monatliche Gesamtkosten",
+    rate_label: "Beispiel Starthypothek",
+    rate_desc: "Aktuelle Marktindikation",
+    ampel_hint_default: "Gib deine Angaben ein, um die Tragbarkeit zu berechnen.",
+    ampel_green: "Sehr gut tragbar",
+    ampel_orange: "Knapp tragbar",
+    ampel_red: "Nicht tragbar",
+    ampel_green_hint: "Deine Finanzierung ist sehr gut tragbar. Ideal für eine Hypothekenfinanzierung.",
+    ampel_orange_hint: "Deine Finanzierung ist knapp im tragbaren Bereich. Banken könnten strengere Anforderungen stellen.",
+    ampel_red_hint: "Die Finanzierung übersteigt das empfohlene Maximum. Mehr Eigenkapital wird benötigt.",
+    ampel_warn_prefix: "Du benötigst ca.",
+    ampel_warn_suffix: "CHF mehr Eigenkapital, damit die Finanzierung tragbar wird.",
+    calc_form_cta: "Persönliche Beratung & Bestzins anfragen",
+    calc_disclaimer: "* Die Berechnung basiert auf Ihren Angaben und dient nur zur Orientierung. Keine Gewähr für Vollständigkeit oder Richtigkeit.",
+    trust_label: "Warum DEINE HYPO",
+    trust_title: "Mehr Banken. Bessere Zinsen.\nPersönliche Begleitung.",
+    trust_sub: "Wir arbeiten mit führenden Schweizer Partnerbanken zusammen – für maximale Auswahl und Top-Zinsen.",
+    usp1_title: "Zugang zu vielen Partnerbanken",
+    usp1_text: "Dank unseres breiten Netzwerks erhalten Sie Angebote von führenden Schweizer Banken – gebündelt an einem Ort.",
+    usp2_title: "Bessere Zinsen durch Vergleich",
+    usp2_text: "Wir vergleichen Angebote und verhandeln aktiv für Sie – damit Sie den Bestzins erhalten, der zu Ihrer Situation passt.",
+    usp3_title: "Persönliche Begleitung von A bis Z",
+    usp3_text: "Von der ersten Berechnung bis zur Unterzeichnung – ein persönlicher Ansprechpartner begleitet Sie durch den gesamten Prozess.",
+    usp4_title: "Neutral und unabhängig",
+    usp4_text: "Wir sind nicht auf eine Bank beschränkt. Ihr Interesse steht im Mittelpunkt – nicht das Produkt einer einzelnen Institution.",
+    form_label: "Zinsvergleich starten",
+    form_title: "In wenigen Schritten zu\ndeinem persönlichen Angebot",
+    form_sub: "Einfach ausfüllen – wir melden uns mit passenden Top-Zinsen bei dir.",
+    step1_title: "Wie heisst du?",
+    step1_sub: "Wir möchten dich persönlich ansprechen.",
+    step2_title: "Dein Geburtsdatum",
+    step2_sub: "Für die Tragbarkeitsberechnung benötigt.",
+    step3_title: "Deine Adresse",
+    step3_sub: "Strasse und Hausnummer.",
+    step4_title: "PLZ & Wohnort",
+    step4_sub: "Für die regionale Zuordnung.",
+    step5_title: "Deine E-Mail-Adresse",
+    step5_sub: "Deine Angebote werden dir per E-Mail zugestellt.",
+    step6_title: "Deine Telefonnummer",
+    step6_sub: "Damit wir dich für eine kurze Erstberatung erreichen können.",
+    step7_title: "Kaufpreis",
+    step7_sub: "Was ist der ungefähre Kaufpreis der Immobilie?",
+    step8_title: "Eigenkapital",
+    step8_sub: "Wie viel Eigenkapital steht dir zur Verfügung?",
+    step9_title: "Wunschregion",
+    step9_sub: "In welcher Region in der Schweiz suchst du?",
+    label_vorname: "Vorname",
+    label_nachname: "Nachname",
+    label_geburtsdatum: "Geburtsdatum",
+    label_adresse: "Strasse & Hausnummer",
+    label_plz: "PLZ",
+    label_ort: "Ort",
+    label_telefon: "Telefon",
+    label_region: "Wunschregion",
+    optional: "Optional",
+    btn_next: "Weiter",
+    btn_back: "Zurück",
+    btn_submit: "Jetzt deinen Zinsvergleich starten",
+    ty_title: "Danke für deine Anfrage!",
+    ty_sub: "Wir melden uns in Kürze mit passenden Angeboten per E-Mail. Unser Team freut sich darauf, dir den besten Zins zu sichern.",
+    bel_warning: "Mindestens 20% Eigenkapital notwendig (Belehnung max. 80%)",
+    lang_flag: "🇩🇪", lang_label: "DE"
+  },
+
+  en: {
+    nav_cta: "Start consultation",
+    hero_badge: "Mortgage comparison Switzerland",
+    hero_h1_1: "Find out how much",
+    hero_h1_2: "property you can",
+    hero_h1_3: "afford",
+    hero_sub: "Calculate your mortgage in seconds and get better rates through our comparison with leading Swiss partner banks.",
+    hero_cta: "Calculate now",
+    hero_cta2: "Request advice",
+    stat1: "Partner banks",
+    stat2: "Rates",
+    stat3: "Support",
+    hc_label1: "Monthly rate",
+    hc_sub1: "incl. interest & amortisation",
+    hc_row1: "Mortgage",
+    hc_row2: "LTV",
+    hc_row3: "Affordability",
+    hc_label2: "Starter mortgage",
+    hc_label3: "Savings",
+    hc_sub3: "vs. direct bank",
+    calc_label: "Mortgage calculator",
+    calc_title: "Your personal calculation",
+    calc_sub: "All values are based on the Swiss calculation standard. Adjust the fields and see the result immediately.",
+    label_kaufpreis: "Purchase price",
+    label_eigenkapital: "Equity",
+    label_einkommen: "Gross annual income",
+    label_geburt: "Date of birth",
+    label_leasing: "Leasing / Loan (monthly)",
+    label_alimente: "Alimony (monthly)",
+    res_hypo_label: "Mortgage",
+    res_bel_label: "LTV:",
+    res_trag_label: "Income burden",
+    res_monthly_label: "Annual costs (breakdown)",
+    row_zins: "Calc. interest rate (5%)",
+    row_unterhalt: "Maintenance (1% purchase price)",
+    row_amort: "Amortisation (80% → 65%)",
+    row_monthly: "Total monthly costs",
+    rate_label: "Example starter mortgage",
+    rate_desc: "Current market indication",
+    ampel_hint_default: "Enter your details to calculate affordability.",
+    ampel_green: "Very affordable",
+    ampel_orange: "Marginally affordable",
+    ampel_red: "Not affordable",
+    ampel_green_hint: "Your financing is very affordable. Ideal for mortgage financing.",
+    ampel_orange_hint: "Your financing is barely within the affordable range. Banks may impose stricter requirements.",
+    ampel_red_hint: "Financing exceeds the recommended maximum. More equity is needed.",
+    ampel_warn_prefix: "You need approx.",
+    ampel_warn_suffix: "CHF more equity to make the financing affordable.",
+    calc_form_cta: "Request personal advice & best rate",
+    calc_disclaimer: "* The calculation is based on your inputs and is for orientation purposes only.",
+    trust_label: "Why DEINE HYPO",
+    trust_title: "More banks. Better rates.\nPersonal support.",
+    trust_sub: "We work with leading Swiss partner banks – for maximum choice and top rates.",
+    usp1_title: "Access to many partner banks",
+    usp1_text: "Thanks to our broad network, you receive offers from leading Swiss banks – all in one place.",
+    usp2_title: "Better rates through comparison",
+    usp2_text: "We compare offers and actively negotiate for you – so you get the best rate for your situation.",
+    usp3_title: "Personal support from A to Z",
+    usp3_text: "From the first calculation to signing – a personal contact accompanies you through the entire process.",
+    usp4_title: "Neutral and independent",
+    usp4_text: "We are not limited to one bank. Your interest is at the centre – not the product of a single institution.",
+    form_label: "Start rate comparison",
+    form_title: "A few steps to your\npersonal offer",
+    form_sub: "Simply fill in – we'll contact you with matching top rates.",
+    step1_title: "What's your name?",
+    step1_sub: "We'd like to address you personally.",
+    step2_title: "Your date of birth",
+    step2_sub: "Required for the affordability calculation.",
+    step3_title: "Your address",
+    step3_sub: "Street and house number.",
+    step4_title: "Postcode & city",
+    step4_sub: "For regional assignment.",
+    step5_title: "Your email address",
+    step5_sub: "Your offers will be sent to you by email.",
+    step6_title: "Your phone number",
+    step6_sub: "So we can reach you for a short initial consultation.",
+    step7_title: "Purchase price",
+    step7_sub: "What is the approximate purchase price of the property?",
+    step8_title: "Equity",
+    step8_sub: "How much equity do you have available?",
+    step9_title: "Desired region",
+    step9_sub: "In which region in Switzerland are you looking?",
+    label_vorname: "First name",
+    label_nachname: "Last name",
+    label_geburtsdatum: "Date of birth",
+    label_adresse: "Street & house number",
+    label_plz: "Postcode",
+    label_ort: "City",
+    label_telefon: "Phone",
+    label_region: "Desired region",
+    optional: "Optional",
+    btn_next: "Next",
+    btn_back: "Back",
+    btn_submit: "Start your rate comparison now",
+    ty_title: "Thank you for your request!",
+    ty_sub: "We will get back to you shortly with suitable offers by email. Our team looks forward to securing the best rate for you.",
+    bel_warning: "Minimum 20% equity required (max. 80% LTV)",
+    lang_flag: "🇬🇧", lang_label: "EN"
+  },
+
+  fr: {
+    nav_cta: "Commencer conseil",
+    hero_badge: "Comparaison hypothécaire Suisse",
+    hero_h1_1: "Découvrez combien",
+    hero_h1_2: "d'immobilier vous",
+    hero_h1_3: "pouvez vous permettre",
+    hero_sub: "Calculez votre hypothèque en quelques secondes et obtenez de meilleurs taux grâce à notre comparaison avec les banques partenaires suisses.",
+    hero_cta: "Calculer maintenant",
+    hero_cta2: "Demander conseil",
+    stat1: "Banques partenaires",
+    stat2: "Taux",
+    stat3: "Accompagnement",
+    hc_label1: "Mensualité", hc_sub1: "incl. intérêts & amortissement",
+    hc_row1: "Hypothèque", hc_row2: "LTV", hc_row3: "Supportabilité",
+    hc_label2: "Hypothèque de départ", hc_label3: "Économies", hc_sub3: "vs. banque directe",
+    calc_label: "Calculateur hypothécaire",
+    calc_title: "Votre calcul personnel",
+    calc_sub: "Toutes les valeurs sont basées sur le standard de calcul suisse.",
+    label_kaufpreis: "Prix d'achat", label_eigenkapital: "Fonds propres",
+    label_einkommen: "Revenu brut annuel", label_geburt: "Date de naissance",
+    label_leasing: "Leasing / Crédit (mensuel)", label_alimente: "Aliments (mensuel)",
+    res_hypo_label: "Hypothèque", res_bel_label: "LTV:", res_trag_label: "Charge de revenu",
+    res_monthly_label: "Coûts annuels (détail)", row_zins: "Taux d'intérêt calc. (5%)",
+    row_unterhalt: "Entretien (1% prix d'achat)", row_amort: "Amortissement (80% → 65%)",
+    row_monthly: "Coûts mensuels totaux", rate_label: "Ex. hypothèque de départ", rate_desc: "Indication de marché actuelle",
+    ampel_hint_default: "Saisissez vos données pour calculer la supportabilité.",
+    ampel_green: "Très supportable", ampel_orange: "À peine supportable", ampel_red: "Non supportable",
+    ampel_green_hint: "Votre financement est très supportable. Idéal pour un financement hypothécaire.",
+    ampel_orange_hint: "Votre financement est juste dans la limite supportable.",
+    ampel_red_hint: "Le financement dépasse le maximum recommandé. Des fonds propres supplémentaires sont nécessaires.",
+    ampel_warn_prefix: "Vous avez besoin d'environ", ampel_warn_suffix: "CHF de fonds propres supplémentaires.",
+    calc_form_cta: "Demander conseil personnel & meilleur taux",
+    calc_disclaimer: "* Le calcul est basé sur vos données et sert uniquement d'orientation.",
+    trust_label: "Pourquoi DEINE HYPO",
+    trust_title: "Plus de banques. Meilleurs taux.\nAccompagnement personnel.",
+    trust_sub: "Nous collaborons avec les principales banques partenaires suisses.",
+    usp1_title: "Accès à de nombreuses banques partenaires",
+    usp1_text: "Grâce à notre large réseau, vous recevez des offres des principales banques suisses.",
+    usp2_title: "Meilleurs taux par comparaison",
+    usp2_text: "Nous comparons les offres et négocions activement pour vous.",
+    usp3_title: "Accompagnement personnel de A à Z",
+    usp3_text: "Du premier calcul à la signature – un interlocuteur personnel vous accompagne.",
+    usp4_title: "Neutre et indépendant",
+    usp4_text: "Nous ne sommes pas limités à une seule banque. Votre intérêt est au centre.",
+    form_label: "Démarrer la comparaison des taux",
+    form_title: "Quelques étapes vers\nvotre offre personnelle",
+    form_sub: "Remplissez simplement – nous vous contacterons avec les meilleurs taux.",
+    step1_title: "Quel est votre nom?", step1_sub: "Nous souhaitons vous adresser personnellement.",
+    step2_title: "Votre date de naissance", step2_sub: "Nécessaire pour le calcul de supportabilité.",
+    step3_title: "Votre adresse", step3_sub: "Rue et numéro de maison.",
+    step4_title: "NPA & ville", step4_sub: "Pour l'attribution régionale.",
+    step5_title: "Votre adresse e-mail", step5_sub: "Vos offres vous seront envoyées par e-mail.",
+    step6_title: "Votre numéro de téléphone", step6_sub: "Pour que nous puissions vous contacter.",
+    step7_title: "Prix d'achat", step7_sub: "Quel est le prix d'achat approximatif?",
+    step8_title: "Fonds propres", step8_sub: "De quels fonds propres disposez-vous?",
+    step9_title: "Région souhaitée", step9_sub: "Dans quelle région de Suisse cherchez-vous?",
+    label_vorname: "Prénom", label_nachname: "Nom", label_geburtsdatum: "Date de naissance",
+    label_adresse: "Rue & numéro", label_plz: "NPA", label_ort: "Ville", label_telefon: "Téléphone", label_region: "Région souhaitée",
+    optional: "Optionnel", btn_next: "Suivant", btn_back: "Retour",
+    btn_submit: "Démarrer votre comparaison de taux maintenant",
+    ty_title: "Merci pour votre demande!", ty_sub: "Nous vous contacterons sous peu avec des offres adaptées par e-mail.",
+    bel_warning: "Minimum 20% de fonds propres requis (LTV max. 80%)",
+    lang_flag: "🇫🇷", lang_label: "FR"
+  },
+
+  it: {
+    nav_cta: "Inizia consulenza",
+    hero_badge: "Confronto ipotecario Svizzera",
+    hero_h1_1: "Scopri quanto",
+    hero_h1_2: "immobile puoi",
+    hero_h1_3: "permetterti",
+    hero_sub: "Calcola il tuo mutuo in pochi secondi e ottieni tassi migliori grazie al confronto con le principali banche partner svizzere.",
+    hero_cta: "Calcola ora",
+    hero_cta2: "Richiedi consulenza",
+    stat1: "Banche partner", stat2: "Tassi", stat3: "Accompagnamento",
+    hc_label1: "Rata mensile", hc_sub1: "incl. interessi & ammortamento",
+    hc_row1: "Ipoteca", hc_row2: "LTV", hc_row3: "Sostenibilità",
+    hc_label2: "Ipoteca iniziale", hc_label3: "Risparmio", hc_sub3: "vs. banca diretta",
+    calc_label: "Calcolatore ipotecario", calc_title: "Il tuo calcolo personale",
+    calc_sub: "Tutti i valori si basano sullo standard di calcolo svizzero.",
+    label_kaufpreis: "Prezzo d'acquisto", label_eigenkapital: "Capitale proprio",
+    label_einkommen: "Reddito lordo annuo", label_geburt: "Data di nascita",
+    label_leasing: "Leasing / Credito (mensile)", label_alimente: "Alimenti (mensile)",
+    res_hypo_label: "Ipoteca", res_bel_label: "LTV:", res_trag_label: "Onere reddituale",
+    res_monthly_label: "Costi annuali (dettaglio)", row_zins: "Tasso calc. (5%)",
+    row_unterhalt: "Manutenzione (1% prezzo)", row_amort: "Ammortamento (80% → 65%)",
+    row_monthly: "Costi mensili totali", rate_label: "Es. ipoteca iniziale", rate_desc: "Indicazione di mercato attuale",
+    ampel_hint_default: "Inserisci i tuoi dati per calcolare la sostenibilità.",
+    ampel_green: "Molto sostenibile", ampel_orange: "Appena sostenibile", ampel_red: "Non sostenibile",
+    ampel_green_hint: "Il tuo finanziamento è molto sostenibile.",
+    ampel_orange_hint: "Il tuo finanziamento è appena nella fascia sostenibile.",
+    ampel_red_hint: "Il finanziamento supera il massimo raccomandato.",
+    ampel_warn_prefix: "Ti servono ca.", ampel_warn_suffix: "CHF di capitale proprio in più.",
+    calc_form_cta: "Richiedere consulenza personale & miglior tasso",
+    calc_disclaimer: "* Il calcolo si basa sui tuoi dati ed è solo orientativo.",
+    trust_label: "Perché DEINE HYPO",
+    trust_title: "Più banche. Tassi migliori.\nAccompagnamento personale.",
+    trust_sub: "Collaboriamo con le principali banche partner svizzere.",
+    usp1_title: "Accesso a molte banche partner", usp1_text: "Grazie alla nostra ampia rete, ricevi offerte dalle principali banche svizzere.",
+    usp2_title: "Tassi migliori tramite confronto", usp2_text: "Confrontiamo le offerte e negoziamo attivamente per te.",
+    usp3_title: "Accompagnamento personale da A a Z", usp3_text: "Dal primo calcolo alla firma – un interlocutore personale ti accompagna.",
+    usp4_title: "Neutrale e indipendente", usp4_text: "Non siamo limitati a una sola banca. Il tuo interesse è al centro.",
+    form_label: "Avvia confronto tassi",
+    form_title: "Pochi passi verso\nla tua offerta personale",
+    form_sub: "Compila semplicemente – ti contatteremo con i migliori tassi.",
+    step1_title: "Come ti chiami?", step1_sub: "Vogliamo rivolgerci a te personalmente.",
+    step2_title: "La tua data di nascita", step2_sub: "Necessaria per il calcolo di sostenibilità.",
+    step3_title: "Il tuo indirizzo", step3_sub: "Via e numero civico.",
+    step4_title: "CAP & città", step4_sub: "Per l'assegnazione regionale.",
+    step5_title: "Il tuo indirizzo e-mail", step5_sub: "Le tue offerte ti verranno inviate via e-mail.",
+    step6_title: "Il tuo numero di telefono", step6_sub: "Per poterti contattare per una breve consulenza.",
+    step7_title: "Prezzo d'acquisto", step7_sub: "Qual è il prezzo d'acquisto approssimativo?",
+    step8_title: "Capitale proprio", step8_sub: "Di quale capitale proprio disponi?",
+    step9_title: "Regione desiderata", step9_sub: "In quale regione della Svizzera cerchi?",
+    label_vorname: "Nome", label_nachname: "Cognome", label_geburtsdatum: "Data di nascita",
+    label_adresse: "Via & numero", label_plz: "CAP", label_ort: "Città", label_telefon: "Telefono", label_region: "Regione desiderata",
+    optional: "Opzionale", btn_next: "Avanti", btn_back: "Indietro",
+    btn_submit: "Avvia ora il tuo confronto tassi",
+    ty_title: "Grazie per la tua richiesta!", ty_sub: "Ti contatteremo presto con offerte adeguate via e-mail.",
+    bel_warning: "Minimo 20% di capitale proprio richiesto (LTV max. 80%)",
+    lang_flag: "🇮🇹", lang_label: "IT"
+  },
+
+  sq: {
+    nav_cta: "Filloni këshillim",
+    hero_badge: "Krahasim hipotekar Zvicër",
+    hero_h1_1: "Zbuloni sa",
+    hero_h1_2: "pronë mund të",
+    hero_h1_3: "përballoni",
+    hero_sub: "Llogarisni hipotekën tuaj në sekonda dhe merrni norma më të mira nëpërmjet krahasimit tonë me bankat partnere zvicerane.",
+    hero_cta: "Llogarit tani",
+    hero_cta2: "Kërkoni këshillim",
+    stat1: "Bankat partnere", stat2: "Normat", stat3: "Mbështetje",
+    hc_label1: "Kësti mujor", hc_sub1: "incl. interesi & amortizimi",
+    hc_row1: "Hipoteka", hc_row2: "LTV", hc_row3: "Përballueshmëria",
+    hc_label2: "Hipoteka fillestare", hc_label3: "Kursime", hc_sub3: "vs. bankë direkte",
+    calc_label: "Llogaritësi i hipotekës", calc_title: "Llogaritja juaj personale",
+    calc_sub: "Të gjitha vlerat bazohen në standardin zviceran të llogaritjes.",
+    label_kaufpreis: "Çmimi i blerjes", label_eigenkapital: "Kapitali vetjak",
+    label_einkommen: "Të ardhurat bruto vjetore", label_geburt: "Data e lindjes",
+    label_leasing: "Leasing / Kredi (mujor)", label_alimente: "Alimentacioni (mujor)",
+    res_hypo_label: "Hipoteka", res_bel_label: "LTV:", res_trag_label: "Ngarkesa e të ardhurave",
+    res_monthly_label: "Kostot vjetore (detaje)", row_zins: "Norma calc. (5%)",
+    row_unterhalt: "Mirëmbajtja (1% çmimi)", row_amort: "Amortizimi (80% → 65%)",
+    row_monthly: "Kostot totale mujore", rate_label: "Shembull hipotekë fillestare", rate_desc: "Indikacion aktual i tregut",
+    ampel_hint_default: "Vendosni të dhënat tuaja për të llogaritur përballueshmërinë.",
+    ampel_green: "Shumë i përballueshëm", ampel_orange: "Mezi i përballueshëm", ampel_red: "Jo i përballueshëm",
+    ampel_green_hint: "Financimi juaj është shumë i përballueshëm.",
+    ampel_orange_hint: "Financimi juaj është mezi brenda kufirit të përballueshëm.",
+    ampel_red_hint: "Financimi tejkalon maksimumin e rekomanduar.",
+    ampel_warn_prefix: "Ju nevojiten rreth", ampel_warn_suffix: "CHF kapital vetjak shtesë.",
+    calc_form_cta: "Kërkoni këshillim personal & normën më të mirë",
+    calc_disclaimer: "* Llogaritja bazohet në të dhënat tuaja dhe shërben vetëm si orientim.",
+    trust_label: "Pse DEINE HYPO",
+    trust_title: "Më shumë banka. Norma më të mira.\nMbështetje personale.",
+    trust_sub: "Ne bashkëpunojmë me bankat kryesore partnere zvicerane.",
+    usp1_title: "Qasje në shumë banka partnere", usp1_text: "Falë rrjetit tonë të gjerë, merrni oferta nga bankat kryesore zvicerane.",
+    usp2_title: "Norma më të mira nëpërmjet krahasimit", usp2_text: "Ne krahasojmë ofertat dhe negociojmë aktivisht për ju.",
+    usp3_title: "Mbështetje personale nga A deri Z", usp3_text: "Nga llogaritja e parë deri te nënshkrimi – një kontakt personal ju shoqëron.",
+    usp4_title: "Neutral dhe i pavarur", usp4_text: "Ne nuk jemi të kufizuar në një bankë. Interesi juaj është në qendër.",
+    form_label: "Filloni krahasimin e normave",
+    form_title: "Disa hapa drejt\nofertës suaj personale",
+    form_sub: "Plotësoni thjesht – do t'ju kontaktojmë me normat më të mira.",
+    step1_title: "Si quaheni?", step1_sub: "Dëshirojmë t'ju adresojmë personalisht.",
+    step2_title: "Data juaj e lindjes", step2_sub: "E nevojshme për llogaritjen e përballueshmërisë.",
+    step3_title: "Adresa juaj", step3_sub: "Rruga dhe numri i shtëpisë.",
+    step4_title: "Kodi postar & qyteti", step4_sub: "Për caktimin rajonal.",
+    step5_title: "Adresa juaj e-mail", step5_sub: "Ofertat tuaja do t'ju dërgohen me e-mail.",
+    step6_title: "Numri juaj i telefonit", step6_sub: "Që të mund t'ju kontaktojmë.",
+    step7_title: "Çmimi i blerjes", step7_sub: "Cili është çmimi i blerjes i përafërt?",
+    step8_title: "Kapitali vetjak", step8_sub: "Sa kapital vetjak keni në dispozicion?",
+    step9_title: "Rajoni i dëshiruar", step9_sub: "Në cilin rajon të Zvicrës po kërkoni?",
+    label_vorname: "Emri", label_nachname: "Mbiemri", label_geburtsdatum: "Data e lindjes",
+    label_adresse: "Rruga & numri", label_plz: "Kodi postar", label_ort: "Qyteti", label_telefon: "Telefoni", label_region: "Rajoni i dëshiruar",
+    optional: "Opsionale", btn_next: "Vazhdo", btn_back: "Kthehu",
+    btn_submit: "Filloni krahasimin tuaj të normave tani",
+    ty_title: "Faleminderit për kërkesën tuaj!", ty_sub: "Do t'ju kontaktojmë së shpejti me oferta të përshtatshme me e-mail.",
+    bel_warning: "Minimum 20% kapital vetjak i nevojshëm (LTV maks. 80%)",
+    lang_flag: "🇦🇱", lang_label: "SQ"
+  },
+
+  sr: {
+    nav_cta: "Počnite savetovanje",
+    hero_badge: "Poređenje hipoteka Švajcarska",
+    hero_h1_1: "Saznajte koliko",
+    hero_h1_2: "nekretnine možete",
+    hero_h1_3: "priuštiti",
+    hero_sub: "Izračunajte hipoteku za nekoliko sekundi i dobijte bolje kamate kroz naše poređenje sa vodećim švajcarskim partnerskim bankama.",
+    hero_cta: "Izračunaj sada",
+    hero_cta2: "Zatražite savet",
+    stat1: "Partnerske banke", stat2: "Kamate", stat3: "Podrška",
+    hc_label1: "Mesečna rata", hc_sub1: "uklj. kamatu & amortizaciju",
+    hc_row1: "Hipoteka", hc_row2: "LTV", hc_row3: "Priuštivost",
+    hc_label2: "Početna hipoteka", hc_label3: "Uštedovina", hc_sub3: "vs. direktna banka",
+    calc_label: "Kalkulator hipoteke", calc_title: "Vaš lični obračun",
+    calc_sub: "Sve vrednosti su zasnovane na švajcarskom standardu obračuna.",
+    label_kaufpreis: "Kupovna cena", label_eigenkapital: "Vlastiti kapital",
+    label_einkommen: "Bruto godišnji prihod", label_geburt: "Datum rođenja",
+    label_leasing: "Lizing / Kredit (mesečno)", label_alimente: "Alimentacija (mesečno)",
+    res_hypo_label: "Hipoteka", res_bel_label: "LTV:", res_trag_label: "Opterećenje prihoda",
+    res_monthly_label: "Godišnji troškovi (pregled)", row_zins: "Kalk. kamatna stopa (5%)",
+    row_unterhalt: "Održavanje (1% cene)", row_amort: "Amortizacija (80% → 65%)",
+    row_monthly: "Ukupni mesečni troškovi", rate_label: "Primer početne hipoteke", rate_desc: "Trenutna tržišna indikacija",
+    ampel_hint_default: "Unesite podatke za obračun priuštivosti.",
+    ampel_green: "Veoma priuštivo", ampel_orange: "Jedva priuštivo", ampel_red: "Nije priuštivo",
+    ampel_green_hint: "Vaše finansiranje je veoma priuštivo.",
+    ampel_orange_hint: "Vaše finansiranje je jedva u granicama priuštivosti.",
+    ampel_red_hint: "Finansiranje premašuje preporučeni maksimum.",
+    ampel_warn_prefix: "Potrebno vam je oko", ampel_warn_suffix: "CHF više vlastitog kapitala.",
+    calc_form_cta: "Zatražite lični savet & najbolju kamatu",
+    calc_disclaimer: "* Obračun se zasniva na vašim podacima i služi samo kao orijentacija.",
+    trust_label: "Zašto DEINE HYPO",
+    trust_title: "Više banaka. Bolje kamate.\nLična podrška.",
+    trust_sub: "Sarađujemo sa vodećim švajcarskim partnerskim bankama.",
+    usp1_title: "Pristup mnogim partnerskim bankama", usp1_text: "Zahvaljujući našoj širokoj mreži, dobijate ponude od vodećih švajcarskih banaka.",
+    usp2_title: "Bolje kamate kroz poređenje", usp2_text: "Poredimo ponude i aktivno pregovaramo za vas.",
+    usp3_title: "Lična podrška od A do Z", usp3_text: "Od prvog obračuna do potpisivanja – lični kontakt vas prati kroz ceo proces.",
+    usp4_title: "Neutralni i nezavisni", usp4_text: "Nismo ograničeni na jednu banku. Vaš interes je u centru.",
+    form_label: "Pokrenite poređenje kamata",
+    form_title: "Nekoliko koraka do\nvaše lične ponude",
+    form_sub: "Jednostavno popunite – kontaktiraćemo vas sa najboljim kamatama.",
+    step1_title: "Kako se zovete?", step1_sub: "Želimo da vam se obratimo lično.",
+    step2_title: "Vaš datum rođenja", step2_sub: "Potrebno za obračun priuštivosti.",
+    step3_title: "Vaša adresa", step3_sub: "Ulica i kućni broj.",
+    step4_title: "Poštanski broj & grad", step4_sub: "Za regionalnu dodelu.",
+    step5_title: "Vaša e-mail adresa", step5_sub: "Vaše ponude biće vam poslate e-mailom.",
+    step6_title: "Vaš broj telefona", step6_sub: "Da bismo vas mogli kontaktirati.",
+    step7_title: "Kupovna cena", step7_sub: "Kolika je okvirna kupovna cena?",
+    step8_title: "Vlastiti kapital", step8_sub: "Koliki vlastiti kapital imate na raspolaganju?",
+    step9_title: "Željena regija", step9_sub: "U kojoj regiji Švajcarske tražite?",
+    label_vorname: "Ime", label_nachname: "Prezime", label_geburtsdatum: "Datum rođenja",
+    label_adresse: "Ulica & broj", label_plz: "Poštanski broj", label_ort: "Grad", label_telefon: "Telefon", label_region: "Željena regija",
+    optional: "Opciono", btn_next: "Dalje", btn_back: "Nazad",
+    btn_submit: "Pokrenite poređenje kamata sada",
+    ty_title: "Hvala na vašem zahtevu!", ty_sub: "Uskoro ćemo vas kontaktirati sa odgovarajućim ponudama e-mailom.",
+    bel_warning: "Minimum 20% vlastitog kapitala potrebno (LTV maks. 80%)",
+    lang_flag: "🇷🇸", lang_label: "SR"
+  },
+
+  es: {
+    nav_cta: "Iniciar consulta",
+    hero_badge: "Comparación hipotecaria Suiza",
+    hero_h1_1: "Descubre cuánta",
+    hero_h1_2: "propiedad puedes",
+    hero_h1_3: "permitirte",
+    hero_sub: "Calcula tu hipoteca en segundos y obtén mejores tasas a través de nuestra comparación con los principales bancos asociados suizos.",
+    hero_cta: "Calcular ahora",
+    hero_cta2: "Solicitar asesoramiento",
+    stat1: "Bancos asociados", stat2: "Tasas", stat3: "Acompañamiento",
+    hc_label1: "Cuota mensual", hc_sub1: "incl. interés & amortización",
+    hc_row1: "Hipoteca", hc_row2: "LTV", hc_row3: "Asequibilidad",
+    hc_label2: "Hipoteca inicial", hc_label3: "Ahorro", hc_sub3: "vs. banco directo",
+    calc_label: "Calculadora hipotecaria", calc_title: "Tu cálculo personal",
+    calc_sub: "Todos los valores se basan en el estándar de cálculo suizo.",
+    label_kaufpreis: "Precio de compra", label_eigenkapital: "Capital propio",
+    label_einkommen: "Ingresos brutos anuales", label_geburt: "Fecha de nacimiento",
+    label_leasing: "Leasing / Crédito (mensual)", label_alimente: "Pensión alimentos (mensual)",
+    res_hypo_label: "Hipoteca", res_bel_label: "LTV:", res_trag_label: "Carga de ingresos",
+    res_monthly_label: "Costes anuales (desglose)", row_zins: "Tipo calc. (5%)",
+    row_unterhalt: "Mantenimiento (1% precio)", row_amort: "Amortización (80% → 65%)",
+    row_monthly: "Costes mensuales totales", rate_label: "Ej. hipoteca inicial", rate_desc: "Indicación actual del mercado",
+    ampel_hint_default: "Introduce tus datos para calcular la asequibilidad.",
+    ampel_green: "Muy asequible", ampel_orange: "Apenas asequible", ampel_red: "No asequible",
+    ampel_green_hint: "Tu financiación es muy asequible.",
+    ampel_orange_hint: "Tu financiación está apenas dentro del límite asequible.",
+    ampel_red_hint: "La financiación supera el máximo recomendado.",
+    ampel_warn_prefix: "Necesitas aprox.", ampel_warn_suffix: "CHF más de capital propio.",
+    calc_form_cta: "Solicitar asesoramiento personal & mejor tasa",
+    calc_disclaimer: "* El cálculo se basa en tus datos y sirve solo de orientación.",
+    trust_label: "Por qué DEINE HYPO",
+    trust_title: "Más bancos. Mejores tasas.\nAcompañamiento personal.",
+    trust_sub: "Colaboramos con los principales bancos asociados suizos.",
+    usp1_title: "Acceso a muchos bancos asociados", usp1_text: "Gracias a nuestra amplia red, recibes ofertas de los principales bancos suizos.",
+    usp2_title: "Mejores tasas mediante comparación", usp2_text: "Comparamos ofertas y negociamos activamente para ti.",
+    usp3_title: "Acompañamiento personal de A a Z", usp3_text: "Desde el primer cálculo hasta la firma – un contacto personal te acompaña.",
+    usp4_title: "Neutral e independiente", usp4_text: "No estamos limitados a un banco. Tu interés está en el centro.",
+    form_label: "Iniciar comparación de tasas",
+    form_title: "Pocos pasos hacia\ntu oferta personal",
+    form_sub: "Simplemente rellena – te contactaremos con las mejores tasas.",
+    step1_title: "¿Cómo te llamas?", step1_sub: "Queremos dirigirnos a ti personalmente.",
+    step2_title: "Tu fecha de nacimiento", step2_sub: "Necesaria para el cálculo de asequibilidad.",
+    step3_title: "Tu dirección", step3_sub: "Calle y número de casa.",
+    step4_title: "Código postal & ciudad", step4_sub: "Para la asignación regional.",
+    step5_title: "Tu dirección de correo electrónico", step5_sub: "Tus ofertas te serán enviadas por correo electrónico.",
+    step6_title: "Tu número de teléfono", step6_sub: "Para que podamos contactarte.",
+    step7_title: "Precio de compra", step7_sub: "¿Cuál es el precio de compra aproximado?",
+    step8_title: "Capital propio", step8_sub: "¿De qué capital propio dispones?",
+    step9_title: "Región deseada", step9_sub: "¿En qué región de Suiza buscas?",
+    label_vorname: "Nombre", label_nachname: "Apellido", label_geburtsdatum: "Fecha de nacimiento",
+    label_adresse: "Calle & número", label_plz: "C.P.", label_ort: "Ciudad", label_telefon: "Teléfono", label_region: "Región deseada",
+    optional: "Opcional", btn_next: "Siguiente", btn_back: "Atrás",
+    btn_submit: "Iniciar tu comparación de tasas ahora",
+    ty_title: "¡Gracias por tu solicitud!", ty_sub: "Nos pondremos en contacto contigo en breve con ofertas adecuadas por correo electrónico.",
+    bel_warning: "Mínimo 20% de capital propio requerido (LTV máx. 80%)",
+    lang_flag: "🇪🇸", lang_label: "ES"
+  },
+
+  pt: {
+    nav_cta: "Iniciar consulta",
+    hero_badge: "Comparação hipotecária Suíça",
+    hero_h1_1: "Descubra quanto",
+    hero_h1_2: "imóvel você",
+    hero_h1_3: "pode ter",
+    hero_sub: "Calcule a sua hipoteca em segundos e obtenha melhores taxas através da nossa comparação com os principais bancos parceiros suíços.",
+    hero_cta: "Calcular agora",
+    hero_cta2: "Solicitar aconselhamento",
+    stat1: "Bancos parceiros", stat2: "Taxas", stat3: "Acompanhamento",
+    hc_label1: "Prestação mensal", hc_sub1: "incl. juros & amortização",
+    hc_row1: "Hipoteca", hc_row2: "LTV", hc_row3: "Acessibilidade",
+    hc_label2: "Hipoteca inicial", hc_label3: "Poupança", hc_sub3: "vs. banco direto",
+    calc_label: "Calculadora de hipoteca", calc_title: "O seu cálculo pessoal",
+    calc_sub: "Todos os valores baseiam-se no padrão de cálculo suíço.",
+    label_kaufpreis: "Preço de compra", label_eigenkapital: "Capital próprio",
+    label_einkommen: "Rendimento bruto anual", label_geburt: "Data de nascimento",
+    label_leasing: "Leasing / Crédito (mensal)", label_alimente: "Alimentos (mensal)",
+    res_hypo_label: "Hipoteca", res_bel_label: "LTV:", res_trag_label: "Encargo de rendimento",
+    res_monthly_label: "Custos anuais (detalhe)", row_zins: "Taxa calc. (5%)",
+    row_unterhalt: "Manutenção (1% preço)", row_amort: "Amortização (80% → 65%)",
+    row_monthly: "Custos mensais totais", rate_label: "Ex. hipoteca inicial", rate_desc: "Indicação atual do mercado",
+    ampel_hint_default: "Introduza os seus dados para calcular a acessibilidade.",
+    ampel_green: "Muito acessível", ampel_orange: "Pouco acessível", ampel_red: "Não acessível",
+    ampel_green_hint: "O seu financiamento é muito acessível.",
+    ampel_orange_hint: "O seu financiamento está apenas dentro do limite acessível.",
+    ampel_red_hint: "O financiamento ultrapassa o máximo recomendado.",
+    ampel_warn_prefix: "Precisa de aprox.", ampel_warn_suffix: "CHF mais de capital próprio.",
+    calc_form_cta: "Solicitar aconselhamento pessoal & melhor taxa",
+    calc_disclaimer: "* O cálculo baseia-se nos seus dados e serve apenas de orientação.",
+    trust_label: "Porquê DEINE HYPO",
+    trust_title: "Mais bancos. Melhores taxas.\nAcompanhamento pessoal.",
+    trust_sub: "Trabalhamos com os principais bancos parceiros suíços.",
+    usp1_title: "Acesso a muitos bancos parceiros", usp1_text: "Graças à nossa ampla rede, recebe ofertas dos principais bancos suíços.",
+    usp2_title: "Melhores taxas através de comparação", usp2_text: "Comparamos ofertas e negociamos ativamente para si.",
+    usp3_title: "Acompanhamento pessoal de A a Z", usp3_text: "Desde o primeiro cálculo até à assinatura – um contacto pessoal acompanha-o.",
+    usp4_title: "Neutral e independente", usp4_text: "Não estamos limitados a um banco. O seu interesse está no centro.",
+    form_label: "Iniciar comparação de taxas",
+    form_title: "Alguns passos para\na sua oferta pessoal",
+    form_sub: "Preencha simplesmente – entraremos em contacto com as melhores taxas.",
+    step1_title: "Qual é o seu nome?", step1_sub: "Queremos dirigir-nos a si pessoalmente.",
+    step2_title: "A sua data de nascimento", step2_sub: "Necessária para o cálculo de acessibilidade.",
+    step3_title: "A sua morada", step3_sub: "Rua e número de porta.",
+    step4_title: "Código postal & cidade", step4_sub: "Para atribuição regional.",
+    step5_title: "O seu endereço de e-mail", step5_sub: "As suas ofertas ser-lhe-ão enviadas por e-mail.",
+    step6_title: "O seu número de telefone", step6_sub: "Para que possamos contactá-lo.",
+    step7_title: "Preço de compra", step7_sub: "Qual é o preço de compra aproximado?",
+    step8_title: "Capital próprio", step8_sub: "Quanto capital próprio tem disponível?",
+    step9_title: "Região desejada", step9_sub: "Em que região da Suíça procura?",
+    label_vorname: "Nome próprio", label_nachname: "Apelido", label_geburtsdatum: "Data de nascimento",
+    label_adresse: "Rua & número", label_plz: "Cód. postal", label_ort: "Cidade", label_telefon: "Telefone", label_region: "Região desejada",
+    optional: "Opcional", btn_next: "Seguinte", btn_back: "Voltar",
+    btn_submit: "Iniciar a sua comparação de taxas agora",
+    ty_title: "Obrigado pelo seu pedido!", ty_sub: "Entraremos em contacto brevemente com ofertas adequadas por e-mail.",
+    bel_warning: "Mínimo 20% de capital próprio necessário (LTV máx. 80%)",
+    lang_flag: "🇵🇹", lang_label: "PT"
+  }
+};
+
+/* ===========================
+   LANGUAGE SYSTEM
+=========================== */
+let currentLang = 'de';
+
+function t(key) {
+  return (i18n[currentLang] && i18n[currentLang][key]) || (i18n['de'][key]) || key;
+}
+
+function applyTranslations() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const text = t(key);
+    if (text) el.textContent = text;
+  });
+  // Update lang button
+  document.getElementById('lang-current-flag').textContent = t('lang_flag');
+  document.getElementById('lang-current-label').textContent = t('lang_label');
+  // Update active
+  document.querySelectorAll('.lang-option').forEach(opt => {
+    opt.classList.toggle('active', opt.dataset.lang === currentLang);
+  });
+  // Re-run calculator text
+  recalculate();
+}
+
+function setLanguage(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  applyTranslations();
+}
+
+// Language switcher
+const langToggle = document.getElementById('lang-toggle');
+const langDropdown = document.getElementById('lang-dropdown');
+
+langToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  langToggle.classList.toggle('open');
+  langDropdown.classList.toggle('open');
+});
+
+document.addEventListener('click', () => {
+  langToggle.classList.remove('open');
+  langDropdown.classList.remove('open');
+});
+
+document.querySelectorAll('.lang-option').forEach(opt => {
+  opt.addEventListener('click', () => {
+    setLanguage(opt.dataset.lang);
+    langToggle.classList.remove('open');
+    langDropdown.classList.remove('open');
+  });
+});
+
+/* ===========================
+   CALCULATOR LOGIC
+=========================== */
+function fmt(num) {
+  if (isNaN(num) || num === null) return '–';
+  return "CHF " + Math.round(num).toLocaleString('de-CH');
+}
+
+function fmtPct(num) {
+  if (isNaN(num) || num === null) return '–';
+  return num.toFixed(1) + '%';
+}
+
+function recalculate() {
+  const kaufpreis = parseFloat(document.getElementById('kaufpreis').value) || 0;
+  const eigenkapital = parseFloat(document.getElementById('eigenkapital').value) || 0;
+  const einkommen = parseFloat(document.getElementById('einkommen').value) || 0;
+  const leasing = parseFloat(document.getElementById('leasing').value) || 0;
+  const alimente = parseFloat(document.getElementById('alimente').value) || 0;
+
+  // --- Core calculations ---
+  const hypothek = Math.max(0, kaufpreis - eigenkapital);
+  const belehnung = kaufpreis > 0 ? (hypothek / kaufpreis) * 100 : 0;
+
+  // Annual costs
+  const zinsJahr = hypothek * 0.05;
+  const unterhaltJahr = kaufpreis * 0.01;
+
+  // Amortisation: difference from 80% to 65% of Kaufpreis over 15 years
+  const amortBasis = Math.max(0, hypothek - (kaufpreis * 0.65));
+  const amortJahr = amortBasis > 0 ? amortBasis / 15 : 0;
+
+  // Other monthly costs annualized
+  const otherJahr = (leasing + alimente) * 12;
+
+  const gesamtJahr = zinsJahr + unterhaltJahr + amortJahr + otherJahr;
+  const monatlich = gesamtJahr / 12;
+  const tragbarkeit = einkommen > 0 ? (gesamtJahr / einkommen) * 100 : null;
+
+  // --- Update DOM ---
+  document.getElementById('res-hypothek').textContent = kaufpreis > 0 ? fmt(hypothek) : '–';
+  document.getElementById('res-belehnung').textContent = kaufpreis > 0 ? fmtPct(belehnung) : '–';
+  document.getElementById('row-zins').textContent = kaufpreis > 0 ? fmt(zinsJahr) : '–';
+  document.getElementById('row-unterhalt').textContent = kaufpreis > 0 ? fmt(unterhaltJahr) : '–';
+  document.getElementById('row-amort').textContent = kaufpreis > 0 ? fmt(amortJahr) : '–';
+  document.getElementById('res-monthly').textContent = kaufpreis > 0 ? fmt(monatlich) : '–';
+
+  // Belehnung warning
+  const belWarn = belehnung > 80 && kaufpreis > 0;
+
+  // Ampel
+  const tragEl = document.getElementById('res-tragbarkeit');
+  const badge = document.getElementById('ampel-badge');
+  const fill = document.getElementById('progress-fill');
+  const hint = document.getElementById('ampel-hint');
+  const warning = document.getElementById('ampel-warning');
+
+  if (tragbarkeit === null || kaufpreis === 0) {
+    tragEl.textContent = '–';
+    tragEl.className = 'ampel-value neutral';
+    badge.textContent = '–';
+    badge.className = 'ampel-badge neutral';
+    fill.style.width = '0%';
+    fill.className = 'progress-bar-fill neutral';
+    hint.textContent = t('ampel_hint_default');
+    warning.classList.remove('show');
+    return;
+  }
+
+  tragEl.textContent = fmtPct(tragbarkeit);
+  const barWidth = Math.min(100, (tragbarkeit / 50) * 100);
+  fill.style.width = barWidth + '%';
+
+  let color, badgeText, hintText;
+
+  if (tragbarkeit <= 33.33) {
+    color = 'green';
+    badgeText = t('ampel_green');
+    hintText = t('ampel_green_hint');
+  } else if (tragbarkeit <= 35) {
+    color = 'orange';
+    badgeText = t('ampel_orange');
+    hintText = t('ampel_orange_hint');
+  } else {
+    color = 'red';
+    badgeText = t('ampel_red');
+    hintText = t('ampel_red_hint');
+  }
+
+  tragEl.className = 'ampel-value ' + color;
+  badge.textContent = badgeText;
+  badge.className = 'ampel-badge ' + color;
+  fill.className = 'progress-bar-fill ' + color;
+  hint.textContent = hintText;
+
+  // Extra Eigenkapital warning
+  if (tragbarkeit > 35 && einkommen > 0) {
+    // Solve: (zins_new + unterhalt + amort_new + other) / einkommen = 0.3333
+    // zins depends on hypothek, amort on hypothek
+    // We need to find EK such that tragbarkeit = 33.33%
+    const maxGesamtJahr = einkommen * 0.3333;
+    const maxNet = maxGesamtJahr - unterhaltJahr - otherJahr;
+    // maxNet = 0.05 * hyp_new + max(hyp_new - 0.65*kp, 0) / 15
+    // if hyp_new > 0.65*kp: maxNet = 0.05*h + (h - 0.65*kp)/15 = h*(0.05 + 1/15) - 0.65*kp/15
+    // h*(0.05+1/15) = maxNet + 0.65*kp/15
+    let targetHyp;
+    const coeff = 0.05 + 1/15;
+    const term = maxNet + (kaufpreis * 0.65) / 15;
+    targetHyp = term / coeff;
+    if (targetHyp < 0) targetHyp = 0;
+    const targetEK = kaufpreis - targetHyp;
+    const ekDiff = Math.max(0, Math.ceil(targetEK - eigenkapital));
+    if (ekDiff > 0) {
+      warning.textContent = t('ampel_warn_prefix') + ' ' + Math.round(ekDiff).toLocaleString('de-CH') + ' ' + t('ampel_warn_suffix');
+      warning.classList.add('show');
+    } else {
+      warning.classList.remove('show');
+    }
+  } else if (belWarn) {
+    warning.textContent = t('bel_warning');
+    warning.classList.add('show');
+  } else {
+    warning.classList.remove('show');
+  }
+}
+
+// Attach listeners
+['kaufpreis','eigenkapital','einkommen','leasing','alimente','geburtsdatum'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('input', recalculate);
+});
+
+// Run on load
+document.addEventListener('DOMContentLoaded', recalculate);
+
+/* ===========================
+   MULTISTEP FORM
+=========================== */
+const TOTAL_STEPS = 9;
+let currentStep = 1;
+
+function buildStepIndicator() {
+  const container = document.getElementById('step-indicator');
+  container.innerHTML = '';
+  for (let i = 1; i <= TOTAL_STEPS; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'step-dot' + (i === currentStep ? ' active' : i < currentStep ? ' done' : '');
+    dot.textContent = i < currentStep ? '✓' : i;
+    container.appendChild(dot);
+    if (i < TOTAL_STEPS) {
+      const line = document.createElement('div');
+      line.className = 'step-line' + (i < currentStep ? ' done' : '');
+      container.appendChild(line);
+    }
+  }
+}
+
+function showStep(step) {
+  document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+  const target = document.querySelector(`.form-step[data-step="${step}"]`);
+  if (target) target.classList.add('active');
+  buildStepIndicator();
+  currentStep = step;
+}
+
+function nextStep() {
+  if (currentStep < TOTAL_STEPS) showStep(currentStep + 1);
+}
+
+function prevStep() {
+  if (currentStep > 1) showStep(currentStep - 1);
+}
+
+// Initialize
+buildStepIndicator();
+
+/* ===========================
+   FORM SUBMISSION
+=========================== */
+async function submitForm() {
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.textContent = '...';
+
+  // Map visible form values to hidden form
+  document.getElementById('hf-vorname').value     = document.getElementById('f-vorname').value;
+  document.getElementById('hf-nachname').value    = document.getElementById('f-nachname').value;
+  document.getElementById('hf-geburtsdatum').value= document.getElementById('f-geburtsdatum').value;
+  document.getElementById('hf-adresse').value     = document.getElementById('f-adresse').value;
+  document.getElementById('hf-plz').value         = document.getElementById('f-plz').value;
+  document.getElementById('hf-ort').value         = document.getElementById('f-ort').value;
+  document.getElementById('hf-email').value       = document.getElementById('f-email').value;
+  document.getElementById('hf-telefon').value     = document.getElementById('f-telefon').value;
+  document.getElementById('hf-kaufpreis').value   = document.getElementById('f-kaufpreis').value;
+  document.getElementById('hf-eigenkapital').value= document.getElementById('f-eigenkapital').value;
+  document.getElementById('hf-region').value      = document.getElementById('f-region').value;
+
+  const form = document.getElementById('hidden-form');
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      showThankYou();
+    } else {
+      // Fallback: show thank you anyway for demo
+      showThankYou();
+    }
+  } catch (e) {
+    // Network error — still show thank you for demo
+    showThankYou();
+  }
+}
+
+function showThankYou() {
+  document.getElementById('step-indicator').style.display = 'none';
+  document.getElementById('form-card').style.display = 'none';
+  const ty = document.getElementById('thank-you');
+  ty.classList.add('show');
+}
+
+/* ===========================
+   NAVIGATION & SCROLL
+=========================== */
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('main-nav');
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+
+  const scrollTop = document.getElementById('scroll-top');
+  scrollTop.classList.toggle('show', window.scrollY > 400);
+});
+
+/* ===========================
+   SCROLL REVEAL
+=========================== */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ===========================
+   SMOOTH ANCHOR SCROLL
+=========================== */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = 80;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+/* ===========================
+   INIT
+=========================== */
+applyTranslations();
+</script>
+</body>
+</html>
