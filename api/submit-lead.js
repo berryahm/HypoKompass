@@ -4,9 +4,17 @@
 // never exposed to the client.
 
 const CRM_BASE = "https://finsion.ecore.ch/api/v1";
+const INVISIBLE_CHARS_RE = /[\u200B-\u200D\uFEFF\u00A0\u2060]/g;
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function isNonEmptyString(v) {
   return typeof v === "string" && v.trim().length > 0;
+}
+
+// Strips invisible/zero-width unicode characters before checking for real content,
+// so a field can't "look" filled while actually being blank.
+function hasVisibleContent(v) {
+  return typeof v === "string" && v.replace(INVISIBLE_CHARS_RE, "").trim().length > 0;
 }
 
 module.exports = async (req, res) => {
@@ -35,9 +43,19 @@ module.exports = async (req, res) => {
 
   const firstName = (body.firstName || "").trim();
   const lastName = (body.lastName || "").trim();
+  const leadEmail = (body.email || "").trim();
+  const telefon = (body.telefon || "").trim();
 
-  if (!isNonEmptyString(firstName) || !isNonEmptyString(lastName)) {
+  if (!hasVisibleContent(firstName) || !hasVisibleContent(lastName)) {
     res.status(400).json({ success: false, message: "firstName and lastName are required" });
+    return;
+  }
+
+  // A lead nobody can reach is worthless - require at least one real contact method.
+  const hasValidEmail = hasVisibleContent(leadEmail) && EMAIL_RE.test(leadEmail);
+  const hasValidPhone = hasVisibleContent(telefon) && telefon.replace(/[^0-9]/g, "").length >= 9;
+  if (!hasValidEmail && !hasValidPhone) {
+    res.status(400).json({ success: false, message: "A valid email or phone number is required" });
     return;
   }
 
@@ -56,8 +74,8 @@ module.exports = async (req, res) => {
     source: "Direkte Kundenanfrage",
   };
 
-  if (isNonEmptyString(body.email)) leadPayload.email = body.email.trim();
-  if (isNonEmptyString(body.telefon)) leadPayload.phone1 = body.telefon.trim();
+  if (hasValidEmail) leadPayload.email = leadEmail;
+  if (hasValidPhone) leadPayload.phone1 = telefon;
   if (isNonEmptyString(body.plz)) leadPayload.addressZip = body.plz.trim();
   if (isNonEmptyString(body.ort)) leadPayload.addressCity = body.ort.trim();
   if (notesParts.length > 0) leadPayload.note = notesParts.join(" | ");

@@ -203,6 +203,9 @@
     .form-input{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-md);color:var(--white);font-size:0.95rem;padding:13px 16px;transition:var(--transition)}
     .form-input::placeholder{color:var(--text-body)}
     .form-input:focus{outline:none;border-color:var(--teal);background:rgba(10,191,163,0.05);box-shadow:0 0 0 3px rgba(10,191,163,0.12)}
+    .form-input.error{border-color:var(--red);background:rgba(239,68,68,0.06)}
+    .field-error{display:none;color:var(--red);font-size:0.78rem;margin-top:6px}
+    .field-error.show{display:block}
     .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
     @media(max-width:500px){.form-row{grid-template-columns:1fr}}
     .form-actions{display:flex;justify-content:space-between;align-items:center;margin-top:24px;gap:12px}
@@ -740,16 +743,16 @@
         <div class="step-sub" data-i18n="form_s1_sub">Damit wir dir dein pers&#xF6;nliches Angebot zusenden k&#xF6;nnen.</div>
         <div class="form-field"><label data-i18n="form_gender">Anrede</label><select class="form-input" id="f-anrede"><option value="m\u00e4nnlich" data-i18n="form_gender_m">Herr</option><option value="weiblich" data-i18n="form_gender_f">Frau</option></select></div>
         <div class="form-row">
-          <div class="form-field"><label data-i18n="form_firstname">Vorname</label><input type="text" class="form-input" id="f-vorname" placeholder="Max" autocomplete="given-name"/></div>
-          <div class="form-field"><label data-i18n="form_lastname">Nachname</label><input type="text" class="form-input" id="f-nachname" placeholder="Mustermann" autocomplete="family-name"/></div>
+          <div class="form-field"><label data-i18n="form_firstname">Vorname</label><input type="text" class="form-input" id="f-vorname" placeholder="Max" autocomplete="given-name"/><div class="field-error" id="f-vorname-err"></div></div>
+          <div class="form-field"><label data-i18n="form_lastname">Nachname</label><input type="text" class="form-input" id="f-nachname" placeholder="Mustermann" autocomplete="family-name"/><div class="field-error" id="f-nachname-err"></div></div>
         </div>
-        <div class="form-field"><label data-i18n="form_email">E-Mail</label><input type="email" class="form-input" id="f-email" placeholder="max.mustermann@email.ch" autocomplete="email"/></div>
+        <div class="form-field"><label data-i18n="form_email">E-Mail</label><input type="email" class="form-input" id="f-email" placeholder="max.mustermann@email.ch" autocomplete="email"/><div class="field-error" id="f-email-err"></div></div>
         <div class="form-actions"><div></div><button class="btn-next" onclick="nextStep()">Weiter &#x2192;</button></div>
       </div>
       <div class="form-step" data-step="2">
         <div class="step-title" data-i18n="form_s2_title">Erreichbarkeit</div>
         <div class="step-sub" data-i18n="form_s2_sub">F&#xFC;r eine kurze telefonische Erstberatung. Dauert nur wenige Minuten.</div>
-        <div class="form-field"><label data-i18n="form_phone">Telefon</label><input type="tel" class="form-input" id="f-telefon" placeholder="+41 79 123 45 67" autocomplete="tel"/></div>
+        <div class="form-field"><label data-i18n="form_phone">Telefon</label><input type="tel" class="form-input" id="f-telefon" placeholder="+41 79 123 45 67" autocomplete="tel"/><div class="field-error" id="f-telefon-err"></div></div>
         <div class="form-row">
           <div class="form-field"><label data-i18n="form_zip">PLZ</label><input type="text" class="form-input" id="f-plz" placeholder="8001" maxlength="6" autocomplete="postal-code"/></div>
           <div class="form-field"><label data-i18n="form_city">Ort</label><input type="text" class="form-input" id="f-ort" placeholder="Z&#xFC;rich" autocomplete="address-level2"/></div>
@@ -884,10 +887,33 @@ function toggleMoreRates(){
 var TOTAL_STEPS=3,currentStep=1;
 function updateProgress(){document.querySelectorAll(".step-bar").forEach(function(b,i){b.className="step-bar";if(i+1===currentStep)b.classList.add("active");if(i+1<currentStep)b.classList.add("done")})}
 function showStep(s){document.querySelectorAll(".form-step").forEach(function(el){el.classList.remove("active")});var t=document.querySelector('.form-step[data-step="'+s+'"]');if(t)t.classList.add("active");currentStep=s;updateProgress()}
-function nextStep(){if(currentStep<TOTAL_STEPS)showStep(currentStep+1)}
+function fieldError(id,msg){var inp=document.getElementById(id);inp.classList.add("error");var err=document.getElementById(id+"-err");if(err){err.textContent=msg;err.classList.add("show")}}
+function clearFieldError(id){var inp=document.getElementById(id);inp.classList.remove("error");var err=document.getElementById(id+"-err");if(err){err.classList.remove("show")}}
+var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function validateStep(step){
+  var ok=true;
+  if(step===1){
+    ["f-vorname","f-nachname","f-email"].forEach(clearFieldError);
+    var vn=document.getElementById("f-vorname").value.trim();
+    var nn=document.getElementById("f-nachname").value.trim();
+    var em=document.getElementById("f-email").value.trim();
+    if(!vn){fieldError("f-vorname","Bitte Vorname eingeben");ok=false}
+    if(!nn){fieldError("f-nachname","Bitte Nachname eingeben");ok=false}
+    if(!em||!EMAIL_RE.test(em)){fieldError("f-email","Bitte g\u00fcltige E-Mail eingeben");ok=false}
+  }
+  if(step===2){
+    clearFieldError("f-telefon");
+    var tel=document.getElementById("f-telefon").value.trim();
+    if(tel.replace(/[^0-9]/g,"").length<9){fieldError("f-telefon","Bitte g\u00fcltige Telefonnummer eingeben");ok=false}
+  }
+  return ok;
+}
+function nextStep(){if(currentStep<TOTAL_STEPS){if(!validateStep(currentStep))return;showStep(currentStep+1)}}
 function prevStep(){if(currentStep>1)showStep(currentStep-1)}
 
 async function submitForm(){
+  if(!validateStep(1)){showStep(1);return}
+  if(!validateStep(2)){showStep(2);return}
   var btn=document.getElementById("submit-btn");btn.disabled=true;btn.textContent="Wird gesendet...";
   var data={
     anrede:document.getElementById("f-anrede").value,
