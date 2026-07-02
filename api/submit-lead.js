@@ -64,6 +64,7 @@ module.exports = async (req, res) => {
   const notesParts = [];
   if (body.kaufpreis) notesParts.push(`Kaufpreis: CHF ${body.kaufpreis}`);
   if (body.eigenkapital) notesParts.push(`Eigenkapital: CHF ${body.eigenkapital}`);
+  if (body.einkommen) notesParts.push(`Jahreseinkommen: CHF ${body.einkommen}`);
   if (body.bemerkungen) notesParts.push(`Bemerkungen: ${body.bemerkungen}`);
 
   const leadPayload = {
@@ -78,6 +79,11 @@ module.exports = async (req, res) => {
   if (hasValidPhone) leadPayload.phone1 = telefon;
   if (isNonEmptyString(body.plz)) leadPayload.addressZip = body.plz.trim();
   if (isNonEmptyString(body.ort)) leadPayload.addressCity = body.ort.trim();
+
+  const yob = parseInt(body.geburtsjahr, 10);
+  const currentYear = new Date().getFullYear();
+  if (!isNaN(yob) && yob >= 1900 && yob <= currentYear) leadPayload.yob = yob;
+
   if (notesParts.length > 0) leadPayload.note = notesParts.join(" | ");
 
   let token;
