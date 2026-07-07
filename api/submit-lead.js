@@ -61,7 +61,15 @@ module.exports = async (req, res) => {
 
   const gender = body.gender === "weiblich" ? "weiblich" : "männlich";
 
+  const TIMELINE_LABELS = {
+    sofort: "So schnell wie möglich",
+    "1-3": "In 1-3 Monaten",
+    "3-6": "In 3-6 Monaten",
+    informieren: "Ich informiere mich erst",
+  };
+
   const notesParts = [];
+  if (body.zeitrahmen && TIMELINE_LABELS[body.zeitrahmen]) notesParts.push(`Zeitrahmen: ${TIMELINE_LABELS[body.zeitrahmen]}`);
   if (body.kaufpreis) notesParts.push(`Kaufpreis: CHF ${body.kaufpreis}`);
   if (body.eigenkapital) notesParts.push(`Eigenkapital: CHF ${body.eigenkapital}`);
   if (body.einkommen) notesParts.push(`Jahreseinkommen: CHF ${body.einkommen}`);
